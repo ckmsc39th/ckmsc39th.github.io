@@ -15,6 +15,7 @@
         <div class="items-centers flex gap-4">
           <a href="#" class="hover:text-white">Youtube</a>
           <a href="#" class="hover:text-white">Instagram</a>
+          <a href="#" class="hover:text-white">Login</a>
         </div>
       </nav>
       <div class="grid grid-cols-2">
