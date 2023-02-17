@@ -5,12 +5,11 @@
         <div class="flex items-center gap-32">
           <a href="#" class="text-2xl font-bold">Luminescence</a>
           <ul class="flex items-center gap-12 font-medium text-gray-500">
-            <li><router-link to="/home" class="hover:text-white">Home</router-link></li>
-            <li><router-link to="/about" class="hover:text-white">About</router-link></li>
-            <li><router-link to="/categories" class="hover:text-white">Categories</router-link></li>
-            <li><router-link to="/works" class="hover:text-white">Works</router-link></li>
-            <li><router-link to="/schedule" class="hover:text-white">Schedule</router-link></li>
-            <li><router-link to="/contast" class="hover:text-white">Contast</router-link></li>
+            <li><a href="/about" class="hover:text-white">About</a></li>
+            <li><a href="/categories" class="hover:text-white">Categories</a></li>
+            <li><a href="/works" class="hover:text-white">Works</a></li>
+            <li><a href="/schedule" class="hover:text-white">Schedule</a></li>
+            <li><a href="/contast" class="hover:text-white">Contast</a></li>
           </ul>
         </div>
         <div class="items-centers flex gap-4">

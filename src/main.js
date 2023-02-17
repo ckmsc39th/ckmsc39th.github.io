@@ -17,11 +17,10 @@ createApp(App).mount('#app');
 //   mode: 'history',
 //   base: __dirname,
 //   routes: [
-//     { path: '/', component: App },
+//     { path: '/', component: Home },
 //     { path: '/about', component: About },
 //     { path: '/categories', component: Categories},
 //     { path: '/contact', component: Contact },
-//     { path: '/home', component: Home},
 //     { path: '/schedule', component: Schedule},
 //     { path: '/works', component: Works}
 //   ]
