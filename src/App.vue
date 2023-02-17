@@ -5,16 +5,17 @@
         <div class="flex items-center gap-32">
           <a href="#" class="text-2xl font-bold">Luminescence</a>
           <ul class="flex items-center gap-12 font-medium text-gray-500">
-            <li><a href="#" class="hover:text-white">Home</a></li>
-            <li><a href="#" class="hover:text-white">About</a></li>
-            <li><a href="#" class="hover:text-white">Categories</a></li>
-            <li><a href="#" class="hover:text-white">Works</a></li>
-            <li><a href="#" class="hover:text-white">Schedule</a></li>
+            <li><router-link to="/home" class="hover:text-white">Home</router-link></li>
+            <li><router-link to="/about" class="hover:text-white">About</router-link></li>
+            <li><router-link to="/categories" class="hover:text-white">Categories</router-link></li>
+            <li><router-link to="/works" class="hover:text-white">Works</router-link></li>
+            <li><router-link to="/schedule" class="hover:text-white">Schedule</router-link></li>
+            <li><router-link to="/contast" class="hover:text-white">Contast</router-link></li>
           </ul>
         </div>
         <div class="items-centers flex gap-4">
-          <a href="#" class="hover:text-white">Youtube</a>
-          <a href="#" class="hover:text-white">Instagram</a>
+          <a href="https://www.youtube.com/@ckmsc39th_luminescence" target="_blank" rel="noopener noreferrer" class="hover:text-white">Youtube</a>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="hover:text-white">Instagram</a>
           <a href="#" class="hover:text-white">Login</a>
         </div>
       </nav>
