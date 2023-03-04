@@ -9,7 +9,7 @@
             <li><a href="/categories" class="hover:text-white">Categories</a></li>
             <li><a href="/works" class="hover:text-white">Works</a></li>
             <li><a href="/schedule" class="hover:text-white">Schedule</a></li>
-            <li><a href="/contast" class="hover:text-white">Contast</a></li>
+            <li><a href="/contast" class="hover:text-white">Contact</a></li>
           </ul>
         </div>
         <div class="items-centers flex gap-4">
