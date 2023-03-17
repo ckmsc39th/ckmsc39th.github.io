@@ -1,19 +1,20 @@
 <template>
-    <div class="background">
+    <div class="home_bg">
         <p>Hi! This is the Home Page</p>
     </div>
     
 </template>
 
 <style>
-    .background{
+    .home_bg{
         width: w-full;
         height: fit-content;
-        background-color: lightgreen;
-        align-content: center;
+        background-color: lightcoral;
+        text-align: center;
     }
-    p {
-        color: darkblue;
+    .home_bg p {
+        color: darkslateblue;
         font-style: italic;
+        font-size: xx-large;
     }
 </style>
