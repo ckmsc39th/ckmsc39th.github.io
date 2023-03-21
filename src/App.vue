@@ -5,7 +5,7 @@
       <nav class="flex items-center justify-between">
         <div class="flex items-center gap-16">
           <router-link :to="{name: 'Home'}" class="homelink">Luminescence</router-link>
-          <router-link :to="{name: 'About' }" class="link">About</router-link>
+          <router-link :to="{name: 'About'}" class="link">About</router-link>
           <router-link :to="{name: 'Categories'}" class="link">Categories</router-link>
           <router-link :to="{name: 'Works'}" class="link">Works</router-link>
           <router-link :to="{name: 'Schedule'}" class="link">Schedule</router-link>
