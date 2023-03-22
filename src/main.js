@@ -5,4 +5,3 @@ import router from './router';
 import navbar from './shared/Navbar.vue'
 
 createApp(App).use(router).component('navbar', navbar).mount('#app');
-
