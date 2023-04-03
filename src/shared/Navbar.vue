@@ -9,12 +9,13 @@
         <router-link :to="{name: 'Contact'}" class="link">Contact</router-link>
       </div>
       
+      
       <div class="items-centers flex gap-4">
-        <a href="https://www.youtube.com/@ckmsc39th_luminescence" target="_blank" rel="noopener noreferrer" class="link">
-          <i data-feather="youtube"></i>
+        <a href="https://www.youtube.com/@ckmsc39th_luminescence" target="_blank" rel="noopener noreferrer" class="icon">
+          <vue-feather type="youtube"></vue-feather>
         </a>
-        <a href="https://instagram.com/luminescence_ckmsc39th_" target="_blank" rel="noopener noreferrer" class="link">
-          <i data-feather="instagram"></i>
+        <a href="https://instagram.com/luminescence_ckmsc39th_" target="_blank" rel="noopener noreferrer" class="icon">
+          <vue-feather type="instagram"></vue-feather>
         </a>
         <a href="#" class="link">Login</a>
       </div>
@@ -41,6 +42,14 @@ export default {
     font-weight: bold;
   }
   .link:hover {
+    color: yellow;
+  }
+  .icon{
+    height: 40;
+    width: 40;
+    color: white;
+  }
+  .icon:hover {
     color: yellow;
   }
 </style>

@@ -12,7 +12,9 @@
     "deploy": "gh-pages -d dist -b gh-pages"
   },
   "dependencies": {
-    "vue": "^3.2.45",
+    "vue": "^3.2.47",
+    "vue-feather": "^2.0.0",
+    "vue-feather-icon": "^1.2.0",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
