@@ -4,7 +4,7 @@
         <router-link :to="{name: 'Home'}" class="homelink">Luminescence</router-link>
       </div>
 
-      <div class="flex items-center gap-1">
+      <div class="flex items-center gap-1 p-5">
         <router-link :to="{name: 'About'}" class="link">About</router-link>
         <router-link :to="{name: 'Categories'}" class="link">Categories</router-link>
         <router-link :to="{name: 'Works'}" class="link">Works</router-link>
@@ -15,10 +15,10 @@
       <div class="flex items-center gap-1">
         <a href="#" class="spclink">Login</a>
         <a href="https://www.youtube.com/@ckmsc39th_luminescence" target="_blank" rel="noopener noreferrer" class="icon">
-          <vue-feather type="youtube" size="30"></vue-feather>
+          <vue-feather type="youtube" size="25"></vue-feather>
         </a>
         <a href="https://instagram.com/luminescence_ckmsc39th_" target="_blank" rel="noopener noreferrer" class="icon">
-          <vue-feather type="instagram" size="30"></vue-feather>
+          <vue-feather type="instagram" size="25"></vue-feather>
         </a>
       </div>
   </nav>
@@ -47,10 +47,10 @@ export default {
   }
 
   .homelink{
-    font-size: 4rem;
+    font-size: 3.75rem;
     font-weight: bold;
     font-family: Brush Script MT, Brush Script Std, cursive;
-    padding: 20px;
+    padding: 15px;
   }
 
   .homelink:hover{
@@ -63,11 +63,14 @@ export default {
   }
 
   .link{
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-family: Calisto MT;
     border: 0.15em solid;
-    border-radius: 0.45em; 
-    padding: 15px 40px;
+    border-radius: 0.45em;
+    width: 100px;
+    text-align: center; 
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 
   .link:hover {
@@ -79,11 +82,14 @@ export default {
   }
 
   .spclink {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-family: Calisto MT;
     border: 0.15em solid;
     border-radius: 0.45em; 
-    padding: 15px 40px;
+    width: 100px;
+    text-align: center; 
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 
   .spclink:hover{
@@ -96,9 +102,10 @@ export default {
   }
 
   .icon {
+    align-items: center;
     border: 0.2em solid;
-    border-radius: 0.75em; 
-    padding: 15px 20px;
+    border-radius: 0.5em; 
+    padding: 11px;
     color: white;
   }
 
