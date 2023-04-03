@@ -282,7 +282,7 @@ nav {
   display: block;
   margin-bottom: 5px;
   font-size: 14px;
-  color: #666;
+  color: #555;
 }
 
 .login-container form input {
@@ -292,13 +292,13 @@ nav {
   padding: 10px;
   border-radius: 5px;
   border: none;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(0, 105, 217, 0.7);
   transition: background-color 0.5s ease-in-out;
 }
 
 .login-container form input:focus {
   outline: none;
-  background-color: #fff;
+  background-color: #0069d9;
 }
 
 .login-container form button {
@@ -328,5 +328,16 @@ nav {
   font-size: 16px;
   cursor: pointer;
   margin-top: 20px;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #ddd;
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #ddd;
 }
 </style>
