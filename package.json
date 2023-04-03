@@ -22,7 +22,7 @@
     "@vitejs/plugin-vue": "^4.0.0",
     "autoprefixer": "^10.4.13",
     "feather-icons": "^4.29.0",
-    "firebase": "^9.17.1",
+    "firebase": "^9.19.1",
     "gh-pages": "^5.0.0",
     "postcss": "^8.4.21",
     "prettier": "^2.8.4",
