@@ -19,7 +19,34 @@
     </div>
 
     <div class="flex items-center gap-1">
-      <a href="#" class="spclink">Login</a>
+      <button class="login-button" @click="showLogin">Login</button>
+      <div class="login-overlay" v-if="showingLogin">
+        <div class="login-container">
+          <h2>Login</h2>
+          <form>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+              />
+            </div>
+            <button type="submit">Log in</button>
+          </form>
+          <button class="close-button" @click="hideLogin">Close</button>
+        </div>
+      </div>
       <a
         href="https://www.youtube.com/@ckmsc39th_luminescence"
         target="_blank"
@@ -43,18 +70,43 @@
 <script>
 import feather from "feather-icons";
 feather.replace();
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
 
 export default {
   name: "navbar",
+  data() {
+    return {
+      email: "",
+      password: "",
+      loggingIn: false,
+      showingLogin: false,
+    };
+  },
   methods: {
-    handleNavClick(event) {
-      // Handle navbar click events here
+    async login() {
+      this.loggingIn = true;
+      try {
+        const userCredential = await firebase
+          .auth()
+          .signInWithEmailAndPassword(this.email, this.password);
+        this.$router.push("/");
+      } catch (error) {
+        console.error(error);
+      }
+      this.loggingIn = false;
+    },
+    showLogin() {
+      this.showingLogin = true;
+    },
+    hideLogin() {
+      this.showingLogin = false;
     },
   },
 };
 </script>
 
-<style>
+<style scoped>
 nav {
   display: flex;
   align-items: center;
@@ -168,5 +220,113 @@ nav {
   90% {
     opacity: 0.2;
   }
+}
+
+.login-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  background-color: #fff;
+  width: 400px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transform: translateY(0%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.login-container.show {
+  transform: translateY(0);
+}
+
+.login-container h2 {
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-container form .form-group {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.login-container form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #666;
+}
+
+.login-container form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: background-color 0.5s ease-in-out;
+}
+
+.login-container form input:focus {
+  outline: none;
+  background-color: #fff;
+}
+
+.login-container form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.login-container form button:hover {
+  background-color: #0069d9;
+}
+
+.login-container form button:active {
+  transform: scale(0.95);
+}
+
+.close-button {
+  background-color: transparent;
+  border: none;
+  color: #888;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
 }
 </style>
