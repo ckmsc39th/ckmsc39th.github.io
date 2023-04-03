@@ -4,10 +4,10 @@
       <img :src="groupPhotoSrc" alt="Group Photo" />
     </div>
     <div class="event-info">
-      <h1>Join us for an event full of creativity and ingenuity!</h1>
+      <h1>(這裡要放成發標語)</h1>
       <div class="time-location">
         <div class="event-time">
-          <h2>Event Time</h2>
+          <h2>舉辦時間</h2>
           <div class="event-time-details">
             <span>{{ eventDate }} | {{ eventTime }}</span>
             <a :href="googleCalendarLink" target="_blank" rel="noopener"
@@ -16,7 +16,7 @@
           </div>
         </div>
         <div class="event-location">
-          <h2>Event Location</h2>
+          <h2>舉辦地點</h2>
           <div class="event-location-details">
             <span>{{ eventLocation }}</span>
             <a :href="googleMapsLink" target="_blank" rel="noopener"
@@ -35,7 +35,7 @@
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
       <div class="description">
-        <h2>Event Description</h2>
+        <h2>活動宗旨與簡介</h2>
         <p>{{ eventDescription }}</p>
       </div>
       <button class="register-button">登記參加</button>
