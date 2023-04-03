@@ -1,6 +1,6 @@
 <template> 
-  <div class="min-h-screen bg-gray-800 text-white">
-    <div class="mx-auto">
+  <div class="app">
+    <div>
       <navbar></navbar>
       <router-view />
     </div>
@@ -20,4 +20,10 @@ console.log(isMobile())
 </script>
 
 <style>
+.app{
+  min-width: fit-content;
+  min-height: 100vh;
+  background-color: rgb(31 41 55);
+  color: white;
+}
 </style>
