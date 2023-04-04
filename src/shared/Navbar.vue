@@ -107,7 +107,7 @@ export default {
 </script>
 
 <style scoped>
-nav {
+nav.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -144,28 +144,8 @@ nav {
 .link:hover {
   border-color: hsl(186, 100%, 78%);
   background-color: hsl(186 100% 78%);
-  box-shadow: 0px 0px 0.5em 0.1px hsl(186 100% 78%);
+  box-shadow: 0px 0px 0.75em 1px hsl(186 100% 78%);
   animation: text-flicker 3s linear infinite;
-  color: black;
-}
-
-.spclink {
-  font-size: 1.1rem;
-  font-family: Calisto MT;
-  border: 0.15em solid;
-  border-radius: 0.45em;
-  width: 100px;
-  text-align: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-.spclink:hover {
-  border-color: hsl(104, 100%, 86%);
-  border-radius: 0.45em;
-  background-color: hsl(104, 100%, 86%);
-  box-shadow: 0px 0px 0.5em 0.5px hsl(104, 100%, 86%);
-  animation: text-flicker 1.5s linear infinite;
   color: black;
 }
 
@@ -224,10 +204,25 @@ nav {
 
 .login-button {
   background-color: transparent;
-  border: none;
   color: white;
-  font-size: 16px;
   cursor: pointer;
+  font-size: 1.1rem;
+  font-family: Calisto MT;
+  border: 0.15em solid;
+  border-radius: 0.45em;
+  width: 100px;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.login-button:hover{
+  border-color: hsl(104, 100%, 86%);
+  border-radius: 0.45em;
+  background-color: hsl(104, 100%, 86%);
+  box-shadow: 0px 0px 0.75em 1px hsl(104, 100%, 86%);
+  animation: text-flicker 1.5s linear infinite;
+  color: black;
 }
 
 .login-overlay {
