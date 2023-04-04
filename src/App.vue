@@ -26,7 +26,7 @@ console.log(isMobile())
   min-width: fit-content;
   min-height: 100vh;
   background-color: rgb(31 41 55);
-  background-image: url("keyVisualImg.JPG");
+  background-image: url('keyVisualImg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -43,7 +43,7 @@ console.log(isMobile())
   left: 0;
   right: 0;
   opacity: 0.55;
-  background-image: url("dots.PNG");
+  background-image: url('dots.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
