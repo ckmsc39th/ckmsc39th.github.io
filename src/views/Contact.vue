@@ -1,20 +1,38 @@
 <template>
     <div class="contact_bg">
-        <p>Hi! This is the Contact Page</p>
+        <h1>Contact Us</h1>
+        <div>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=39thckmsc@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>
+        </div>
+        <div>
+            <a href="https://instagram.com/luminescence_ckmsc39th_">Instagram</a>
+        </div>
     </div>
     
 </template>
 
 <style>
     .contact_bg{
-        width: w-full;
-        height: fit-content;
-        background-color: lightcoral;
-        text-align: center;
+        max-width: 800px;
+        margin: auto;
+        padding: 40px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #fff;
     }
-    .contact_bg p {
-        color: darkslateblue;
-        font-style: italic;
-        font-size: xx-large;
+
+    .contact_bg h1 {
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      
+    .contact_bg a {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #007bff;
+      }
+    
+    .contact_bg a:hover{
+        text-decoration: underline;
     }
 </style>

@@ -3,22 +3,27 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "license": "MIT",
   "homepage": "https://ckmsc39th.github.io/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "predeploy": "yarn run build",
-    "deploy": "gh-pages -d dist -b gh-pages"
+    "deploy": "vite build && gh-pages -d dist -b gh-pages"
   },
   "dependencies": {
-    "vue": "^3.2.45",
-    "vue-router": "4"
+    "firebase": "^9.19.1-20230331192943",
+    "vue": "^3.2.47",
+    "vue-feather": "^2.0.0",
+    "vue-feather-icon": "^1.2.0",
+    "vue-router": "^4.1.6",
+    "vuefire": "^3.0.0-alpha.9"
   },
   "devDependencies": {
+    "@types/feather-icons": "^4.29.1",
     "@vitejs/plugin-vue": "^4.0.0",
     "autoprefixer": "^10.4.13",
-    "firebase": "^9.17.1",
+    "feather-icons": "^4.29.0",
     "gh-pages": "^5.0.0",
     "postcss": "^8.4.21",
     "prettier": "^2.8.4",
