@@ -6,7 +6,7 @@
       >
     </div>
 
-    <div class="flex items-center gap-1 p-5">
+    <div class="flex items-center gap-1 pr-20">
       <router-link :to="{ name: 'About' }" class="link">About</router-link>
       <router-link :to="{ name: 'Categories' }" class="link"
         >Categories</router-link
