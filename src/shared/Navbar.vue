@@ -17,35 +17,28 @@
       >
       <router-link :to="{ name: 'Contact' }" class="link">Contact</router-link>
     </div>
-
     <div class="flex items-center gap-1">
-        <button class="login-button" @click="showLogin">Login</button>
-        <div class="login-overlay" v-if="showingLogin">
-          <div class="login-container">
-            <h2>Login</h2>
-            <form>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Enter your email"
-                />
-              </div>
-              <div class="form-group">
-                <label for="password">Password</label>
-                <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  placeholder="Enter your password"
-                />
-              </div>
-              <button type="submit">Log in</button>
-            </form>
-            <button class="close-button" @click="hideLogin">Close</button>
-          </div>
+      <button class="login-button" @click="showLogin">Login</button>
+      <div class="login-overlay" v-if="showingLogin">
+        <div class="login-container">
+          <h2>Login</h2>
+          <form>
+            <div class="form-group">
+              <input v-model="email" type="email" placeholder="Email" />
+            </div>
+            <div class="form-group">
+              <input
+                v-model="password"
+                type="password"
+                placeholder="Password"
+              />
+            </div>
+            <button type="button" @click="login" :disabled="loggingIn">
+              {{ loggingIn ? "Logging in..." : "Log in" }}
+            </button>
+          </form>
+          <button class="close-button" @click="hideLogin">Cancel</button>
+        </div>
       </div>
       <a
         href="https://www.youtube.com/@ckmsc39th_luminescence"
@@ -68,42 +61,39 @@
 </template>
 
 <script>
+import { ref } from "vue";
 import feather from "feather-icons";
 feather.replace();
-import firebase from "firebase/compat/app";
-import "firebase/compat/auth";
 
-export default {
-  name: "navbar",
-  data() {
-    return {
-      email: "",
-      password: "",
-      loggingIn: false,
-      showingLogin: false,
-    };
-  },
-  methods: {
-    async login() {
-      this.loggingIn = true;
-      try {
-        const userCredential = await firebase
-          .auth()
-          .signInWithEmailAndPassword(this.email, this.password);
-        this.$router.push("/");
-      } catch (error) {
-        console.error(error);
-      }
-      this.loggingIn = false;
-    },
-    showLogin() {
-      this.showingLogin = true;
-    },
-    hideLogin() {
-      this.showingLogin = false;
-    },
-  },
-};
+const email = ref("");
+const password = ref("");
+const loggingIn = ref(false);
+const showingLogin = ref(false);
+
+const correctEmail = "123@email.com";
+const correctPasswd = "1234";
+
+async function login() {
+  loggingIn.value = true;
+  try {
+    if (email.value === correctEmail && password.value === correctPasswd) {
+      console.log("true111");
+    } else {
+      console.log("false111");
+    }
+  } catch (error) {
+    console.error(error);
+  }
+  loggingIn.value = false;
+}
+
+function showLogin() {
+  showingLogin.value = true;
+}
+
+function hideLogin() {
+  showingLogin.value = false;
+}
 </script>
 
 <style scoped>
@@ -216,7 +206,7 @@ nav.navbar {
   padding-bottom: 15px;
 }
 
-.login-button:hover{
+.login-button:hover {
   border-color: hsl(104, 100%, 86%);
   border-radius: 0.45em;
   background-color: hsl(104, 100%, 86%);
