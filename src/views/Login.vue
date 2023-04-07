@@ -1,61 +1,3 @@
-<!-- <template>
-  <button class="login-button" @click="showLogin">Login</button>
-  <div class="login-overlay" v-if="showingLogin">
-    <div class="login-container">
-      <h2>Login</h2>
-      <form>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" name="email" placeholder="Enter your email"/>
-        </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" name="password" placeholder="Enter your password"/>
-        </div>
-        <button type="submit">Log in</button>
-      </form>
-      <button class="close-button" @click="hideLogin">Close</button>
-    </div>
-  </div>
-</template>
-
-<script>
-import firebase from "firebase/compat/app";
-import "firebase/compat/auth";
-
-export default {
-  name: "navbar",
-  data() {
-    return {
-      email: "",
-      password: "",
-      loggingIn: false,
-      showingLogin: false,
-    };
-  },
-  methods: {
-    async login() {
-      this.loggingIn = true;
-      try {
-        const userCredential = await firebase
-          .auth()
-          .signInWithEmailAndPassword(this.email, this.password);
-        this.$router.push("/");
-      } catch (error) {
-        console.error(error);
-      }
-      this.loggingIn = false;
-    },
-    showLogin() {
-      this.showingLogin = true;
-    },
-    hideLogin() {
-      this.showingLogin = false;
-    },
-  },
-};
-</script> -->
-
 <template>
   <div>
     <button class="login-button" @click="showLogin">Log in</button>
@@ -64,34 +6,42 @@ export default {
         <h2>Login</h2>
         <form>
           <div class="form-group">
-        <input v-model="email" type="email" placeholder="Email" />
-        </div>
-        <div class="form-group">
-          <input v-model="password" type="password" placeholder="Password" />
+            <input v-model="email" type="email" placeholder="Email" />
           </div>
-        <button @click="login" :disabled="loggingIn">{{ loggingIn ? 'Logging in...' : 'Log in' }}</button>
-      </form>
-      <button class="close-button" @click="hideLogin">Cancel</button>
+          <div class="form-group">
+            <input v-model="password" type="password" placeholder="Password" />
+          </div>
+          <button type="button" @click="login" :disabled="loggingIn">
+            {{ loggingIn ? "Logging in..." : "Log in" }}
+          </button>
+        </form>
+        <button class="close-button" @click="hideLogin">Cancel</button>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
+import { ref } from "vue";
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
 
-const email = ref('');
-const password = ref('');
+const email = ref("");
+const password = ref("");
 const loggingIn = ref(false);
 const showingLogin = ref(false);
 
 async function login() {
   loggingIn.value = true;
+  console.log("logging in!!!!!!!!!!!!!!!!!!!!!!!!!!11");
   try {
-    const userCredential = await firebase.auth().signInWithEmailAndPassword(email.value, password.value);
-    $router.push('/');
+    if (email.value === "123@gmail.com" && password.value === "1234") {
+      console.log("true111");
+    } else {
+      console.log("false111");
+    }
+    //   const userCredential = await firebase.auth().signInWithEmailAndPassword(email.value, password.value);
+    //   $router.push('/');
   } catch (error) {
     console.error(error);
   }
@@ -106,7 +56,6 @@ function hideLogin() {
   showingLogin.value = false;
 }
 </script>
-
 
 <style>
 .login-button {
@@ -123,7 +72,7 @@ function hideLogin() {
   padding-bottom: 15px;
 }
 
-.login-button:hover{
+.login-button:hover {
   border-color: hsl(104, 100%, 86%);
   border-radius: 0.45em;
   background-color: hsl(104, 100%, 86%);
@@ -235,7 +184,8 @@ function hideLogin() {
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #ddd;
-  opacity: 1; /* Firefox */
+  opacity: 1;
+  /* Firefox */
 }
 
 ::-ms-input-placeholder {
