@@ -5,6 +5,7 @@ import Categories from '../views/Categories.vue'
 import Works from '../views/Works.vue'
 import Schedule from '../views/Schedule.vue'
 import Contact from '../views/Contact.vue'
+import Login from '../views/Login.vue'
 
 const routes = [
     {
@@ -36,8 +37,12 @@ const routes = [
         path: '/contact',
         name: 'Contact',
         component: Contact
-    }
-        
+    },
+    {
+        path: '/login',
+        name: Login,
+        component: Login
+    }        
 ]
 
 const router = createRouter({

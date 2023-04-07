@@ -19,33 +19,33 @@
     </div>
 
     <div class="flex items-center gap-1">
-      <button class="login-button" @click="showLogin">Login</button>
-      <div class="login-overlay" v-if="showingLogin">
-        <div class="login-container">
-          <h2>Login</h2>
-          <form>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter your email"
-              />
-            </div>
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                placeholder="Enter your password"
-              />
-            </div>
-            <button type="submit">Log in</button>
-          </form>
-          <button class="close-button" @click="hideLogin">Close</button>
-        </div>
+        <button class="login-button" @click="showLogin">Login</button>
+        <div class="login-overlay" v-if="showingLogin">
+          <div class="login-container">
+            <h2>Login</h2>
+            <form>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Enter your password"
+                />
+              </div>
+              <button type="submit">Log in</button>
+            </form>
+            <button class="close-button" @click="hideLogin">Close</button>
+          </div>
       </div>
       <a
         href="https://www.youtube.com/@ckmsc39th_luminescence"
