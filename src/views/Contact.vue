@@ -7,6 +7,9 @@
         <div>
             <a href="https://instagram.com/luminescence_ckmsc39th_">Instagram</a>
         </div>
+        <div>
+            <a href="https://github.com/ckmsc39th/ckmsc39th.github.io">Github</a>
+        </div>
     </div>
     
 </template>
@@ -29,10 +32,11 @@
     .contact_bg a {
         font-size: 24px;
         margin-bottom: 10px;
-        color: #007bff;
+        color: white;
       }
     
     .contact_bg a:hover{
+        color: #007bff;
         text-decoration: underline;
     }
 </style>
