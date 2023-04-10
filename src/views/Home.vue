@@ -38,7 +38,13 @@
         <h2>活動宗旨與簡介</h2>
         <p>{{ eventDescription }}</p>
       </div>
-      <button class="register-button">登記參加</button>
+      <input
+        class="register-email"
+        v-model="email"
+        type="email"
+        placeholder="請輸入您的電子郵件地址"
+      />
+      <button @click="saveEmail" class="register-button">登記參加</button>
     </div>
   </div>
 </template>
@@ -57,6 +63,8 @@ export default {
     };
   },
 };
+
+function sendEmail() {}
 </script>
 
 <style scoped>
