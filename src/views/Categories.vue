@@ -159,14 +159,14 @@
 </template>
 
 <style scoped>
-.categories_bg {
+.categories-placeholder {
   width: w-full;
   height: fit-content;
   background-color: lightcoral;
   text-align: center;
 }
 
-.categories_bg p {
+.categories-placeholder p {
   color: darkslateblue;
   font-style: italic;
   font-size: xx-large;
@@ -176,7 +176,7 @@
 }
 
 .categories-page {
-  max-width: 800px;
+  max-width: 1200px;
   margin: auto;
   padding: 40px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -186,19 +186,23 @@
 h1 {
   font-size: 36px;
   font-weight: bold;
+  margin-top: 40px;
   margin-bottom: 20px;
 }
 
 h2 {
   font-size: 24px;
   font-weight: bold;
+  margin-top: 15px;
   margin-bottom: 10px;
 }
 
 h3 {
   font-size: 20px;
   font-weight: bold;
+  margin-top: 20px;
   margin-bottom: 10px;
+  color: #82cbf0;
 }
 
 .theme p {
@@ -216,12 +220,12 @@ ul {
 ol {
   list-style: decimal;
   margin: 0;
-  padding: 0;
+  padding: 20px;
 }
 
 li {
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.3;
   margin-bottom: 10px;
 }
 
