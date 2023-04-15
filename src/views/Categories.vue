@@ -2,6 +2,17 @@
   import { ref } from 'vue'
   const tabs = ref(['數學', '物理', '化學', '生物', '資訊', '地科', 'test'])
   const activeTab = ref('數學')
+  const grouplist = ([
+    {id: 1, mark: "G1", title: "模擬原行星盤氣體在光致蒸發作用下之吸積模型", author: "胡軒綸、蕭宇博", description: "hihi"},
+    {id: 2, mark: "G2", title: "大屯火山土壤二氧化碳逸出之分析", author: "鄧喻羲", description: "hihi"}
+  ]);
+  const selectedWork = ref(null);
+  const showPopup = (grouplist) => {
+    selectedWork.value = grouplist;
+  };
+  const hidePopup = () => {
+    selectedWork.value = null;
+  };
   function switchTab(newTab) {
     this.activeTab = newTab;
     if (newTab === '化學') {
@@ -133,7 +144,29 @@
         <h4># 喜歡嘗試各種活動、新科技</h4>
         <p>文禮常常找各種科學活動問同學要不要參加，又或是最近流行甚麼ChatGPT，文禮都會找學生討論。</p>
         <h4># 你是我的花朵</h4>
-
+        <br>
+        <div>
+          <h4>作品列表</h4>
+          <center>
+          <table border="1">
+            <tr>
+              <th>編號</th>
+              <th>作品名稱</th>
+              <th>作者</th>
+            </tr>
+            <tr v-for="group in grouplist" :key="group.id">
+                <td>{{ group.mark }}</td>
+                <td @click="showPopup(grouplist)">{{ group.title }}</td>
+                <td>{{ group.author }}</td>
+            </tr>
+          </table>
+          </center>
+          <!-- <div v-if="selectedWork" class="popup">
+            <h2>{{ selectedWork.title }}</h2>
+            <p>{{ selectedWork.description }}</p>
+            <button @click="hidePopup">關閉</button>
+          </div> -->
+        </div>
       </div>
       <div v-if="activeTab === 'test'">
         <p>asdf</p>
@@ -221,4 +254,16 @@ li {
   margin-bottom: 10px;
 }
 
+table th, td{
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+}
+
+
+
 </style>
+
