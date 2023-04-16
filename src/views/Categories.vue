@@ -3,16 +3,20 @@
   const tabs = ref(['數學', '物理', '化學', '生物', '資訊', '地科', 'test'])
   const activeTab = ref('數學')
   const grouplist = ([
-    {id: 1, mark: "G1", title: "模擬原行星盤氣體在光致蒸發作用下之吸積模型", author: "胡軒綸、蕭宇博", description: "hihi"},
-    {id: 2, mark: "G2", title: "大屯火山土壤二氧化碳逸出之分析", author: "鄧喻羲", description: "hihi"}
+    {id: 1, mark: "G1", title: "模擬原行星盤氣體在光致蒸發作用下之吸積模型", author: "胡軒綸、蕭宇博", description: "我們在研究原始行星盤上氣體是如何演化，藉由 VADER 程式去模擬氣體密度隨著時間的變化，研究中著重於光致蒸發和黏滯係數如何對原行星盤產生影響。\n\n在原行星盤演化中，恆星輻射會給予外圍氣體能量，氣體因而獲得能量而逃逸，稱為光致蒸發，這過程會導致盤面出現密度相對低的區域，而黏滯係數最終會影響角動量傳遞快慢，進而影響演化速度與方式，以上就是我們的研究啦~"},
+    {id: 2, mark: "G2", title: "大屯火山土壤二氧化碳逸出之分析", author: "鄧喻羲", description: "早期學者利用鉀氬定年法，判斷大屯火山最後一次噴發是十萬年前，但這種方法誤差極大，近年來許多地震分析、地殼變動、地球化學和氣體監測等研究，說明了大屯火山的火山作用依然很活躍，不排除有噴發的可能。\n\n本研究聚焦在八煙地區的土壤二氧化碳監測，以區域的微震資料以及環境數據為基礎，利用多項式回歸，對原有的二氧化碳數據進行過濾，以方便日後監測火山訊號。當中我們發現尤其以大氣溫度關聯最大，且具有時間延遲性。\n\n如果你覺得這專題聽起來很水的話，確實挺水的，沒有用什麼太厲害的工具，就是用excel瘋狂整理數據而已，只能說我太弱啦。"}
   ]);
+  const popupVisible = ref(false);
   const selectedWork = ref(null);
-  const showPopup = (grouplist) => {
-    selectedWork.value = grouplist;
-  };
-  const hidePopup = () => {
+
+  function showPopup(work) {
+    selectedWork.value = work;
+    popupVisible.value = true;
+  }
+  function hidePopup() {
+    popupVisible.value = false;
     selectedWork.value = null;
-  };
+  }
   function switchTab(newTab) {
     this.activeTab = newTab;
     if (newTab === '化學') {
@@ -148,24 +152,28 @@
         <div>
           <h4>作品列表</h4>
           <center>
-          <table border="1">
+          <table>
+            <thead>
             <tr>
-              <th>編號</th>
+              <th>作品編號</th>
               <th>作品名稱</th>
               <th>作者</th>
             </tr>
+            </thead>
+            <tbody>
             <tr v-for="group in grouplist" :key="group.id">
                 <td>{{ group.mark }}</td>
-                <td @click="showPopup(grouplist)">{{ group.title }}</td>
+                <td @click="showPopup(group)"><a href="#">{{ group.title }}</a></td>
                 <td>{{ group.author }}</td>
             </tr>
+            </tbody>
           </table>
           </center>
-          <!-- <div v-if="selectedWork" class="popup">
-            <h2>{{ selectedWork.title }}</h2>
-            <p>{{ selectedWork.description }}</p>
-            <button @click="hidePopup">關閉</button>
-          </div> -->
+          <div v-if="popupVisible" class="popup">
+            <h3>作品名稱: {{ selectedWork.title }}<br>作者: {{ selectedWork.author }}</h3>
+            <p class="popup__content">{{ selectedWork.description }}</p>
+            <button class="popup__close" @click="hidePopup"><u>關閉</u></button>
+          </div>
         </div>
       </div>
       <div v-if="activeTab === 'test'">
@@ -262,8 +270,72 @@ table th, td{
   padding-right: 30px;
   text-align: center;
 }
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80vh;
+  max-height: 90%;
+  overflow-y: auto;
+  z-index: 100;
+  background-color: rgb(54, 0, 120);
+  box-shadow: 0 0 50px rgba(165, 255, 247, 0.703);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
+.popup__header {
+  width: 100%;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.popup__title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.popup__title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
+.popup__close {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.popup__content {
+  padding: 20px;
+  text-align: justify;
+  white-space: pre-line;
+}
+
+.popup__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.popup__image {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.popup.is-active {
+  display: block;
+  backdrop-filter: blur(5px);
+}
 </style>
-
