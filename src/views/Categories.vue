@@ -10,10 +10,12 @@
   const selectedWork = ref(null);
 
   function showPopup(work) {
+    document.body.classList.add("popup-show");
     selectedWork.value = work;
     popupVisible.value = true;
   }
   function hidePopup() {
+    document.body.classList.add("popup-show");
     popupVisible.value = false;
     selectedWork.value = null;
   }
@@ -150,7 +152,7 @@
         <h4># 你是我的花朵</h4>
         <br>
         <div>
-          <h4>作品列表</h4>
+          <h4>作品列表 (點擊作品名稱可查看詳細資訊)</h4>
           <center>
           <table>
             <thead>
@@ -170,9 +172,12 @@
           </table>
           </center>
           <div v-if="popupVisible" class="popup">
-            <h3>作品名稱: {{ selectedWork.title }}<br>作者: {{ selectedWork.author }}</h3>
+            <div class="popup__header">
+              <h3>作品名稱: {{ selectedWork.title }}<br>作者: {{ selectedWork.author }}</h3>
+              <button class="close-btn" @click="hidePopup">X</button>
+            </div>
             <p class="popup__content">{{ selectedWork.description }}</p>
-            <button class="popup__close" @click="hidePopup"><u>關閉</u></button>
+            <!-- <button class="popup__close" @click="hidePopup"><u>關閉</u></button> -->
           </div>
         </div>
       </div>
@@ -184,6 +189,12 @@
 </template>
 
 <style scoped>
+.showpopup {
+  display: block;
+}
+body.showpopup {
+  backdrop-filter: blur(5px);
+}
 .categories-placeholder {
   width: w-full;
   height: fit-content;
@@ -280,7 +291,7 @@ table th, td{
   max-height: 90%;
   overflow-y: auto;
   z-index: 100;
-  background-color: rgb(54, 0, 120);
+  background-color: rgb(34, 0, 75);
   box-shadow: 0 0 50px rgba(165, 255, 247, 0.703);
   border-radius: 30px;
   display: flex;
@@ -291,8 +302,9 @@ table th, td{
 
 .popup__header {
   width: 100%;
-  padding: 20px;
-  border-bottom: 1px solid #ccc;
+  padding: 50px;
+  border-bottom: 2px solid #ccc;
+  margin-top: 0px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -317,7 +329,7 @@ table th, td{
 }
 
 .popup__content {
-  padding: 20px;
+  padding: 50px;
   text-align: justify;
   white-space: pre-line;
 }
@@ -333,9 +345,22 @@ table th, td{
   width: 100%;
   margin-bottom: 20px;
 }
-
 .popup.is-active {
   display: block;
   backdrop-filter: blur(5px);
+}
+.close-btn {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 25px;
+  color: #5ee1ff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.close-btn:hover {
+  color: #666;
 }
 </style>
