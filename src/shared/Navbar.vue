@@ -6,7 +6,7 @@
       >
     </div>
 
-    <div class="flex items-center gap-1 pr-20">
+    <div class="flex items-center gap-1 pr-20 pl-20">
       <router-link :to="{ name: 'About' }" class="link">About</router-link>
       <router-link :to="{ name: 'Categories' }" class="link"
         >Categories</router-link
@@ -107,6 +107,11 @@ export default {
 </script>
 
 <style scoped>
+@font-face {
+  font-family: cursiveFont;
+  src: url('/GreatVibes-Regular.ttf');
+}
+
 nav.navbar {
   display: flex;
   align-items: center;
@@ -117,7 +122,7 @@ nav.navbar {
 .homelink {
   font-size: 3.75rem;
   font-weight: bold;
-  font-family: Brush Script MT, Brush Script Std, cursive;
+  font-family: cursiveFont;
   padding: 15px;
 }
 
