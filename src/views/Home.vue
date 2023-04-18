@@ -2,7 +2,7 @@
   <div class="home-page tab-page">
     <h1>建中數理資優班第39屆成果發表</h1>
     <div class="group-photo div-page">
-      <h2>(這裡要放團體照片)</h2>
+      <h2>(這裡將會放225 226團體照片)</h2>
       <img :src="groupPhotoSrc" alt="Group Photo" />
     </div>
     <div class="event-info div-page">
