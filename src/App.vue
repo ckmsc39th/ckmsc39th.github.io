@@ -1,4 +1,4 @@
-<template> 
+<template>
   <div class="app">
     <div class="navbar">
       <navbar></navbar>
@@ -11,22 +11,23 @@
 import feather from "feather-icons";
 feather.replace();
 
-function isMobile(){
-    return !!window.navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+function isMobile() {
+  return !!window.navigator.userAgent.match(
+    /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+  );
 }
 
-console.log(isMobile())
-
+console.log(isMobile());
 </script>
 
 <style>
-.app{
+.app {
   position: relative;
   z-index: 0;
   min-width: fit-content;
   min-height: 100vh;
   background-color: rgb(31 41 55);
-  background-image: url('/keyVisualImg.jpg');
+  background-image: url("/keyVisualImg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -34,8 +35,8 @@ console.log(isMobile())
   color: white;
 }
 
-.app::after{
-  content: '';
+.app::after {
+  content: "";
   position: absolute;
   z-index: 1;
   top: 0;
@@ -43,7 +44,7 @@ console.log(isMobile())
   left: 0;
   right: 0;
   opacity: 0.9;
-  background-image: url('/dots.png');
+  background-image: url("/dots.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -96,7 +97,7 @@ console.log(isMobile())
   }
 }
 
-.navbar{
+.navbar {
   position: relative;
   z-index: 2;
 }
