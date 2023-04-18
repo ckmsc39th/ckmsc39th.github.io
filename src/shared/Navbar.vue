@@ -109,7 +109,7 @@ export default {
 <style scoped>
 @font-face {
   font-family: cursiveFont;
-  src: url('/GreatVibes-Regular.ttf');
+  src: url("/GreatVibes-Regular.ttf");
 }
 
 nav.navbar {
@@ -221,7 +221,7 @@ nav.navbar {
   padding-bottom: 15px;
 }
 
-.login-button:hover{
+.login-button:hover {
   border-color: hsl(104, 100%, 86%);
   border-radius: 0.45em;
   background-color: hsl(104, 100%, 86%);
