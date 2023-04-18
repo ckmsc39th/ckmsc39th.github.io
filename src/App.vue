@@ -7,17 +7,18 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import feather from "feather-icons";
 feather.replace();
 
-function isMobile() {
+const isMobile = () => {
   return !!window.navigator.userAgent.match(
     /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
   );
-}
+};
 
-console.log(isMobile());
+// console.log(isMobile())
+
 </script>
 
 <style>

@@ -5,6 +5,7 @@ import Categories from "../views/Categories.vue";
 import Works from "../views/Works.vue";
 import Schedule from "../views/Schedule.vue";
 import Contact from "../views/Contact.vue";
+import Test from "../views/Test.vue";
 import ScheduleChild1 from "../views/ScheduleChild1.vue";
 import ScheduleChild2 from "../views/ScheduleChild2.vue";
 import ScheduleChild3 from "../views/ScheduleChild3.vue";
@@ -43,6 +44,10 @@ const routes = [
     component: Contact,
   },
   {
+    path: "/test",
+    name: Test,
+    component: Test
+  },
     path: "/day1-2F",
     name: "Day1-2F",
     component: ScheduleChild1,
@@ -61,7 +66,7 @@ const routes = [
     path: "/day2-4F",
     name: "Day2-4F",
     component: ScheduleChild4,
-  },
+  }
 ];
 
 const router = createRouter({
