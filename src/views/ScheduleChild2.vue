@@ -1,6 +1,7 @@
 <template>
-  <div class="d1-4f">
+  <div class="tab-page d1-4f">
     <h2>Day 1 4F國際會議廳</h2>
+    
     <table>
       <tr>
         <th>Mark</th>
@@ -13,6 +14,12 @@
         <td>{{ group.time }}</td>
       </tr>
     </table>
+
+    <div class="return-btn">
+      <router-link :to="{ name: 'Schedule' }" class="link"
+      >返回</router-link>
+    </div>
+
   </div>
 </template>
 
@@ -62,7 +69,11 @@ export default {
           time: "15:15~15:30",
         },
         { id: 10, mark: "M5", title: "次方數平移之研究", time: "15:30~15:45" },
-        { id: 11, mark: "B9", title: "~失蹤的標題~", time: "15:45~16:00" },
+        { id: 11, 
+          mark: "B9", 
+          title: "草履蟲與各種綠藻內共生的各種結果", 
+          time: "15:45~16:00" 
+        },
         {
           id: 12,
           mark: "I10",
@@ -85,26 +96,13 @@ export default {
 </script>
 
 <style>
-.d1-4f {
-  max-width: 800px;
-  margin: auto;
-  padding: 40px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #fff;
-}
-
-.d1-4f h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
 
 .d1-4f table {
   width: 100%;
 }
 
-.d1-4f th,
-td {
+.d1-4f th, td {
+  font-size: 20px;
   border: 1px solid #fff;
   text-align: center;
 }
@@ -112,4 +110,5 @@ td {
 .title {
   width: 500px;
 }
+
 </style>

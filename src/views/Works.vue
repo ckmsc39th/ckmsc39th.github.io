@@ -1,6 +1,6 @@
 <template>
   <div class="works_bg">
-    <p>Hi! This is the Works Page</p>
+    <p>Sorry, the Works page is still under construction...</p>
   </div>
 </template>
 

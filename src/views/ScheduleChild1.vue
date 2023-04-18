@@ -1,19 +1,29 @@
 <template>
-  <div class="d1-2f">
+  <div class="tab-page d1-2f">
     <h2>Day 1 2F展演廳</h2>
-    <table>
-      <tr>
-        <th>Mark</th>
-        <th class="title">Title</th>
-        <th>Time</th>
-      </tr>
-      <tr v-for="group in day1Floor2GroupList" :key="group.id">
-        <td>{{ group.mark }}</td>
-        <td class="title">{{ group.title }}</td>
-        <td>{{ group.time }}</td>
-      </tr>
-    </table>
+    <div class="div-page">
+      <table>
+        <tr>
+          <th>Mark</th>
+          <th class="title">Title</th>
+          <th>Time</th>
+        </tr>
+        <tr v-for="group in day1Floor2GroupList" :key="group.id">
+          <td>{{ group.mark }}</td>
+          <td class="title">{{ group.title }}</td>
+          <td>{{ group.time }}</td>
+        </tr>
+      </table>
+    </div>
+    
+    <div class="return-btn">
+      <router-link :to="{ name: 'Schedule' }" class="link"
+      >返回</router-link>
+    </div>
+
   </div>
+
+  
 </template>
 
 <script>
@@ -78,26 +88,12 @@ export default {
 </script>
 
 <style>
-.d1-2f {
-  max-width: 800px;
-  margin: auto;
-  padding: 40px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #fff;
-}
-
-.d1-2f h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
 .d1-2f table {
   width: 100%;
 }
 
-.d1-2f th,
-td {
+.d1-2f th, td {
+  font-size: 20px;
   border: 1px solid #fff;
   text-align: center;
 }
@@ -105,4 +101,5 @@ td {
 .title {
   width: 500px;
 }
+
 </style>

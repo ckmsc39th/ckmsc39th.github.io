@@ -1,10 +1,12 @@
 <template>
-  <div class="home-page">
-    <div class="group-photo">
+  <div class="home-page tab-page">
+    <h1>建中數理資優班第39屆成果發表</h1>
+    <div class="group-photo div-page">
+      <h2>(這裡要放團體照片)</h2>
       <img :src="groupPhotoSrc" alt="Group Photo" />
     </div>
-    <div class="event-info">
-      <h1>(這裡要放成發標語)</h1>
+    <div class="event-info div-page">
+      <h2>(這裡要放成發標語)</h2>
       <div class="time-location">
         <div class="event-time">
           <h2>舉辦時間</h2>
@@ -67,25 +69,12 @@ export default {
 function sendEmail() {}
 </script>
 
-<style scoped>
-.home-page {
-  max-width: 800px;
-  margin: auto;
-  padding: 40px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #fff;
-}
+<style>
 
 .group-photo img {
   max-width: 100%;
   height: auto;
   display: block;
-  margin-bottom: 20px;
-}
-
-.event-info h1 {
-  font-size: 36px;
-  font-weight: bold;
   margin-bottom: 20px;
 }
 

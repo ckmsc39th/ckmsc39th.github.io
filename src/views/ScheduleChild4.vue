@@ -1,6 +1,7 @@
 <template>
-  <div class="d2-4f">
+  <div class="tab-page d2-4f">
     <h2>Day 2 4F國際會議廳</h2>
+    
     <table>
       <tr>
         <th>Mark</th>
@@ -13,6 +14,12 @@
         <td>{{ group.time }}</td>
       </tr>
     </table>
+
+    <div class="return-btn">
+      <router-link :to="{ name: 'Schedule' }" class="link"
+      >返回</router-link>
+    </div>
+
   </div>
 </template>
 
@@ -85,26 +92,13 @@ export default {
 </script>
 
 <style>
-.d2-4f {
-  max-width: 800px;
-  margin: auto;
-  padding: 40px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #fff;
-}
-
-.d2-4f h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
 
 .d2-4f table {
   width: 100%;
 }
 
-.d2-4f th,
-td {
+.d2-4f th, td {
+  font-size: 20px;
   border: 1px solid #fff;
   text-align: center;
 }

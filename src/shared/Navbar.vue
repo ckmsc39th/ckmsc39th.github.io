@@ -96,11 +96,7 @@ function hideLogin() {
 }
 </script>
 
-<style scoped>
-@font-face {
-  font-family: cursiveFont;
-  src: url("/GreatVibes-Regular.ttf");
-}
+<style>
 
 nav.navbar {
   display: flex;
@@ -113,14 +109,14 @@ nav.navbar {
   font-size: 3.75rem;
   font-weight: bold;
   font-family: cursiveFont;
-  padding: 15px;
+  padding: 20px;
+  border: 0.05em solid;
+  border-radius: 0.45em;
 }
 
 .homelink:hover {
-  border-color: hsl(272, 100%, 87%);
-  border-radius: 0.45em;
   background-color: hsl(272, 71%, 81%);
-  box-shadow: 0px 0px 0.5em 0.5px hsl(272, 71%, 81%);
+  box-shadow: 0px 0px 0.5em 0.5px hsl(272, 100%, 81%);
   animation: text-flicker 3s linear infinite;
   color: black;
 }
@@ -128,6 +124,7 @@ nav.navbar {
 .link {
   font-size: 1.1rem;
   font-family: Calisto MT;
+  font-weight: bold;
   border: 0.15em solid;
   border-radius: 0.45em;
   width: 100px;
@@ -160,42 +157,6 @@ nav.navbar {
   color: black;
 }
 
-@keyframes text-flicker {
-  0% {
-    opacity: 0.7;
-  }
-  2% {
-    opacity: 0.5;
-  }
-  8% {
-    opacity: 0.1;
-  }
-  9% {
-    opacity: 0.3;
-  }
-
-  12% {
-    opacity: 0.1;
-  }
-  25% {
-    opacity: 0.3;
-  }
-  30% {
-    opacity: 1;
-  }
-  55% {
-    opacity: 0.7;
-  }
-  60% {
-    opacity: 0.5;
-  }
-  75% {
-    opacity: 0.6;
-  }
-  90% {
-    opacity: 0.2;
-  }
-}
 
 .login-button {
   background-color: transparent;
@@ -203,6 +164,7 @@ nav.navbar {
   cursor: pointer;
   font-size: 1.1rem;
   font-family: Calisto MT;
+  font-weight: bold;
   border: 0.15em solid;
   border-radius: 0.45em;
   width: 100px;

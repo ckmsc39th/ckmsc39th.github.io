@@ -1,6 +1,6 @@
 <template>
   <div class="categories_bg">
-    <p>Hi! This is the Categories Page</p>
+    <p>Sorry, the Categories page is still under construction...</p>
   </div>
 </template>
 

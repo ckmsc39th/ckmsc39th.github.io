@@ -1,19 +1,13 @@
 <template>
-  <div class="about-page">
+  <div class="tab-page">
+
     <h1>About Us</h1>
-    <div class="theme">
+    <div class="theme div-page">
       <h2>主題含意</h2>
       <p>{{ themeMeaning }}</p>
     </div>
-    <div class="team">
-      <h2>工作人員名單</h2>
-      <ul>
-        <li v-for="teammate in teammateList" :key="teammate.id">
-          {{ teammate.name }} - {{ teammate.position }}
-        </li>
-      </ul>
-    </div>
-    <div class="music-mv">
+
+    <div class="music-mv div-page">
       <h2>音樂MV</h2>
       <p>
         快來看看我們最新的成果發表主題曲:
@@ -29,18 +23,32 @@
         ></iframe>
       </p>
     </div>
-    <div class="invitation">
+
+    <div class="invitation div-page">
       <h2>邀請函</h2>
+      <p>其實是這張啦(?)</p>
       <img :src="invitationLetter" alt="Invitation Letter" />
     </div>
+
+    <div class="team div-page">
+      <h2>工作人員名單</h2>
+      <ul>
+        <li v-for="teammate in teammateList" :key="teammate.id">
+          {{ teammate.name }} - {{ teammate.position }}
+        </li>
+      </ul>
+    </div>
+
   </div>
+
+  
 </template>
 
 <script>
 export default {
   data() {
     return {
-      themeMeaning: "老實說，這部分不關我的事等公關快點把文案給我。",
+      themeMeaning: "施工中...",
       teammateList: [
         { id: 1, name: "廖乃頡", position: "網管組組長" },
         { id: 2, name: "程朗神", position: "網管組組長2" },
@@ -55,28 +63,9 @@ export default {
 </script>
 
 <style scoped>
-.about-page {
-  max-width: 800px;
-  margin: auto;
-  padding: 40px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #fff;
-}
 
-h1 {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.theme p {
-  font-size: 18px;
+.theme, .music-mv, .invitation p {
+  font-size: 20px;
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -88,17 +77,17 @@ ul {
 }
 
 li {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.6;
   margin-bottom: 10px;
 }
 
 .music-mv a {
-  color: #007bff;
   text-decoration: none;
 }
 
 .music-mv a:hover {
+  color: #007bff;
   text-decoration: underline;
 }
 
