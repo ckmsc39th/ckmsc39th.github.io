@@ -6,6 +6,24 @@
     {id: 1, mark: "G1", title: "模擬原行星盤氣體在光致蒸發作用下之吸積模型", author: "胡軒綸、蕭宇博", description: "我們在研究原始行星盤上氣體是如何演化，藉由 VADER 程式去模擬氣體密度隨著時間的變化，研究中著重於光致蒸發和黏滯係數如何對原行星盤產生影響。\n\n在原行星盤演化中，恆星輻射會給予外圍氣體能量，氣體因而獲得能量而逃逸，稱為光致蒸發，這過程會導致盤面出現密度相對低的區域，而黏滯係數最終會影響角動量傳遞快慢，進而影響演化速度與方式，以上就是我們的研究啦~"},
     {id: 2, mark: "G2", title: "大屯火山土壤二氧化碳逸出之分析", author: "鄧喻羲", description: "早期學者利用鉀氬定年法，判斷大屯火山最後一次噴發是十萬年前，但這種方法誤差極大，近年來許多地震分析、地殼變動、地球化學和氣體監測等研究，說明了大屯火山的火山作用依然很活躍，不排除有噴發的可能。\n\n本研究聚焦在八煙地區的土壤二氧化碳監測，以區域的微震資料以及環境數據為基礎，利用多項式回歸，對原有的二氧化碳數據進行過濾，以方便日後監測火山訊號。當中我們發現尤其以大氣溫度關聯最大，且具有時間延遲性。\n\n如果你覺得這專題聽起來很水的話，確實挺水的，沒有用什麼太厲害的工具，就是用excel瘋狂整理數據而已，只能說我太弱啦。"}
   ]);
+  const math = ([
+    {id: 3, mark: "M1", title: "The Broken Stick Problem - 木棒切割問題之推廣", author: "李允中", description: "本研究要探討的問題是由經典的 《Broken stick problem 》所延伸的問題，雖在文獻中已有了用電腦所運算出來的答案，但沒有提供數學方法，因此我決定親手嘗試找出一個完整且詳盡的統一解法甚至通式。研究初期原本是想由連續隨機變數的方向作切入，但是由於太過複雜，因此最後決定回歸找規律、推導一般式、求出機率、再由一般式回頭證明規律的一般性。 研究過程中雖遭遇到不少困難以及錯誤的思路，但最後仍試著找出了規律及一般式。過程中大量地使用了組合數及數列求和的技巧來整理一般式，計算量龐大。\n\n註: 經典的《The Broken Stick Problem》原始題目為：將一條隨機長度的木條，分成三段隨機長度的木條，則這三段木條 能構成三角形的機率為何？"},
+    {id: 4, mark: "M2", title: "單位圓中內接n邊形與圓心O所成向量之係數比", author: "洪楷威、張哲宇", description: "我們的研究目的是要找出一個固定的計算方式，使得圓內接正n邊形中，任何一條圓心對頂點所做向量，在乘上對應係數後，相加會等於零向量。在尋找我們的專題題目時，偶然想到了之前曾經使用過的奔馳定理，於是我們就想說能否將用在三角形的奔馳定理加以推廣至更多邊形的情況，並使用圓內接多邊形的方式固定兩邊長，使三角形面積可以以三角函數的方式呈現，而在過程中還推演出了另一項命題：如何表示sin(a+b+c+…)"},
+    {id: 5, mark: "M3", title: "內切鏡射三角形的性質研究", author: "邱韋齊、張齊軒", description: "本研究以三角形 ∆ABC 的內切圓切點為起點，構造出內切三角形。接著以內切三角形的三邊為對稱軸，將原三角形鏡射，構造出鏡射三角形。發現在任意三角形的情況下，鏡射三角形的面積與內切三角形相同，且鏡射三角形與旁切三角形全等。也發現鏡射三角形與內接三角形的交點所構造出的新三角形與三角形 ∆ABC 相似且其邊長比例為原三角形的內切圓與外接圓半徑比例相關。最後，還給出了在一般化邊長比的情況下，鏡射三角形的特殊性質。"},
+    {id: 6, mark: "M4", title: "定量餘數於不同值下頻率、數量之探討", author: "黃章睿", description: "呃，我的專題題目是:定量餘數於不同值下頻率、數量之探討，題目發想來自於2021年秋AMC 12B第25題。看起來好像很厲害，實際上做了什麼有意義的連我自己都不知道。我覺得跟我同時段報告的肯定更好，所以親臨敝場次的人我都視為是來看笑話的，希望報告時台下沒有人，反正還是得講，還是會原地爆炸，不意外了，真的......，然後我的專題內容到底在做什麼呢?原本預計是數論，然後用了一些極基礎的程式碼，做一下統計，就變成四不像的半成品了。稍微自我介紹一下，敝姓黃，萍水相逢，自是不必過於深究，有能者眾，有心者少。步出上東門......悽愴傷我心。我猜沒人看到這，但我還是要湊到300字。總結一下，不知道你為什麼會看到這個，如果仍有一點點興趣，勸你最好放棄，不要浪費生命，很可悲。"},
+    {id: 7, mark: "M5", title: "次方數平移之研究", author: "阮炫嘉", description: "在我的研究中探討了有關平方數平移的問題：取一個集合 S，其中 S_0 包含所有平方數，例如 1、4、9、16……而 S_n 則是 S_0 中所有元素加上 n 後的集合，例如 S_1 包含 2、5、10、17…… 等。我的研究探討了 S_n 和 S_m 的交集，並且關注交集中元素的數次方數的集合。我們的目標是找到 |S_0∩S_n | 和 |S_m∩S_n | 的通解，其中 |S_0∩S_n | 表示 S_0 和 S_n 的交集數，|S_m∩S_n | 則表示 S_m 和 S_n 的交集數。同時，我們也探討了是否存在相異的正整數 m 和 n 使得 |S_m∩S_n | 為無限大的情況，並且研究了當 S 包含高次方數時是否仍有通解的情況。透過這項研究，我們可以更深入地了解集合和交集的性質，同時也發現了新的計算方法和規律。希望這項研究可以為數學領域帶來更多啟示，並且讓大家對數學有更深入的認識。"},
+    {id: 8, mark: "M6", title: "非線性遞迴求解之研究", author: "林鈺軒", description: "在數學這塊廣闊的大陸上，有很多不同的居民，在離散這個國度裡，有一群人彼此之間有非常緊密的關係，他們是遞迴數列，其中卡特蘭數是裡面非常特別的一類，他們之間的關係並不是線性的，並且他們彼此之間都有關係，所以他們的遞迴式也長得很特別。我這次的研究主題就是跟卡特蘭數有著類似遞迴關係式的遞迴數列。給定初始條件，再寫出遞迴關係式，就可以知道這個數列的一般式。既然跟卡特蘭數有相似的遞迴關係式，結果當然也跟卡特蘭數有關啊！這次研究中，我研究了f(n)為常數函數、一次函數、二次函數、指數函數的形式。覺得這個很抽象？沒錯，我也覺得！想要了解更多嗎？那就5/25來現場聽我的分享～"},
+    {id: 9, mark: "M7", title: "方塊填滿方法", author: "陳尚寧", description: ""},
+    {id: 10, mark: "M8", title: "最快的晚餐", author: "薛德毓", description: "之前想到一個問題，若一個家族要聚餐，訂了一家晚上的餐廳一桌子的菜，一開始大家陸陸續續來，位子都隨興坐，直到所有人到齊了，大家開始考慮長幼關係，左尊右卑，希望按年齡大小排序，但空間狹窄只容許一次兩個人互相換位置，那這樣至少要換幾次才能夠達成長幼有序呢？\n\n於是我去討論一群人在直線排列與環狀排列下，以不同的交換規則進行置換，目標是將所有人都換到正確的位置上，而在不同的限制下，不一定所有的排列都能找到解，於是本篇去探討各種規則下有解的情形，以及在有解的情形中，花費最少步數的解是甚麼，這個最小值的期望值又是多少。\n\n看到其他有些組說不要浪費生命去看他們的專題，我這邊跟大家說來看我的專題不會浪費你的生命，你甚至還會因此對自己的生命更有自信，因為我太廢了。"},
+  ]);
+  const physics = ([
+    {id: 11, mark: "P1", title: "開發Ex-dSTORM光學顯微鏡實現次10奈米超解析影像", author:"廖乃頡", description:"礙於光的繞射性質，任何光學系統都有極限的光學解析度。這使得天文觀測與微小結構的分析難以進行—成像模糊無法辨別。電子顯微鏡需要真空環境、僅能觀察薄樣本抑或是碰撞與高溫導致樣本受破壞等缺點，光學顯微鏡在科學發展上仍是無法替代的。\n\ndSTORM (direct Stochastic Optical Reconstruction Microscopy) 和 U-ExM (Ultrastructure Expansion Microscopy) 是兩種強大的分子結構成像技術，具有高分辨率和靈敏度。在本次實驗中，我們結合dSTORM和U-ExM 對生物樣本進行更全面成像的最新進展。我們的研究重點是優化dSTORM和U-ExM的組合，以獲得最大的分辨率、準確性和速度。\n\n這些年來，分子生物學領域有顯著的發展。而此領域中，螢光顯微鏡技術能提供研究人員可視化的細胞結構和理解細胞過程的方法。但傳統螢光顯微鏡有許多侷限性，尤其是分辨率方面，使得人們在分子層級樣本的觀察與研究卻有點困難。這就是超解析顯微技術 (SRM) 的用武之地。\n\n憑藉 dSTORM 突破繞射極限分辨率能力，dSTORM 能提供相較傳統螢光顯微鏡技術前所未有的細節和清晰度。 U-ExM 透過對生物樣本進行化學膨脹，並在高倍放大下對其進行成像，以獲得更高的分辨率，並揭示以前無法獲得的細節。"},
+    {id: 12, mark: "P2", title: "比翼雙飛", author:"薛珺文", description:"近期無人機用途廣泛，不過缺點即是高耗電，因此我針對其個別扇葉進行研究。改變扇葉之數量以及角度，並測量其在不同電壓下的轉速、功率等，找出受力較大、電源功率較小者。結果發現，兩片扇葉以及扇葉角度為15度之風扇，其在功率以及受力方面表現較好；而扇葉越多或為偶數時，其單位電壓之轉速較高，反之亦然；且角度在15到30度之間的功率-受力轉換較佳，45度的風扇則較能以低轉速獲得高推力。往後希望能增加馬達數量，研究多個風扇間的交互關係，以找出最適合無人機使用的省電組合。"},
+    {id: 13, mark: "P3", title: "微帶天線陣列設計與實作", author:"程朗、張勝勛", description:"這篇研究探討微帶天線的設計。從一開始天線的理論到最後實作的成品，我們將一步步進 行。本研究目標在於做出 return loss 盡可能小、增益盡可能大，阻抗盡可能接近 50 Ω 的天 線。我們使用 Ansys HFSS 模擬我們的微帶天線，從單一個 patch 開始，一個一個串起來， 變成 1×4、2×4、4×4，一直調整天線的 dimensions，模擬以做出阻抗最匹配、指向性最高 的天線。模擬後，便可以以 Altium Designer 將其印在描圖紙上，並使用曝光機與蝕刻機， 便可實作出天線。本研究做出了 return loss −27.2 dB，增益 10.2 dBi 的 4×4 微帶天線陣列。"},
+  ]);
+  const biology = ([
+
+  ])
   const popupVisible = ref(false);
   const selectedWork = ref(null);
 
@@ -56,6 +74,36 @@
       <div v-if="activeTab === '數學'">
         <p>指導教師：尤貴弘</p>
         <p>尤貴弘，字達，號董（有懂？），是個溫文儒雅的好老師，備受大家喜愛。身為數資班的老師，和其他老師不一樣的是，老師從來不誇耀自己的能力，不會說自己數學很厲害，甚至每當我們想要老師使用微積分的時候，他常常說：「可是我不會微積分啊」外表看似在裝弱，但我們每個人都知道老師其實很有料，基本上無論問他甚麼問題，他都能夠很清楚、很有條理地回答，直到學生了解為止，可以看出老師真的是一位很有耐心的人。此外，無論在教課或解題時，實在很佩服老師可以把思路講得這麼透徹，其實不一定每個老師都會把為甚麼這樣算的想法講出來，貴弘老師卻把這部分做的很紮實，怪不得物理老師總是把數學知識推給貴弘老師了。另外，老師他喜歡吃菠蘿麵包，有一次他在課堂上情不自禁拿出來吃，說道：「菠蘿麵包很好吃啊」使我們哄堂大笑，也發覺老師是一個很簡單就滿足的人，讓我們知道以後可以如何回（賄）報（賂）老師。</p>
+        <br>
+        <div>
+          <h4>作品列表 (點擊作品名稱可查看詳細資訊)</h4>
+          <center>
+          <table>
+            <thead>
+            <tr>
+              <th>作品編號</th>
+              <th>作品名稱</th>
+              <th>作者</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="group in math" :key="group.id">
+                <td>{{ group.mark }}</td>
+                <td @click="showPopup(group)"><a>{{ group.title }}</a></td>
+                <td>{{ group.author }}</td>
+            </tr>
+            </tbody>
+          </table>
+          </center>
+          <div v-if="popupVisible" class="popup">
+            <div class="popup__header">
+              <h3>作品名稱: {{ selectedWork.title }}<br>作者: {{ selectedWork.author }}</h3>
+              <button class="close-btn" @click="hidePopup">X</button>
+            </div>
+            <p class="popup__content">{{ selectedWork.description }}</p>
+            <!-- <button class="popup__close" @click="hidePopup"><u>關閉</u></button> -->
+          </div>
+        </div>
       </div>
       <div v-if="activeTab === '物理'">
         <p>指導教師：柳順儒</p>
@@ -87,6 +135,35 @@
             <li>把"Tracker"念成"垂可"</li>
             <li>當你不想算小學數學時，"經過一番努力"就有答案了(偷看答案)</li>
           </ol>
+          <div>
+            <h4>作品列表 (點擊作品名稱可查看詳細資訊)</h4>
+            <center>
+            <table>
+              <thead>
+              <tr>
+                <th>作品編號</th>
+                <th>作品名稱</th>
+                <th>作者</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr v-for="group in physics" :key="group.id">
+                  <td>{{ group.mark }}</td>
+                  <td @click="showPopup(group)"><a>{{ group.title }}</a></td>
+                  <td>{{ group.author }}</td>
+              </tr>
+              </tbody>
+            </table>
+            </center>
+            <div v-if="popupVisible" class="popup">
+              <div class="popup__header">
+                <h3>作品名稱: {{ selectedWork.title }}<br>作者: {{ selectedWork.author }}</h3>
+                <button class="close-btn" @click="hidePopup">X</button>
+              </div>
+              <p class="popup__content">{{ selectedWork.description }}</p>
+              <!-- <button class="popup__close" @click="hidePopup"><u>關閉</u></button> -->
+            </div>
+          </div>
       </div>
       <div v-if="activeTab === '化學'">
         <p>指導教師：楊傑超</p>
@@ -165,7 +242,7 @@
             <tbody>
             <tr v-for="group in grouplist" :key="group.id">
                 <td>{{ group.mark }}</td>
-                <td @click="showPopup(group)"><a href="#">{{ group.title }}</a></td>
+                <td @click="showPopup(group)"><a>{{ group.title }}</a></td>
                 <td>{{ group.author }}</td>
             </tr>
             </tbody>
@@ -287,8 +364,9 @@ table th, td{
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
-  height: 80vh;
+  height: auto;
   max-height: 90%;
+  overflow: visible;
   overflow-y: auto;
   z-index: 100;
   background-color: rgb(34, 0, 75);
@@ -303,48 +381,22 @@ table th, td{
 .popup__header {
   width: 100%;
   padding: 50px;
+  padding-top: 20px;
+  padding-bottom: 15px;
   border-bottom: 2px solid #ccc;
-  margin-top: 0px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
-.popup__title-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.popup__title {
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-  margin: 0;
-}
-
-.popup__close {
-  cursor: pointer;
-  font-weight: bold;
-}
-
 .popup__content {
+  padding-top: 10px;
   padding: 50px;
+  max-height: 70vh;
+  overflow-y: auto;
   text-align: justify;
   white-space: pre-line;
 }
 
-.popup__content-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-
-.popup__image {
-  width: 100%;
-  margin-bottom: 20px;
-}
 .popup.is-active {
   display: block;
   backdrop-filter: blur(5px);
