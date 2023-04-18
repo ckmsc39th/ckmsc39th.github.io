@@ -18,6 +18,7 @@ const isMobile = () => {
 };
 
 // console.log(isMobile())
+
 </script>
 
 <style>
@@ -43,7 +44,7 @@ const isMobile = () => {
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: 0.55;
+  opacity: 0.9;
   background-image: url("/dots.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -54,10 +55,46 @@ const isMobile = () => {
 
 @keyframes background-flicker {
   0% {
-    opacity: 0.55;
+    opacity: 0.9;
   }
-  50% {
+  2% {
     opacity: 0.05;
+  }
+  3% {
+    opacity: 0.05;
+  }
+  4% {
+    opacity: 0.9;
+  }
+  41% {
+    opacity: 0.7;
+  }
+  42% {
+    opacity: 0.05;
+  }
+  44% {
+    opacity: 0.05;
+  }
+  45% {
+    opacity: 0.7;
+  }
+  65% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 0.4;
+  }
+  72% {
+    opacity: 0.1;
+  }
+  73% {
+    opacity: 0.1;
+  }
+  74% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.9;
   }
 }
 

@@ -43,8 +43,8 @@ export default {
       themeMeaning: "老實說，這部分不關我的事等公關快點把文案給我。",
       teammateList: [
         { id: 1, name: "廖乃頡", position: "網管組組長" },
-        { id: 2, name: "程朗神", position: "網管組組員1" },
-        { id: 3, name: "賴預期", position: "網管組組員2" },
+        { id: 2, name: "程朗神", position: "網管組組長2" },
+        { id: 3, name: "賴預期", position: "網管組組員" },
         { id: 4, name: "謝餅神", position: "網管空降支援大隊長" },
       ],
       musicMVLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
