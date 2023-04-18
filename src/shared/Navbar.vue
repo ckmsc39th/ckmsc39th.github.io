@@ -106,6 +106,7 @@ nav.navbar {
 }
 
 .homelink {
+  text-align: center;
   font-size: 3.75rem;
   font-weight: bold;
   font-family: cursiveFont;
@@ -115,6 +116,7 @@ nav.navbar {
 }
 
 .homelink:hover {
+  border-color: hsl(272, 71%, 81%);
   background-color: hsl(272, 71%, 81%);
   box-shadow: 0px 0px 0.5em 0.5px hsl(272, 100%, 81%);
   animation: text-flicker 3s linear infinite;
