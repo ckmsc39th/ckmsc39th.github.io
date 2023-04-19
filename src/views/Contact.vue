@@ -2,13 +2,25 @@
   <div class="tab-page contact-pg">
     <h1>Contact Us</h1>
     <div class="contact-methods">
-      <a href="mailto:39thckmsc@gmail.com">
+      <a
+        href="mailto:39thckmsc@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <i class="fas fa-envelope"></i> Email
       </a>
-      <a href="https://instagram.com/luminescence_ckmsc39th_">
+      <a
+        href="https://instagram.com/luminescence_ckmsc39th_"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <i class="fab fa-instagram"></i> Instagram
       </a>
-      <a href="https://github.com/ckmsc39th/ckmsc39th.github.io">
+      <a
+        href="https://github.com/ckmsc39th/ckmsc39th.github.io"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <i class="fab fa-github"></i> Github
       </a>
     </div>
