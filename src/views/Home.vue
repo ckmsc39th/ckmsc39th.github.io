@@ -53,6 +53,8 @@
 
 <script setup>
 import { ref } from "vue";
+import axios from "axios";
+
 const groupPhotoSrc = "groupPhoto.jpg";
 const eventDate = "2023年5月25&26日 (週四/五)";
 const eventTime = "2:00 PM - 5:00 PM";
@@ -60,12 +62,24 @@ const eventLocation = "100台北市中正區南海路56號";
 const eventDescription = "一定要來喔";
 const googleCalendarLink = "待加入";
 const googleMapsLink = "https://goo.gl/maps/kWBUJyyp6iXVHmib8";
+
 const email = ref("");
+const message = "hello";
 function saveEmail() {
   console.log(`Email saved: ${email.value}`);
   // TODO: add the code to send the email to server or do any other action with it
   email.value = "";
 }
+const sendEmail = () => {
+  const data = {
+    email: email.value,
+    message: message.value,
+  };
+  axios
+    .post("/api/send-email", data)
+    .then(() => console.log("Email sent successfully"))
+    .catch((error) => console.error("Error sending email:", error));
+};
 </script>
 
 <style scoped>

@@ -60,7 +60,7 @@
   </nav>
 </template>
 
-<script>
+<script setup>
 import { ref } from "vue";
 import feather from "feather-icons";
 feather.replace();
@@ -89,7 +89,6 @@ async function login() {
 
 function showLogin() {
   showingLogin.value = true;
-  console.log("showLogin");
 }
 
 function hideLogin() {
