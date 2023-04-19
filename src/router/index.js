@@ -1,16 +1,17 @@
 import { createRouter, createWebHistory } from "vue-router";
+import { comment } from "postcss";
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
 import Categories from "../views/Categories.vue";
 import Works from "../views/Works.vue";
 import Schedule from "../views/Schedule.vue";
 import Contact from "../views/Contact.vue";
+import Members from "../views/Members.vue";
 import Test from "../views/Test.vue";
 import ScheduleChild1 from "../views/ScheduleChild1.vue";
 import ScheduleChild2 from "../views/ScheduleChild2.vue";
 import ScheduleChild3 from "../views/ScheduleChild3.vue";
 import ScheduleChild4 from "../views/ScheduleChild4.vue";
-import { comment } from "postcss";
 
 const routes = [
   {
@@ -42,6 +43,11 @@ const routes = [
     path: "/contact",
     name: "Contact",
     component: Contact,
+  },
+  {
+    path: "/members",
+    name: Members,
+    component: Members,
   },
   {
     path: "/test",

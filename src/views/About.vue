@@ -88,14 +88,7 @@ const invitationLetter = "invitationLetter.png";
 </script>
 
 <style scoped>
-.theme,
 .music-mv,
-.invitation p {
-  font-size: 20px;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
 ul {
   list-style: none;
   margin: 0;
@@ -116,7 +109,11 @@ li {
   color: #007bff;
   text-decoration: underline;
 }
-
+.invitation p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
 .invitation img {
   max-width: 100%;
   height: auto;
