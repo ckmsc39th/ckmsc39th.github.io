@@ -51,25 +51,24 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      groupPhotoSrc: "groupPhoto.jpg",
-      eventDate: "2023年5月25&26日 (週四/五)",
-      eventTime: "2:00 PM - 5:00 PM",
-      eventLocation: "100台北市中正區南海路56號",
-      eventDescription: "一定要來喔",
-      googleCalendarLink: "待加入",
-      googleMapsLink: "https://goo.gl/maps/kWBUJyyp6iXVHmib8",
-    };
-  },
-};
-
-function sendEmail() {}
+<script setup>
+import { ref } from "vue";
+const groupPhotoSrc = "groupPhoto.jpg";
+const eventDate = "2023年5月25&26日 (週四/五)";
+const eventTime = "2:00 PM - 5:00 PM";
+const eventLocation = "100台北市中正區南海路56號";
+const eventDescription = "一定要來喔";
+const googleCalendarLink = "待加入";
+const googleMapsLink = "https://goo.gl/maps/kWBUJyyp6iXVHmib8";
+const email = ref("");
+function saveEmail() {
+  console.log(`Email saved: ${email.value}`);
+  // TODO: add the code to send the email to server or do any other action with it
+  email.value = "";
+}
 </script>
 
-<style>
+<style scoped>
 .group-photo img {
   max-width: 100%;
   height: auto;
@@ -127,14 +126,23 @@ function sendEmail() {}
   margin-bottom: 40px;
 }
 
+.register-email {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #007bff;
+}
+
 .register-button {
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
+  padding: 10px 20px;
   background-color: #007bff;
   border: none;
-  padding: 10px 20px;
   border-radius: 5px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }
