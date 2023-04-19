@@ -159,7 +159,7 @@ li {
 }
 
 .team-member-info h3 {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .team-member-info p {
