@@ -1,36 +1,40 @@
 <template>
   <div class="tab-page contact-pg">
     <h1>Contact Us</h1>
-    
-    <div class="div-page">
-      <a
-        href="https://mail.google.com/mail/?view=cm&fs=1&to=39thckmsc@gmail.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        >Email</a
-      >
+    <div class="contact-methods">
+      <a href="mailto:39thckmsc@gmail.com">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+      <a href="https://instagram.com/luminescence_ckmsc39th_">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <a href="https://github.com/ckmsc39th/ckmsc39th.github.io">
+        <i class="fab fa-github"></i> Github
+      </a>
     </div>
-
-    <div class="div-page">
-      <a href="https://instagram.com/luminescence_ckmsc39th_">Instagram</a>
-    </div>
-
-    <div class="div-page">
-      <a href="https://github.com/ckmsc39th/ckmsc39th.github.io">Github</a>
-    </div>
-    
   </div>
 </template>
 
-<style>
-
-.contact-pg a {
-  font-size: 24px;
-  margin-bottom: 10px;
+<style scoped>
+.contact-pg h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
 }
 
-.contact-pg a:hover {
+.contact-methods a {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  margin-bottom: 10px;
   color: #007bff;
+  text-decoration: none;
+}
+
+.contact-methods a i {
+  margin-right: 10px;
+}
+
+.contact-methods a:hover {
   text-decoration: underline;
 }
 </style>

@@ -33,8 +33,7 @@ export default {
 </script>
 
 <style>
-
-.sublink{
+.sublink {
   font-size: 24px;
 }
 .sublink:hover {

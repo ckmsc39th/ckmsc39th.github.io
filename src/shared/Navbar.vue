@@ -89,6 +89,7 @@ async function login() {
 
 function showLogin() {
   showingLogin.value = true;
+  console.log("showLogin");
 }
 
 function hideLogin() {
@@ -97,7 +98,6 @@ function hideLogin() {
 </script>
 
 <style>
-
 nav.navbar {
   display: flex;
   align-items: center;
@@ -158,7 +158,6 @@ nav.navbar {
   animation: text-flicker 3s linear infinite;
   color: black;
 }
-
 
 .login-button {
   background-color: transparent;

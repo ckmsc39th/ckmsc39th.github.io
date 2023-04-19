@@ -70,7 +70,6 @@ function sendEmail() {}
 </script>
 
 <style>
-
 .group-photo img {
   max-width: 100%;
   height: auto;

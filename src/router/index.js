@@ -46,12 +46,12 @@ const routes = [
   {
     path: "/test",
     name: Test,
-    component: Test
+    component: Test,
   },
   {
     path: "/day1-2F",
     name: "Day1-2F",
-    component: ScheduleChild1
+    component: ScheduleChild1,
   },
   {
     path: "/day1-4F",
@@ -67,7 +67,7 @@ const routes = [
     path: "/day2-4F",
     name: "Day2-4F",
     component: ScheduleChild4,
-  }
+  },
 ];
 
 const router = createRouter({

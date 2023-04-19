@@ -1,6 +1,5 @@
 <template>
   <div class="tab-page">
-
     <h1>About Us</h1>
     <div class="theme div-page">
       <h2>主題含意</h2>
@@ -38,10 +37,7 @@
         </li>
       </ul>
     </div>
-
   </div>
-
-  
 </template>
 
 <script>
@@ -63,8 +59,9 @@ export default {
 </script>
 
 <style scoped>
-
-.theme, .music-mv, .invitation p {
+.theme,
+.music-mv,
+.invitation p {
   font-size: 20px;
   line-height: 1.6;
   margin-bottom: 20px;
