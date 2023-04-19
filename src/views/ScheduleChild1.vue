@@ -1,6 +1,8 @@
 <template>
   <div class="tab-page d1-2f">
-    <h2>Day 1 2F展演廳</h2>
+    <h1>Schedule</h1>
+    <h2>Day 1 | 夢紅樓 2F展演廳</h2>
+
     <div class="div-page">
       <table>
         <tr>

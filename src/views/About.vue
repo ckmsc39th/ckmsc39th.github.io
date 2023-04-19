@@ -77,9 +77,9 @@ const teammateList = [
   },
   {
     id: 4,
-    name: "謝秉辰",
+    name: "謝秉宸",
     position: "非網管空降支援",
-    intro: "餅神。",
+    intro: "超弱。",
     photo: "/team/xie.jpg",
   },
 ];
@@ -91,8 +91,6 @@ const invitationLetter = "invitationLetter.png";
 .music-mv,
 ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 li {
@@ -119,6 +117,7 @@ li {
   height: auto;
   display: block;
   margin: 20px 0;
+  border-radius: 0.25em;
 }
 .team-member-list {
   display: flex;

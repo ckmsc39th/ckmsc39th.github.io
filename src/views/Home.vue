@@ -88,6 +88,7 @@ const sendEmail = () => {
   height: auto;
   display: block;
   margin-bottom: 20px;
+  border-radius: 0.25em;
 }
 
 .event-info .time-location {

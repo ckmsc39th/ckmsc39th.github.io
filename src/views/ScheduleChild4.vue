@@ -1,19 +1,23 @@
 <template>
   <div class="tab-page d2-4f">
-    <h2>Day 2 4F國際會議廳</h2>
+    <h1>Schedule</h1>
+    <h2>Day 2 | 夢紅樓 4F國際會議廳</h2>
     
-    <table>
-      <tr>
-        <th>Mark</th>
-        <th class="title">Title</th>
-        <th>Time</th>
-      </tr>
-      <tr v-for="group in day2Floor4GroupList" :key="group.id">
-        <td>{{ group.mark }}</td>
-        <td class="title">{{ group.title }}</td>
-        <td>{{ group.time }}</td>
-      </tr>
-    </table>
+    <div class="div-page">
+      <table>
+        <tr>
+          <th>Mark</th>
+          <th class="title">Title</th>
+          <th>Time</th>
+        </tr>
+        <tr v-for="group in day2Floor4GroupList" :key="group.id">
+          <td>{{ group.mark }}</td>
+          <td class="title">{{ group.title }}</td>
+          <td>{{ group.time }}</td>
+        </tr>
+      </table>
+    </div>
+    
 
     <div class="return-btn">
       <router-link :to="{ name: 'Schedule' }" class="link"
