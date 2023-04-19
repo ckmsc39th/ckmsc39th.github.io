@@ -21,9 +21,30 @@
     {id: 12, mark: "P2", title: "比翼雙飛", author:"薛珺文", description:"近期無人機用途廣泛，不過缺點即是高耗電，因此我針對其個別扇葉進行研究。改變扇葉之數量以及角度，並測量其在不同電壓下的轉速、功率等，找出受力較大、電源功率較小者。結果發現，兩片扇葉以及扇葉角度為15度之風扇，其在功率以及受力方面表現較好；而扇葉越多或為偶數時，其單位電壓之轉速較高，反之亦然；且角度在15到30度之間的功率-受力轉換較佳，45度的風扇則較能以低轉速獲得高推力。往後希望能增加馬達數量，研究多個風扇間的交互關係，以找出最適合無人機使用的省電組合。"},
     {id: 13, mark: "P3", title: "微帶天線陣列設計與實作", author:"程朗、張勝勛", description:"這篇研究探討微帶天線的設計。從一開始天線的理論到最後實作的成品，我們將一步步進 行。本研究目標在於做出 return loss 盡可能小、增益盡可能大，阻抗盡可能接近 50 Ω 的天 線。我們使用 Ansys HFSS 模擬我們的微帶天線，從單一個 patch 開始，一個一個串起來， 變成 1×4、2×4、4×4，一直調整天線的 dimensions，模擬以做出阻抗最匹配、指向性最高 的天線。模擬後，便可以以 Altium Designer 將其印在描圖紙上，並使用曝光機與蝕刻機， 便可實作出天線。本研究做出了 return loss −27.2 dB，增益 10.2 dBi 的 4×4 微帶天線陣列。"},
   ]);
+  const chemistry = ([
+    {id: 14, mark: "CH1", title: "銠催化消去反應之掌性選擇性優化及探討", author: "王子銓、李鈺捷", description: "本研究發現了一個新的銠金屬催化反應，此反應的銠金屬是由sp2碳移動至sp3碳，由於銠金屬接在sp2碳上的能量會比銠金屬接在sp3碳上的能量較低，因此我們決定探討此反應的反應機構。推測反應如圖。我們推測此反應能由低能量往高能量反應的原因是因為1,4-shift的那步可逆反應。根據勒沙特列原理，當C被反應而減少時，會促進B向C反應，一旦反應成C，又會立刻進行消去反應形成產物，使反應成功克服能量上的障礙，成功進行。"},
+    {id: 15, mark: "CH2", title: "殼聚醣-海藻酸鈉凝膠於魚類藥物釋放之應用可行性研究", author: "游書維、林柏碩", description: "殼聚醣-海藻酸鈉凝膠為一常見藥物釋放載體，但目前研究多以人類醫學作為目標應用。而魚類普遍使用之藥浴法可能造成魚體接觸較高藥物濃度之水體以達藥效而造成副作用，故本研究期望提供一於水中緩釋藥物之新方法，使水中魚類服藥穩定性增加。\n\n本研究以兩種染劑分子模擬藥物並予以進行包覆，探討不同釋放方式之釋放效率差異，並觀察此凝膠於不同酸鹼度、鹽度下之釋放情形，藉以瞭解此凝膠之藥物釋放功能是否適用於各式魚類之水體。\n\n本研究成果證實台盼藍分子可穩定於水中釋放，並瞭解凝膠於不同酸鹼度、鹽度下之釋放情形差異，可用於設計不同水質環境之魚類藥物凝膠。未來可進一步以實際藥物之凝膠處理魚類生物，觀察凝膠之釋放特性與本研究是否吻合。"},
+    {id: 16, mark: "CH3", title: "不同厚度鎳鉻鐵合金對於鎳鈷鉻合金之腐蝕行為影響", author: "洪浩烜、劉允中", description: "多主金屬合金對於功能性多層材料設計至關重要,為了研究其電化學之穩定性,我們以光學顯微鏡結合電化學裝置,輔以常規脈衝伏安法對於其腐蝕行為進行分析。\n\n我們先前的研究顯示鎳鉻鐵合金有優於鎳鈷鉻合金的抗腐蝕能力,因鎳鈷鉻合金與底層的金元素間發生鉻元素的化學態變化進而產生氫氧化鉻導致合金薄膜脫落,故我們將鎳鉻鐵合金薄膜濺鍍於鎳鈷鉻合金薄膜之上,期望透過鎳鉻鐵合金的電化學穩定性抑制鎳鈷鉻合金的脫落情形。\n\n本研究結果表明鍍上鎳鉻鐵合金層的樣品發生腐蝕變化的極化電位較大,延後了腐蝕反應發生的電位。代表其可以有效抑制原先鎳鈷鉻合金的腐蝕現象。\n\n現階段對於鎳鉻鐵合金抑制鎳鈷鉻合金腐蝕的作用機制尚不明確,之後我們希望能利用X 射線光電子能譜進行樣品的表面元素分析,進一步觀察樣品的表面產生了何種物質,得以產生保護層的效果。"},
+    {id: 17, mark: "CH4", title: "不同鉑、錫添加順序下合成的陽極觸媒對甲醇電催化反應之效應", author: "蔡佾紘、譚雍澐", description: "鉑金屬在燃料電池中扮演著不可或缺的角色，負責催化甲醇的氧化反應。本研究將探討在混入錫金屬的前提下，不同鉑與錫的添加順序，對催化效果的影響。\n本研究中，在合成觸媒的過程中有三種不同的鉑、錫添加順序，分別是鉑先加、兩者同時加和錫先加。合成出觸媒後，以粉末式X光繞射儀(XRD)、掃描式電子顯微鏡(SEM)搭載能量散射光譜儀(EDX)分析表面晶體結構、粒徑大小與元素比例，並以交流阻抗電化學分析儀(Potentiostat)進行循環伏安法(Cyclic Voltammetry, CV)，得到觸媒的電化學性質。\n從表面與晶體分析的結果可得，三種不同的添加狀況會形成兩種金屬分別包覆對方與被包覆，或是有二元金屬特性的合金態。而從電化學的結果可得，同時加的電極有最大的ECSA值，而Sn先加的電極在MOR、MA、SA都有最佳的效果。"},
+    {id: 18, mark: "CH5", title: "利用計算化學探討有機不對稱合成之光學選擇性—掌性分子熱力學模擬", author: "王世中", description: "四氫吡咯酮作為一種常用的藥物骨架，其已被發現在多種藥理學方面具有應用價值，例如預防骨質疏鬆、保護神經系統和抗癌。\n\n本研究的目的在於利用密度泛函理論進行全取代N-甲基吡咯酮的結構優化，並探索其掌性異構物中最穩定的結構。此外，本研究還針對此異構體進行熱力學反應模擬，試圖深入了解麥可加成反應與方醯胺類催化劑製備該化合物過程的反應機制，有文獻指出，氫鍵的形成可使分子的過渡態結構更加穩定，進而達到降低活化能的效果，因此本研究利用不同極性的溶劑（如甲苯和3-戊酮）和改變催化劑上苯胺基中苯環的取代基（CF3，NO2，NH2，H），試圖降低反應活化能來提升藥物合成之可行性。\n\n研究發現，部分掌性異構物在未產生顯著的立體障礙的情況下，其計算所得的能量相近。針對反應的部份，催化劑的修飾：若其苯環為拉電子基，將有助於降低反應的活化能溶劑效應：高極性的溶劑可有效降低反應活化能；未來將進一步分析氫鍵的作用程度來討論整個反應過程。而這些發現有助於有機藥物合成反應的設計，為未來的藥物研發提供了重要的參考依據。"},
+  ]);
   const biology = ([
-
-  ])
+    {id: 19, mark: "B1", title: "噬不可擋—現存藥物促進細胞自噬的研究", author: "何亮宏", description: "-自噬是甚麼?\n細胞自噬(autophagy)乃近年來研究的一大熱門領域，光是在2022年一年之中，就有10,446篇論文在pubmed上被發表，其潛在n價值可見一斑。不論是在癌症、神經退化性疾病、青光眼、細胞凋亡等等方面的研究，討論細胞自噬都是不可或缺的一環。所謂的細胞自噬可以簡單理解為細胞處理細胞內廢物的機制，在受到外部條件(如:缺乏養分、累積過多廢物等等)刺激後由自噬小體作用，達到代謝的目的。\n-題目在幹嘛?\n目前研究領域中較少副作用小且可以有效增進細胞自噬的藥物，我們希望可以透過現有藥物發現新的具有促進細胞自噬潛力的藥物，以較低的開發成本達到目標。\n-做了可以幹嗎?\n顯而易見的促進細胞自噬在實驗上可以成為很好的一個操縱變因，這些藥物可做為未來從事其他研究(如:阿茲海默症等神經退化性疾病)時的工具。\n-怎麼做?\n在實驗中我們使用了p62接合冷光酶發出冷光(luminescence，成發主題ㄟ耶)的快篩技術還有西方墨點法(Western blotting)的蛋白分析技術，討論在自噬前後含量會改變的蛋白質變化量，用來定量分析自噬程度。\n-還做了甚麼呢?在文案截稿的這天，我們還在努力透過調整不同操縱變因(如:多種藥物混合使用)進行實驗。\n-結果呢?請參與5/25,5/26建中39屆數資成果發表<Luminescence>，一定要來喔!"},
+    {id: 20, mark: "B2", title: "精神疾病的「仙丹」－探討一種新穎腺苷調控藥物對於思覺失調症及焦慮症的治療潛力－以藥物及壓力引發之疾病小鼠為模式", author: "曹祐彬、傅紹捷", description: "#介紹\n大家好，我們是生物組的曹祐彬和傅紹捷，我們在Line實驗室（整合神經科學與行為學實驗室，Lab of Integrated Neuroscience and Ethology, the “LINE”）中已經從事實驗接近一年半（Since 12/2021），這段時間裡，我們完成了腺苷調控藥物－NAM對於思覺失調症及焦慮症的行為研究。\n\n#何謂腺苷？\n常見的腺苷其實存在於三磷酸腺苷（ATP）中，相信學過高中生物大家都對這東西不陌生，他常被稱為身體中的能量代幣。當ATP中的三個磷酸根全數脫離，就會得到我們實驗中所使用的調控藥物主成份。腺苷受體在我們的身體中具有四種亞型A1、 A2A、A2B 和 A3，分別調控多種機制。\n\n#研究背景\n過去已有多篇研究指出腺苷與 A2A 受體結合後放出的下游傳遞物可以促進特定受體引發電流以及釋放特定傳導物，藉由這兩種機制可以達到治癒思覺失調症及焦慮症的效果。\n\n#實驗內容－引發思覺失調症及焦慮症。第一種以實驗室過去使用的藥物引發小鼠類思覺失調症。使用“類”這個字的原因是我們無法使用先天上已具備思覺失調症診斷的動物模型，而另外以人為操作方式引發產生類似思覺失調症的疾病。藉由藥物引發多種思覺失調症動物常見的行為表現，並且以腦區蛋白質表現量作為分子生物學的證據，以上兩種方式檢驗該款藥物有能力成功引發“類”思覺失調症模型的方式。第二種引發類焦慮症的方式為模擬生活中常見的壓力，引用他人文獻的操作刺激小鼠，引發小鼠類焦慮症的表現。稱為“類”的原因同上所述。\n\n#實驗內容－行為實驗\n實驗內容包含檢測：活動量、快感缺失，前刺激適應、不喜空曠區域的表現、探索傾向、掙脫傾向。\n\n在思覺失調症動物上可見活動量下降，如字面所示就是不想動。快感缺失比擬在人類身上就是我原本做會快樂的事情，現在做卻不快樂了。前刺激適應以人來比喻，我先給你一個我等一下會嚇你的警告，你就會做好心理準備而不會嚇到，但思覺失調症動物會失去警覺，而維持相同、甚至更高的驚嚇反應。\n\n在焦慮症小鼠上可見小鼠不喜待在空曠區域而偏好待在靠近牆壁、角落等陰暗環境，藉由這樣的天性和焦慮症增強的表現，即可測量其偏好程度作為焦慮症指標。因為焦慮症小鼠會出現憂鬱症狀，因此設計糖水偏好實驗，較憂鬱的小鼠會降低糖水飲用量，類似人類憂鬱嚴重時都不想做任何事。懸尾實驗利用憂鬱的小鼠更快放棄掙扎的特性，呈現憂鬱時放棄抵抗的特性，實驗時我們會將他懸吊起來測量其掙脫慾望，一般小鼠會努力掙脫，憂鬱小鼠偏好選擇在原地靜止、放棄掙扎。\n\n#實驗結果\n登登登…我們就留到成發的時候再來揭曉吧！結果是好是壞，歡迎來聽我們的報告！\n\n#實驗結論\n～～～總是要賣一點關子的吧～～～"},
+    {id: 21, mark: "B3", title: "Grid2 knockdown mice的顫抖模式研究", author: "", description: ""},
+    {id: 22, mark: "B4", title: "由台灣水域分離的噬菌體對Escherichia coli與Enterobacter cloacae的作用", author: "莊予睿", description: "由於抗生素的濫用和細菌的演化 治療感染多重抗藥性細菌的病人是個越發棘手的問 題 而噬菌體是一種能夠殺死細菌的病毒 它們會在細菌的細胞內引入自己的 DNA 隨後迅速大量複製 導致細菌脹大破裂而死 因此噬菌體有非常大的潛能可以對抗那些具有抗藥性的菌株 本實驗收集台灣各個角落的污水樣本（目前一共收集 21 個樣本） 並從中分離出噬菌體 測試其中行裂解性循環（Lytic cycle）的噬菌體對於大腸桿菌和陰溝腸桿菌的作用 成功分離出數株對陰溝腸桿菌行裂解性循環的噬菌體 並測試其抗逆境（溫度、鹽度等等）為之後的噬菌體療法進行準備"},
+    {id: 23, mark: "B5", title: "酵母菌spo13突變體減數分裂時程與MOP之研究", author: "王映筌、李秉澔", description: "#研究簡介\n酵母菌經減數分裂形成孢子時，在第二次分裂時會形成meiosisⅡ outer plaque(MOP)，進而形成四個單倍體孢子，但酵母菌spo13突變體產生孢子時，僅會進行第一次分裂，產生兩個二倍體孢子。本研究主要探討一般出芽型野生酵母菌與酵母菌spo13突變體進行MOP的時程比較與調控機制。\n*註:此處的分裂係指一次減數分裂中第一次與第二次分裂，不是兩次減數分裂，所以請不要再問什麼一次分裂完就是單倍體之類的蠢問題，莫以巨觀視角片面揣摩微觀細節。\n\n#研究過程\n首先統計產胞率並檢測標示蛋白Spo74-myc及Spo74-HA的螢光訊號結果是否可用於觀察MOP形成，再來以Spo74-myc或Spo74-HA為指標，比較野生型酵母菌和spo13 突變體MOP形成的時間點是否一致，最後依據所得結果進一步探討可能的調控因子為何，如：時間或染色體結構等(以上都是做實驗前的理想)。\n#研究結果\n一路顛頗，成發時揭曉。"},
+    {id: 24, mark: "B6", title: "Stomatal immunity under heat stress", author: "林靖閔", description: "Climate change has been shown to benefit pathogen infection and damage crop yield. Thus, plants developed complex, chemical-based signaling pathways to elicit immune responses. The first layer of the plant innate immunity is initiated by the perceptions of PAMPS (e.g. flg22) by PRRs (e.g. FLS2) causing stomata closure to prevent perfect entry points for opportunistic microbes.\nBioactive peptides generated through proteolytic processing are found to play an important role in signaling.\nIn this study, we demonstrated that Heat Stress will affect plants in stomatal immunity through ESCAPE-processed AtCAPE9. XCP1 (ESCAPE) is a caspase involved in the proteolysis of AtPR1, generating AtCAPE9 and initiating systematic immunity against pathogens in Arabidopsis. Furthermore, we narrow down the experiment to a molecular level to prove the decrease of XCP1 under Heat Stress.\n指導老師：朱芳琳老師\n指導教授：陳逸然教授\n指導學姊：范凱亭學姊"},
+    {id: 25, mark: "B7", title: "A Cryptic Hub for Development-Regulatory Mechanism of Plant Transcription Factor BPC on Development", author: "蔡紹騏", description: "GAGA motifs are found upstream of various genes regulating plant growth, and BPCs (BASIC PENTACYSTEINEs) are plant-specific GAGA-binding factors. Past research demonstrated that bpcs are pleiotropic mutants, leading to multiple developmental defects relating to the circadian clock. BPC1, BPC2, and BPC3 can be categorized into class 1, BPC4, BPC5, and BPC6 into class 2 respectively, with BPC5 being a pseudogene. It was proved that between and within classes, BPCs have overlapping and antagonistic regulations. I aim to analyze how class 1 BPCs regulate the circadian clock of Arabidopsis thaliana by monitoring the leaf circadian motion via 3D point clouds and implementing overexpression of BPCs with an inducible system. I compared downstream clock operation in double bpc1 bpc2 and triple bpc1 bpc2 bpc3 mutants with WT. The leaf motion was restricted in the bpc mutants, suggesting that clock operation was compromised. By conducting a series of RT-qPCR assays, I examined clock gene expression under mutant and induced lines of class I BPC. My results showed that class I BPCs are interlocked to form a repressive machinery repressing or activating the essential genes of the circadian clock and leaf development. To conclude, class I BPC functions as a regulatory hub towards the circadian clock and leaf development"},
+    {id: 26, mark: "B8", title: "靈長類組蛋白去乙醯基酶(HDAC)演化與蛋白結構分析摘要", author: "張宸維、黃尹謙", description: "#作者介紹\n大家好，我們是生物組的張宸維和黃尹謙，高一時在偉大的朱芳琳老師推薦下，到了台大生科系鄭貽生教授的蛋白結構實驗室學習，順利完成了用40分鐘找到教授及實驗室的speedrun創舉。\n#前情提要\n我們的研究就是在用電腦看一群猴子他們的蛋白的演化樹長什麼樣子，然後用軟體做出看起來酷酷的蛋白結構圖，實際上還好。本研究的器材只需筆電兩台，可說是混在生物組中的資訊組。\n#研究背景\n組蛋白去乙醯基酶(HDAC)是一種演化上保守的酶，也是影響細胞生長、分化、老化、凋亡等重要功能的表觀遺傳修飾蛋白質。它能夠改變染色體結構，進而抑制該區域的基因表現。然而，HDAC的不正常活化可能導致嚴重疾病，如癌症和神經退化性疾病。現在，已經有HDAC的抑制劑作為藥物使用。\n#研究簡介\n由於建中生與猴子在演化上有著密不可分的奇妙關係，因此，本研究以六種靈長類為對象進行演化分析，試圖解開它們之間的演化關係。再透過蛋白結構的比較，我們探討了它們之間的遺傳差異。最後，我們使用分子對接模擬HDAC與抑制劑的對接情形。通過這些結果，我們發現HDAC受到極強的天擇壓力，使得其分化後的功能被保留下來。同時，我們也發現抑制劑對接成功與否的差異，暗示著未來該化合物具有開發為藥物的潛力。\n#有什麼用呢?\n這項研究的發現有助於深入了解HDAC在演化中的重要作用，並為開發更有效的HDAC抑制劑提供了新思路。相信這將對未來的癌症和神經退化性疾病的治療帶來積極的影響。"},
+    {id: 27, mark: "B9", title: "草履蟲與各種綠藻內共生的各種結果", author: "陳昱任", description: "1.研究動機:內共生是驅動真核細胞演化的主要力量之一（Ex:粒線體與葉綠體），然而共生體如何建立內共生的機制至今仍不清楚。我使用草履蟲以及多種小球藻，來研究內共生的發生後細胞會發生甚麼改變。\n\n2.研究目的:過去的文獻中，較少有本研究進行實驗的綠藻種類的數據。本研究想完善這幾種綠藻與草履蟲內共生的數據並跟其他較常見的種類的比較有何不同。\n\n3.研究過程與方法:\n1.將綠藻與草履蟲混和後觀察(0、7、14、28、45天) 如45天時草履蟲與綠藻內共生數量超過50%則本次共生成功，並且可以拿來做後續的實驗。\n2.測量與綠藻內共生成功的草履蟲的各項數值，並進行比較。"},
+    {id: 28, mark: "B10", title: "蛋白質序列的改變對運輸功能與細胞定位的影響", author: "", description: ""},
+    {id: 29, mark: "B11", title: "靈長類組蛋白去乙醯基酶(HDAC)演化與蛋白結構分析摘要", author: "楊致綸、葉諭陽", description: "組蛋白去乙醯化酶(HDA)是能將組蛋白賴氨酸上乙醯基水解掉的一類酶，這使得 DNA 纏繞組蛋白更加緊密。因為 DNA 纏繞著組蛋白，而 DNA 的表達水平受到組蛋白乙醯化與去乙醯化水平的影響，所以這使組蛋白去乙醯化酶會影響性狀表現，就阿拉伯芥而言，組蛋白乙醯化與去乙醯化可以影響生長素等對植物發育造成變化的激素。這也是表觀遺傳的調控機制之一。為了確認究竟會有怎麼樣的改變並量化分析，我們進行了不同 HDA 開花時間的測試與葉片觀察、 測量的實驗，想要找出 HDA 對植物的影響與差異。\n研究結果指出HDA可能對開花時間呈現正相關或負相關，並且從發芽到開花時間的天數與開花時的葉片個數大致呈正比。而HDA也會本身對下胚軸(子葉到初生根的部分)的生長產生影響。未來期待可以研究HDA究竟是如何挑控生長素，進而對開花時間等造成影響。"},
+    {id: 30, mark: "B12", title: "泛素化酶 Peli1對T 細胞耗竭之影響與機制探討", author: "黃品睿", description: "#研究動機\n-\n腫瘤微環境常造就一個免疫抑制的環境而使 T cell 呈現耗竭的狀態使得免疫治療受到影響，若能在未來能夠有機會配合免疫療法治療，降低 T cell exhaustion，可進而提升免疫療法的成效\n-\n#研究目的\n-\n1.利用Jurkat細胞為研究模式，探討Peli1對於T cell exhaustion相關分子的調控\n2.分析Peli1 對於調控T cell exhaustion重要的轉錄因子所扮演的角色\n3.探討Peli1 調控 T cell exhaustion之路徑\n-\n#研究結果\n-\n這當然要等當天再講啊"},
+  ]);
+  const infor = ([
+    {id: 14, mark: "", title: "", author: "", description: ""},
+  ]);
   const popupVisible = ref(false);
   const selectedWork = ref(null);
 
@@ -184,6 +205,35 @@
         有別於其他科目的專題札記使用頻率時高時低，化學組的研究札記可是要週週寫週週交，甚至有組別早已寫滿換第二本，也有同學一次補齊一學期的十幾篇札記，可見札記在化專同學的心目中是一本難以忘懷的記憶
         <h4># 生命導師</h4>
         當你被超哥約談或者專題課留在學校被超哥拜訪，代表你即將接受一段激勵人心的話語洗禮，超哥會鼓勵我們參與各種科展競賽，競賽落榜會獲得溫馨安慰考試分數太爛也會獲得特別關心，當被超哥叫到名字時是五味雜陳，是既期待又怕受傷害，特別是免修結果要公布的時候。總之，當超哥看好你的時候，你最好用功一點
+        <div>
+          <h4>作品列表 (點擊作品名稱可查看詳細資訊)</h4>
+          <center>
+          <table>
+            <thead>
+            <tr>
+              <th>作品編號</th>
+              <th>作品名稱</th>
+              <th>作者</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="group in chemistry" :key="group.id">
+                <td>{{ group.mark }}</td>
+                <td @click="showPopup(group)"><a>{{ group.title }}</a></td>
+                <td>{{ group.author }}</td>
+            </tr>
+            </tbody>
+          </table>
+          </center>
+          <div v-if="popupVisible" class="popup">
+            <div class="popup__header">
+              <h3>作品名稱: {{ selectedWork.title }}<br>作者: {{ selectedWork.author }}</h3>
+              <button class="close-btn" @click="hidePopup">X</button>
+            </div>
+            <p class="popup__content">{{ selectedWork.description }}</p>
+            <!-- <button class="popup__close" @click="hidePopup"><u>關閉</u></button> -->
+          </div>
+        </div>
       </div>
       <div v-if="activeTab === '生物'">
         <p>指導教師：朱芳琳</p>
@@ -214,7 +264,35 @@
         <p>每次上課都積極使用手部動作活化教學，希望藉由這些肢體的輔助，展現對同學的關愛與熱情，讓學習更加生動有趣（他越是手打開開，同學們越不知道他在上什麼）</p>
         <h4># 編審委員</h4>
         <p>是翰林版生物課本的編審委員，所以只要發現課本寫的不好可以反應給老師知道，但會不會改就是另一回事了。</p>
-
+        <div>
+          <h4>作品列表 (點擊作品名稱可查看詳細資訊)</h4>
+          <center>
+          <table>
+            <thead>
+            <tr>
+              <th>作品編號</th>
+              <th>作品名稱</th>
+              <th>作者</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="group in biology" :key="group.id">
+                <td>{{ group.mark }}</td>
+                <td @click="showPopup(group)"><a>{{ group.title }}</a></td>
+                <td>{{ group.author }}</td>
+            </tr>
+            </tbody>
+          </table>
+          </center>
+          <div v-if="popupVisible" class="popup">
+            <div class="popup__header">
+              <h3>作品名稱: {{ selectedWork.title }}<br>作者: {{ selectedWork.author }}</h3>
+              <button class="close-btn" @click="hidePopup">X</button>
+            </div>
+            <p class="popup__content">{{ selectedWork.description }}</p>
+            <!-- <button class="popup__close" @click="hidePopup"><u>關閉</u></button> -->
+          </div>
+        </div>
       </div>
       <div v-if="activeTab === '資訊'">
         <p>指導教師：王鼎中</p>
@@ -356,7 +434,7 @@ table th, td{
   padding-bottom: 10px;
   padding-left: 30px;
   padding-right: 30px;
-  text-align: center;
+  text-align: left;
 }
 .popup {
   position: fixed;
