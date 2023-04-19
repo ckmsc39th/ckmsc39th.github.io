@@ -10,63 +10,14 @@
 </template>
 
 <script setup>
-const members = [
-  { id: 1, name: "name", position: "position" },
-  { id: 2, name: "name", position: "position" },
-  { id: 3, name: "name", position: "position" },
-  { id: 4, name: "name", position: "position" },
-  { id: 5, name: "name", position: "position" },
-  { id: 6, name: "name", position: "position" },
-  { id: 7, name: "name", position: "position" },
-  { id: 8, name: "name", position: "position" },
-  { id: 9, name: "name", position: "position" },
-  { id: 10, name: "name", position: "position" },
-  { id: 11, name: "name", position: "position" },
-  { id: 12, name: "name", position: "position" },
-  { id: 13, name: "name", position: "position" },
-  { id: 14, name: "name", position: "position" },
-  { id: 15, name: "name", position: "position" },
-  { id: 16, name: "name", position: "position" },
-  { id: 17, name: "name", position: "position" },
-  { id: 18, name: "name", position: "position" },
-  { id: 19, name: "name", position: "position" },
-  { id: 20, name: "name", position: "position" },
-  { id: 21, name: "name", position: "position" },
-  { id: 22, name: "name", position: "position" },
-  { id: 23, name: "name", position: "position" },
-  { id: 24, name: "name", position: "position" },
-  { id: 25, name: "name", position: "position" },
-  { id: 26, name: "name", position: "position" },
-  { id: 27, name: "name", position: "position" },
-  { id: 28, name: "name", position: "position" },
-  { id: 29, name: "name", position: "position" },
-  { id: 30, name: "name", position: "position" },
-  { id: 31, name: "name", position: "position" },
-  { id: 32, name: "name", position: "position" },
-  { id: 33, name: "name", position: "position" },
-  { id: 34, name: "name", position: "position" },
-  { id: 35, name: "name", position: "position" },
-  { id: 36, name: "name", position: "position" },
-  { id: 37, name: "name", position: "position" },
-  { id: 38, name: "name", position: "position" },
-  { id: 39, name: "name", position: "position" },
-  { id: 50, name: "name", position: "position" },
-  { id: 51, name: "name", position: "position" },
-  { id: 52, name: "name", position: "position" },
-  { id: 53, name: "name", position: "position" },
-  { id: 54, name: "name", position: "position" },
-  { id: 55, name: "name", position: "position" },
-  { id: 56, name: "name", position: "position" },
-  { id: 57, name: "name", position: "position" },
-  { id: 58, name: "name", position: "position" },
-  { id: 59, name: "name", position: "position" },
-  { id: 60, name: "name", position: "position" },
-  { id: 61, name: "name", position: "position" },
-  { id: 62, name: "name", position: "position" },
-  { id: 63, name: "name", position: "position" },
-  { id: 64, name: "name", position: "position" },
-  { id: 65, name: "name", position: "position" },
-];
+import { ref } from "vue";
+const members = ref([]);
+const loadJSON = async () => {
+  const response = await fetch("/members.json");
+  const data = await response.json();
+  members.value = data;
+};
+loadJSON();
 </script>
 
 <style>
