@@ -80,7 +80,7 @@ const teammateList = [
     name: "謝秉宸",
     position: "非網管空降支援",
     intro: "超弱。",
-    photo: "/team/xie.jpg",
+    photo: "/team/xie.png",
   },
 ];
 const musicMVLink = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
