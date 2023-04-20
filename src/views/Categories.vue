@@ -77,16 +77,7 @@
 </script>
 
 <template>
-<<<<<<< HEAD
-  <div class="categories_bg">
-    <p>Sorry, the Categories page is still under construction...</p>
-  </div>
-</template>
-
-<style>
-.categories_bg {
-=======
-  <div class="categories-page">
+  <div class="categories-page tab-page">
     <div class="categories-placeholder">
       <p>Hi! This is the Categories Page</p>
     </div>
@@ -397,25 +388,17 @@ body.showpopup {
   backdrop-filter: blur(5px);
 }
 .categories-placeholder {
->>>>>>> categories-dev
   width: w-full;
   height: fit-content;
   background-color: lightcoral;
   text-align: center;
 }
-<<<<<<< HEAD
-.categories_bg p {
-=======
 
 .categories-placeholder p {
->>>>>>> categories-dev
   color: darkslateblue;
   font-style: italic;
   font-size: xx-large;
 }
-<<<<<<< HEAD
-</style>
-=======
 .text-blue-500 {
   color: #22a7f0;
 }
@@ -548,4 +531,3 @@ table th, td{
   color: #666;
 }
 </style>
->>>>>>> categories-dev
