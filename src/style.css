@@ -4,91 +4,109 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: cursiveFont;
-    src: url("/GreatVibes-Regular.ttf");
+  font-family: cursiveFont;
+  src: url("/GreatVibes-Regular.ttf");
   }
 
 @font-face {
-    font-family: Dongle;
-    src: url("/Dongle-Regular.ttf");
+  font-family: Dongle;
+  src: url("/Dongle-Regular.ttf");
 }
 
 @font-face {
-    font-family: Signika;
-    src: url("/Signika-Regular.ttf");
+  font-family: Signika;
+  src: url("/Signika-Regular.ttf");
 }
 
 .tab-page {
-    width: 800px;
-    margin: auto;
-    padding: 20px;
-    font-family: "cwTeXYen", Signika, "Segoe UI", sans-serif;
-    color: #fff;
-    background-color: rgba(191, 191, 191, 0.07);
-    border-radius: 0.5em;
+  width: 900px;
+  margin: auto;
+  padding: 20px;
+  font-family: "cwTeXYen", Signika, "Segoe UI", sans-serif;
+  color: #fff;
+  background-color: rgba(191, 191, 191, 0.07);
+  border-radius: 0.5em;
 }
 
 .div-page{
-    width: 720px;
-    margin: 3% auto;
-    padding: 20px;
-    background-color: rgba(191, 191, 191, 0.1);
-    border-radius: 0.5em;
+  width: 800px;
+  margin: 3% auto;
+  padding: 20px;
+  background-color: rgba(191, 191, 191, 0.1);
+  border-radius: 0.5em;
 }
 
 .return-btn {
-    display: flex;
-    width: 720px;
-    margin: 3% auto;
-    padding: 20px;
-    place-content: flex-end;
+  display: flex;
+  width: 720px;
+  margin: 3% auto;
+  padding: 20px;
+  place-content: flex-end;
 }
 
 h1 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
   
 h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #82cbf0;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color:rgb(150, 180, 230);
+}
+
+
 @keyframes text-flicker {
-    0% {
-      opacity: 0.7;
-    }
-    2% {
-      opacity: 0.5;
-    }
-    8% {
-      opacity: 0.1;
-    }
-    9% {
-      opacity: 0.3;
-    }
-  
-    12% {
-      opacity: 0.1;
-    }
-    25% {
-      opacity: 0.3;
-    }
-    30% {
-      opacity: 1;
-    }
-    55% {
-      opacity: 0.7;
-    }
-    60% {
-      opacity: 0.5;
-    }
-    75% {
-      opacity: 0.6;
-    }
-    90% {
-      opacity: 0.2;
-    }
+  0% {
+    opacity: 0.7;
+  }
+  2% {
+    opacity: 0.5;
+  }
+  8% {
+    opacity: 0.1;
+  }
+  9% {
+    opacity: 0.3;
+  }
+
+  12% {
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0.7;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.2;
+  }
 }

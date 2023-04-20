@@ -6,6 +6,12 @@
         <div class="member-position">{{ member.position }}</div>
       </li>
     </ul>
+
+    <div class="return-btn">
+      <router-link :to="{ name: 'About' }" class="link"
+      >返回</router-link>
+    </div>
+
   </div>
 </template>
 

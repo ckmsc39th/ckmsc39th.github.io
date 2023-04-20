@@ -112,5 +112,7 @@ export default {
 
 .title {
   width: 500px;
+  padding-left: 20px;
+  text-align: left;
 }
 </style>
