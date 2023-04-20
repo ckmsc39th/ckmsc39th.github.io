@@ -1,0 +1,1 @@
+let a="useandom-26T198340PX75pxJACKVERYMINDBUSHWOLF_GQZbfghjklqvwyzrict",i=(e,t=21)=>(l=t)=>{let r="",n=l;for(;n--;)r+=e[Math.random()*e.length|0];return r},h=(e=21)=>{let t="",l=e;for(;l--;)t+=a[Math.random()*64|0];return t};var o={nanoid:h,customAlphabet:i};export{o as n};
