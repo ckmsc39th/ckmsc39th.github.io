@@ -26,7 +26,7 @@
     </div>
 
     <div class="team div-page">
-      <h2>Developor List</h2>
+      <h2>Developer List</h2>
       <div class="team-member-list">
         <div
           v-for="teammate in teammateList"
