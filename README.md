@@ -37,7 +37,7 @@ To run this webpage locally, please follow the instructions below:
 - Nigel-Liao - [nigelliao123@gmail.com](mailto:nigelliao123@gmail.com)
 - bensonhsieh2006 - [email@example.com](mailto:email@example.com)
 - random-integer - [lancameb@hotmail.com](mailto:lancameb@hotmail.com)
-- expect1ai - [expectlai@outlook.com](mailto:expectlai@outlook.com)
+- expect1ai - [laiyuchi@proton.me](mailto:laiyuchi@proton.me)
 
 ## License
 

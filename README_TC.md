@@ -42,7 +42,7 @@
 - 廖乃頡 - [nigelliao123@gmail.com](mailto:nigelliao123@gmail.com)
 - 謝秉宸 - [email@example.com](mailto:email@example.com)
 - 程朗 - [lancameb@hotmail.com](mailto:lancameb@hotmail.com)
-- 賴預期 - [expectlai@outlook.com](mailto:expectlai@outlook.com)
+- 賴昱錡 - [laiyuchi@proton.me](mailto:laiyuchi@proton.me)
 
 ## 憑證
 

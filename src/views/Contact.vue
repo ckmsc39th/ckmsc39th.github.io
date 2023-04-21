@@ -67,9 +67,9 @@ const teammateList = [
   },
   {
     id: 3,
-    name: "賴預期",
+    name: "賴昱錡",
     position: "網管組組員",
-    intro: "預期 與其",
+    intro: "我不會寫程式。",
     photo: "/team/lai.jpg",
   },
   {
