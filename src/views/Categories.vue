@@ -69,7 +69,7 @@
     selectedWork.value = null;
   }
   function switchTab(newTab) {
-    this.activeTab = newTab;
+    activeTab.value = newTab;
     if (newTab === '化學') {
       // play a sound effect
     }
