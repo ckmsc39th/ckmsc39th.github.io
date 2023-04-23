@@ -1,8 +1,8 @@
-# Jianguo Middle School Mathematics and Science Class Results Presentation
+# Taipei Municipal Jianguo High School Mathematics and Science Class Project Presentation
 
 [中文版說明文件連結](./README_TC.md)
 
-This webpage is created to promote the presentation of the results of the mathematics and science class of Jianguo Middle School. The presentation will be held on the afternoon of 5/25 and 5/26 at Jianguo Middle School.
+This webpage is established to promote the project presentation of the Jianguo High School mathematics and science class. The presentation will be held on the afternoon of 5/25 and 5/26 at Jianguo High School.
 
 ## Group Photo
 
@@ -10,11 +10,11 @@ This webpage is created to promote the presentation of the results of the mathem
 
 ## Location
 
-Jianguo Middle School (No. 56, Nanhai Rd., Zhongzheng Dist., Taipei City)
+Taipei Municipal Jianguo High School (No. 56, Nanhai Rd., Zhongzheng Dist., Taipei City)
 
 ## Date & Time
 
-2023/5/25&26 (Thu/Fri) 2:00 PM - 5:00 PM
+2023/5/25&26 (Thu/Fri) 1:00 PM - 5:00 PM
 
 ## Framework
 
@@ -35,7 +35,7 @@ To run this webpage locally, please follow the instructions below:
 ## Contributors
 
 - Nigel-Liao - [nigelliao123@gmail.com](mailto:nigelliao123@gmail.com)
-- bensonhsieh2006 - [email@example.com](mailto:email@example.com)
+- bensonhsieh2006 - [bensonhsieh2006@gmail.com](mailto:bensonhsieh2006@gmail.com)
 - random-integer - [lancameb@hotmail.com](mailto:lancameb@hotmail.com)
 - expect1ai - [laiyuchi@proton.me](mailto:laiyuchi@proton.me)
 
