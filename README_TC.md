@@ -19,7 +19,7 @@
 
 ## 日期與時間
 
-2023 年 5 月 25&26 日 (週四/五) 2:00 PM - 5:00 PM
+2023 年 5 月 25&26 日 (週四/五) 1:00 PM - 5:00 PM
 
 ## 框架
 
@@ -40,7 +40,7 @@
 ## 貢獻者
 
 - 廖乃頡 - [nigelliao123@gmail.com](mailto:nigelliao123@gmail.com)
-- 謝秉宸 - [email@example.com](mailto:email@example.com)
+- 謝秉宸 - [bensonhsieh2006@gmail.com](mailto:bensonhsieh2006@gmail.com)
 - 程朗 - [lancameb@hotmail.com](mailto:lancameb@hotmail.com)
 - 賴昱錡 - [laiyuchi@proton.me](mailto:laiyuchi@proton.me)
 
