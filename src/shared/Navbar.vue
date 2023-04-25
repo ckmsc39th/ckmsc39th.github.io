@@ -6,17 +6,17 @@
       >
     </div>
 
-    <div class="flex items-center gap-1 pr-20 pl-20">
+    <div class="flex items-center gap-1 pl-[5%] pr-[5%]">
       <router-link :to="{ name: 'About' }" class="link">About</router-link>
       <router-link :to="{ name: 'Categories' }" class="link"
         >Categories</router-link
       >
-      <router-link :to="{ name: 'Works' }" class="link">Works</router-link>
       <router-link :to="{ name: 'Schedule' }" class="link"
         >Schedule</router-link
       >
       <router-link :to="{ name: 'Contact' }" class="link">Contact</router-link>
     </div>
+    
     <div class="flex items-center gap-1">
       <button class="login-button" @click="showLogin">Login</button>
       <div class="login-overlay" v-if="showingLogin">
@@ -46,7 +46,7 @@
         rel="noopener noreferrer"
         class="icon"
       >
-        <vue-feather type="youtube" size="25"></vue-feather>
+        <vue-feather type="youtube" size="20"></vue-feather>
       </a>
       <a
         href="https://instagram.com/luminescence_ckmsc39th_"
@@ -54,7 +54,7 @@
         rel="noopener noreferrer"
         class="icon"
       >
-        <vue-feather type="instagram" size="25"></vue-feather>
+        <vue-feather type="instagram" size="20"></vue-feather>
       </a>
     </div>
   </nav>
@@ -98,15 +98,15 @@ function hideLogin() {
 
 <style>
 nav.navbar {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 25px 100px;
+  padding: 2% 5%;
 }
 
 .homelink {
   text-align: center;
-  font-size: 3.75rem;
   font-weight: bold;
   font-family: cursiveFont;
   padding: 20px;
@@ -123,12 +123,10 @@ nav.navbar {
 }
 
 .link {
-  font-size: 1.1rem;
   font-family: Calisto MT;
   font-weight: bold;
   border: 0.15em solid;
   border-radius: 0.45em;
-  width: 100px;
   text-align: center;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -146,7 +144,6 @@ nav.navbar {
   align-items: center;
   border: 0.2em solid;
   border-radius: 0.5em;
-  padding: 11px;
   color: white;
 }
 
@@ -162,12 +159,10 @@ nav.navbar {
   background-color: transparent;
   color: white;
   cursor: pointer;
-  font-size: 1.1rem;
   font-family: Calisto MT;
   font-weight: bold;
   border: 0.15em solid;
   border-radius: 0.45em;
-  width: 100px;
   text-align: center;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -291,5 +286,45 @@ nav.navbar {
 ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #ddd;
+}
+
+@media (max-width: 2000px) {
+  .homelink{
+    font-size: 3.75rem;
+  }
+
+  .link{
+    font-size: 1.1rem;
+    width: 100px;
+  }
+
+  .login-button{
+    font-size: 1.1rem;
+    width: 100px;
+  }
+
+  .icon{
+    padding: 14px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .homelink{
+    font-size: 3rem;
+  }
+
+  .link{
+    font-size: 0.8rem;
+    width: 70px;
+  }
+
+  .login-button{
+    font-size: 0.8rem;
+    width: 70px;
+  }
+
+  .icon{
+    padding: 10px;
+  }
 }
 </style>

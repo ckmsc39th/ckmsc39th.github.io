@@ -1,13 +1,14 @@
 <template>
   <div class="tab-page d2-4f">
     <h1>Schedule</h1>
-    <h2>Day 2 | 夢紅樓 4F國際會議廳</h2>
     
     <div class="div-page">
+      <h2>Day 2 | 夢紅樓 4F國際會議廳</h2>
+      
       <table>
         <tr>
           <th>Mark</th>
-          <th class="title">Title</th>
+          <th>Title</th>
           <th>Time</th>
         </tr>
         <tr v-for="group in day2Floor4GroupList" :key="group.id">
@@ -97,19 +98,4 @@ export default {
 
 <style>
 
-.d2-4f table {
-  width: 100%;
-}
-
-.d2-4f th, td {
-  font-size: 20px;
-  border: 1px solid #fff;
-  text-align: center;
-}
-
-.title {
-  width: 500px;
-  padding-left: 20px;
-  text-align: left;
-}
 </style>

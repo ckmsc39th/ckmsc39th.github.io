@@ -80,7 +80,7 @@
   <div class="tab-page">
     <h1>Categories</h1>
     <br/>
-    <div class="flex justify-start space-x-4">
+    <div class="flex justify-start space-x-4 ml-[3%]">
       <div
         v-for="tab in tabs"
         :key="tab"
@@ -121,7 +121,7 @@
             <tbody>
             <tr v-for="group in math" :key="group.id">
                 <td>{{ group.mark }}</td>
-                <td @click="showPopup(group)"><p class="touch">{{ group.title }}</p></td>
+                <td @click="showPopup(group)" class="touch">{{ group.title }}</td>
                 <td>{{ group.author }}</td>
             </tr>
             </tbody>
@@ -424,45 +424,6 @@ body.showpopup {
   color: #22a7f0;
 }
 
-
-.theme p {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-ul {
-  list-style: disc;
-  margin: 0;
-  padding: 20px;
-}
-
-ol {
-  list-style: decimal;
-  margin: 0;
-  padding: 20px;
-}
-
-li {
-  font-size: 16px;
-  line-height: 1.3;
-  margin-bottom: 10px;
-}
-
-table {
-  width: 100%
-}
-
-table th, td{
-  text-align: center;
-}
-
-.title {
-  width: 500px;
-  padding-left: 20px;
-  text-align: left;
-}
-
 .popup {
   position: fixed;
   top: 50%;
@@ -520,9 +481,5 @@ table th, td{
 .close-btn:hover {
   color: #666;
 }
-.touch:hover {
-  cursor: pointer;
-  color: #00aeff;
-  text-decoration: underline;
-}
+
 </style>
