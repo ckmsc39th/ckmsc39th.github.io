@@ -23,7 +23,6 @@ const isMobile = () => {
   position: relative;
   z-index: 0;
   min-width: fit-content;
-  min-height: 100vh;
   background-color: rgb(31 41 55);
   background-image: url("/keyVisualImg.jpg");
   background-size: cover;

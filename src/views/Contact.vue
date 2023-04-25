@@ -92,6 +92,7 @@ const teammateList = [
   align-items: center;
   font-size: 24px;
   margin-bottom: 10px;
+  margin-left: 3%;
   color: #007bff;
   text-decoration: none;
 }

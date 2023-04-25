@@ -12,8 +12,8 @@
         快來看看我們最新的成果發表主題曲:
         <a :href="musicMVLink" target="_blank">點擊我^^</a>
         <iframe
-          width="90%"
-          height="70%"
+          width="100%"
+          height="360"
           src="https://www.youtube-nocookie.com/embed/z0jQZxH7NgM"
           title="YouTube video player"
           frameborder="0"
@@ -45,6 +45,10 @@ const invitationLetter = "invitationLetter.png";
 
 <style scoped>
 
+.music-mv{
+  max-width: 100%;
+  min-height: fit-content;
+}
 .music-mv a {
   text-decoration: none;
 }

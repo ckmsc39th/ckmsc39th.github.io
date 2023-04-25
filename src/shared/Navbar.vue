@@ -1,12 +1,12 @@
 <template>
   <nav class="navbar">
-    <div class="flex items-center gap-1">
+    <div class="column-1">
       <router-link :to="{ name: 'Home' }" class="homelink"
         >Luminescence</router-link
       >
     </div>
 
-    <div class="flex items-center gap-1 pl-[5%] pr-[5%]">
+    <div class="column-2">
       <router-link :to="{ name: 'About' }" class="link">About</router-link>
       <router-link :to="{ name: 'Categories' }" class="link"
         >Categories</router-link
@@ -16,8 +16,8 @@
       >
       <router-link :to="{ name: 'Contact' }" class="link">Contact</router-link>
     </div>
-    
-    <div class="flex items-center gap-1">
+
+    <div class="column-3">
       <button class="login-button" @click="showLogin">Login</button>
       <div class="login-overlay" v-if="showingLogin">
         <div class="login-container">
@@ -57,6 +57,11 @@
         <vue-feather type="instagram" size="20"></vue-feather>
       </a>
     </div>
+
+    <div class="column-4">
+      <h1>Hi</h1>
+    </div>
+
   </nav>
 </template>
 
@@ -103,6 +108,26 @@ nav.navbar {
   align-items: center;
   justify-content: space-between;
   padding: 2% 5%;
+}
+
+.column-1{
+  display: flex;
+  align-items: center;
+  gap: 1px
+}
+
+.column-2{
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.column-3{
+  display: flex;
+  align-items: center;
+  gap: 1px
 }
 
 .homelink {
@@ -325,6 +350,22 @@ nav.navbar {
 
   .icon{
     padding: 10px;
+  }
+}
+
+@media (max-width: 801px) {
+  .column-2{
+    display: none;
+  }
+
+  .column-3{
+    display: none;
+  }
+}
+
+@media (min-width: 801px) {
+  .column-4{
+    display: none;
   }
 }
 </style>
