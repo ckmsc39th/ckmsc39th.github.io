@@ -92,6 +92,7 @@ const teammateList = [
   align-items: center;
   font-size: 24px;
   margin-bottom: 10px;
+  margin-left: 3%;
   color: #007bff;
   text-decoration: none;
 }
@@ -122,8 +123,8 @@ const teammateList = [
 }
 
 .team-member-photo {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: 20px;

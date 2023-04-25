@@ -54,7 +54,7 @@ loadJSON();
   margin: 20px;
   box-shadow: 0px 0px 15px #eee;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.85);
   font-size: 1.2em;
   font-weight: bold;
   color: #333;

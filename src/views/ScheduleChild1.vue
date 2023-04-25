@@ -1,13 +1,14 @@
 <template>
   <div class="tab-page d1-2f">
     <h1>Schedule</h1>
-    <h2>Day 1 | 夢紅樓 2F展演廳</h2>
 
     <div class="div-page">
+      <h2>Day 1 | 夢紅樓 2F展演廳</h2>
+      
       <table>
         <tr>
           <th>Mark</th>
-          <th class="title">Title</th>
+          <th>Title</th>
           <th>Time</th>
         </tr>
         <tr v-for="group in day1Floor2GroupList" :key="group.id">
@@ -90,20 +91,5 @@ export default {
 </script>
 
 <style>
-.d1-2f table {
-  width: 100%;
-}
-
-.d1-2f th, td {
-  font-size: 20px;
-  border: 1px solid #fff;
-  text-align: center;
-}
-
-.title {
-  width: 500px;
-  padding-left: 20px;
-  text-align: left;
-}
 
 </style>

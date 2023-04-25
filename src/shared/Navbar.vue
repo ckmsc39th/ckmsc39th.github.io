@@ -1,24 +1,27 @@
 <template>
   <nav class="navbar">
-    <div class="flex items-center gap-1">
+    <div class="column-1">
       <router-link :to="{ name: 'Home' }" class="homelink"
         >Luminescence</router-link
       >
     </div>
 
-    <div class="flex items-center gap-1 pr-20 pl-20">
+    <div class="column-2">
       <router-link :to="{ name: 'About' }" class="link">About</router-link>
       <router-link :to="{ name: 'Categories' }" class="link"
         >Categories</router-link
       >
-      <router-link :to="{ name: 'Works' }" class="link">Works</router-link>
       <router-link :to="{ name: 'Schedule' }" class="link"
         >Schedule</router-link
       >
       <router-link :to="{ name: 'Contact' }" class="link">Contact</router-link>
     </div>
-    <div class="flex items-center gap-1">
+
+
+    <div class="column-3">
+
       <button class="login-button" @click="showLogin">Login</button>
+
       <div class="login-overlay" v-if="showingLogin">
         <div class="login-container">
           <h2>Login</h2>
@@ -40,23 +43,78 @@
           <button class="close-button" @click="hideLogin">Cancel</button>
         </div>
       </div>
-      <a
-        href="https://www.youtube.com/@ckmsc39th_luminescence"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="icon"
-      >
-        <vue-feather type="youtube" size="25"></vue-feather>
-      </a>
-      <a
-        href="https://instagram.com/luminescence_ckmsc39th_"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="icon"
-      >
-        <vue-feather type="instagram" size="25"></vue-feather>
-      </a>
+
+      <div class="outer-links">
+          <a
+          href="https://www.youtube.com/@ckmsc39th_luminescence"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="icon"
+        >
+          <vue-feather type="youtube" size="20"></vue-feather>
+        </a>
+        <a
+          href="https://instagram.com/luminescence_ckmsc39th_"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="icon"
+        >
+          <vue-feather type="instagram" size="20"></vue-feather>
+        </a>
+      </div>
+      
     </div>
+
+    <div class="column-4">
+      <label class="hamburger-menu">
+        <input type="checkbox" id="checkID"/>
+      </label>
+        
+      <aside class="sidebar-overlay">
+        <div class="sidebar">
+          <div class="mobile-link">
+            <router-link :to="{ name: 'About' }" @click="uncheck" class="hover-mobile-link"
+            >About</router-link>
+          </div>
+
+          <div class="mobile-link">
+            <router-link :to="{ name: 'Categories' }" @click="uncheck" class="hover-mobile-link"
+            >Categories</router-link>
+          </div>
+
+          <div class="mobile-link">
+            <router-link :to="{ name: 'Schedule' }" @click="uncheck" class="hover-mobile-link"
+            >Schedule</router-link>
+          </div>
+
+          <div class="mobile-link">
+            <router-link :to="{ name: 'Contact' }" @click="uncheck" class="hover-mobile-link"
+            >Contact</router-link>
+          </div>
+
+          <div>
+            <a
+              href="https://www.youtube.com/@ckmsc39th_luminescence"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mobile-icon"
+            >
+            <vue-feather type="youtube" size="20"></vue-feather>
+            </a>
+            <a
+              href="https://instagram.com/luminescence_ckmsc39th_"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mobile-icon"
+            >
+            <vue-feather type="instagram" size="20"></vue-feather>
+            </a>
+          </div>
+          
+        </div>
+      </aside>
+    </div>
+
   </nav>
 </template>
 
@@ -94,19 +152,124 @@ function showLogin() {
 function hideLogin() {
   showingLogin.value = false;
 }
+
+function uncheck() {
+  let input = document.getElementById('checkID')
+  input.checked = false;
+}
+
 </script>
 
 <style>
 nav.navbar {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 25px 100px;
+  padding: 2% 5%;
+}
+
+.column-1{
+  display: flex;
+  align-items: center;
+  gap: 1px
+}
+
+.column-2{
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.column-3{
+  display: flex;
+  align-items: center;
+  gap: 1px
+}
+
+.hamburger-menu{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: max-content;
+  position: absolute;
+  top: 45px;
+  right: 20px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input{
+  content: "";
+  width: 40px;
+  height: 8px;
+  background-color: white;
+  border-radius: 4px;
+  transform-origin: left center;
+  transition: opacity 200ms ease-in-out, 
+              width 200ms ease-in-out,
+              rotate 200ms ease-in-out,
+              translation 200ms ease-in-out,
+              background-color 200ms ease-in-out;
+  z-index: 9999;
+}
+
+.hamburger-menu:has(input:checked)::before {
+  rotate: 45deg;
+  width: 50.91167px;
+  translate: 0 -4px;
+}
+
+.hamburger-menu:has(input:checked)::after {
+  rotate: -45deg;
+  width: 50.91167px;
+  translate: 0 4px;
+}
+
+.hamburger-menu input{
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  pointer-events: none;
+}
+
+.hamburger-menu input:checked {
+  opacity: 0;
+  width: 0;
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: translate 200ms ease-in-out;
+  translate: 300%;
+  background-color: rgba(51, 51, 51, 0.9);
+  color: white;
+  max-width: 100vw;
+  min-height: 100vh
+}
+
+.sidebar {
+  height: 100vh;
+  position: absolute;
+  right: 0px;
+  top: 150px;
+}
+
+.hamburger-menu:has(input:checked) + .sidebar-overlay{
+  translate: 0;
 }
 
 .homelink {
   text-align: center;
-  font-size: 3.75rem;
   font-weight: bold;
   font-family: cursiveFont;
   padding: 20px;
@@ -123,12 +286,10 @@ nav.navbar {
 }
 
 .link {
-  font-size: 1.1rem;
   font-family: Calisto MT;
   font-weight: bold;
   border: 0.15em solid;
   border-radius: 0.45em;
-  width: 100px;
   text-align: center;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -146,7 +307,6 @@ nav.navbar {
   align-items: center;
   border: 0.2em solid;
   border-radius: 0.5em;
-  padding: 11px;
   color: white;
 }
 
@@ -158,16 +318,29 @@ nav.navbar {
   color: black;
 }
 
+.mobile-link{
+  margin-bottom: 60px;
+}
+
+.hover-mobile-link{
+  padding: 20px;
+  text-align: center;
+  border-radius: 0.5rem;
+  
+}
+
+.mobile-icon{
+  padding: 20px;
+}
+
 .login-button {
   background-color: transparent;
   color: white;
   cursor: pointer;
-  font-size: 1.1rem;
   font-family: Calisto MT;
   font-weight: bold;
   border: 0.15em solid;
   border-radius: 0.45em;
-  width: 100px;
   text-align: center;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -291,5 +464,72 @@ nav.navbar {
 ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #ddd;
+}
+
+@media (max-width: 2000px) {
+  .homelink{
+    font-size: 3.75rem;
+  }
+
+  .link{
+    font-size: 1.1rem;
+    width: 100px;
+  }
+
+  .login-button{
+    font-size: 1.1rem;
+    width: 100px;
+  }
+
+  .icon{
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 1099px) {
+  .homelink{
+    font-size: 3rem;
+  }
+
+  .link{
+    font-size: 0.8rem;
+    width: 70px;
+  }
+
+  .login-button{
+    font-size: 0.8rem;
+    width: 70px;
+  }
+
+  .icon{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+@media (max-width: 800px) {
+  .column-2{
+    display: none;
+  }
+
+  .outer-links{
+    display: none;
+  }
+}
+
+@media (max-width: 456px){
+  .homelink{
+    font-size: 2rem;
+  }
+}
+@media (min-width: 800px) {
+  .column-4{
+    display: none;
+  }
 }
 </style>

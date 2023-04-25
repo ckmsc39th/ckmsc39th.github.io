@@ -3,7 +3,6 @@ import { comment } from "postcss";
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
 import Categories from "../views/Categories.vue";
-import Works from "../views/Works.vue";
 import Schedule from "../views/Schedule.vue";
 import Contact from "../views/Contact.vue";
 import Members from "../views/Members.vue";
@@ -28,11 +27,6 @@ const routes = [
     path: "/categories",
     name: "Categories",
     component: Categories,
-  },
-  {
-    path: "/works",
-    name: "Works",
-    component: Works,
   },
   {
     path: "/schedule",
