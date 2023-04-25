@@ -59,7 +59,22 @@
     </div>
 
     <div class="column-4">
-      <h1>Hi</h1>
+      <label class="hamburger-menu">
+        <input type="checkbox" />
+      </label>
+        
+      <aside class="sidebar-overlay">
+        <div class="sidebar">
+          <router-link :to="{ name: 'About' }" class="link">About</router-link>
+          <router-link :to="{ name: 'Categories' }" class="link"
+            >Categories</router-link
+          >
+          <router-link :to="{ name: 'Schedule' }" class="link"
+            >Schedule</router-link
+          >
+          <router-link :to="{ name: 'Contact' }" class="link">Contact</router-link>
+        </div>
+      </aside>
     </div>
 
   </nav>
@@ -74,6 +89,7 @@ const email = ref("");
 const password = ref("");
 const loggingIn = ref(false);
 const showingLogin = ref(false);
+const showingNavbar = ref(false);
 
 const correctEmail = "123@email.com";
 const correctPasswd = "1234";
@@ -98,6 +114,11 @@ function showLogin() {
 
 function hideLogin() {
   showingLogin.value = false;
+}
+
+function toggleNavbar() {
+  showingNavbar.value = !showingNavbar.value;
+  console.log(showingNavbar.value)
 }
 </script>
 
@@ -128,6 +149,85 @@ nav.navbar {
   display: flex;
   align-items: center;
   gap: 1px
+}
+
+.hamburger-menu{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: max-content;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input{
+  content: "";
+  width: 60px;
+  height: 8px;
+  background-color: white;
+  border-radius: 6px;
+  transform-origin: left center;
+  transition: opacity 200ms ease-in-out, 
+              width 200ms ease-in-out,
+              rotate 200ms ease-in-out,
+              translation 200ms ease-in-out,
+              background-color 200ms ease-in-out;
+}
+
+.hamburger-menu:has(input:checked)::before {
+  rotate: 45deg;
+  width: 50.91167px;
+  translate: 0 -4px;
+}
+
+.hamburger-menu:has(input:checked)::after {
+  rotate: -45deg;
+  width: 50.91167px;
+  translate: 0 4px;
+}
+
+.hamburger-menu input{
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  pointer-events: none;
+}
+
+.hamburger-menu input:checked {
+  opacity: 0;
+  width: 0;
+}
+
+.sidebar-overlay {
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: translate 200ms ease-in-out;
+  translate: 300%;
+  padding: 0.5rem 1rem;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  max-width: 100vw;
+  min-height: 100vh
+}
+
+.sidebar {
+  text-align: end;
+  padding: 5px 10px;
+  padding-top: 70px;
+}
+
+.hamburger-menu:has(input:checked) + .sidebar-overlay{
+  translate: 0;
 }
 
 .homelink {
