@@ -60,19 +60,50 @@
 
     <div class="column-4">
       <label class="hamburger-menu">
-        <input type="checkbox" />
+        <input type="checkbox" id="checkID"/>
       </label>
         
       <aside class="sidebar-overlay">
         <div class="sidebar">
-          <router-link :to="{ name: 'About' }" class="link">About</router-link>
-          <router-link :to="{ name: 'Categories' }" class="link"
-            >Categories</router-link
-          >
-          <router-link :to="{ name: 'Schedule' }" class="link"
-            >Schedule</router-link
-          >
-          <router-link :to="{ name: 'Contact' }" class="link">Contact</router-link>
+          <div>
+            <router-link :to="{ name: 'About' }" class="mobile-link" @click="uncheck"
+            >About</router-link>
+          </div>
+
+          <div>
+            <router-link :to="{ name: 'Categories' }" class="mobile-link" @click="uncheck"
+            >Categories</router-link>
+          </div>
+
+          <div>
+            <router-link :to="{ name: 'Schedule' }" class="mobile-link" @click="uncheck"
+            >Schedule</router-link>
+          </div>
+
+          <div>
+            <router-link :to="{ name: 'Contact' }" class="mobile-link" @click="uncheck"
+            >Contact</router-link>
+          </div>
+
+          <div>
+            <a
+              href="https://www.youtube.com/@ckmsc39th_luminescence"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mobile-icon"
+            >
+            <vue-feather type="youtube" size="20"></vue-feather>
+            </a>
+            <a
+              href="https://instagram.com/luminescence_ckmsc39th_"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mobile-icon"
+            >
+            <vue-feather type="instagram" size="20"></vue-feather>
+            </a>
+          </div>
+          
         </div>
       </aside>
     </div>
@@ -89,7 +120,6 @@ const email = ref("");
 const password = ref("");
 const loggingIn = ref(false);
 const showingLogin = ref(false);
-const showingNavbar = ref(false);
 
 const correctEmail = "123@email.com";
 const correctPasswd = "1234";
@@ -116,10 +146,11 @@ function hideLogin() {
   showingLogin.value = false;
 }
 
-function toggleNavbar() {
-  showingNavbar.value = !showingNavbar.value;
-  console.log(showingNavbar.value)
+function uncheck() {
+  let input = document.getElementById('checkID')
+  input.checked = false;
 }
+
 </script>
 
 <style>
@@ -177,6 +208,7 @@ nav.navbar {
               rotate 200ms ease-in-out,
               translation 200ms ease-in-out,
               background-color 200ms ease-in-out;
+  z-index: 9999;
 }
 
 .hamburger-menu:has(input:checked)::before {
@@ -205,7 +237,6 @@ nav.navbar {
 }
 
 .sidebar-overlay {
-  margin: 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -221,7 +252,9 @@ nav.navbar {
 }
 
 .sidebar {
-  text-align: end;
+  margin: auto;
+  position: absolute;
+  right: 50px;
   padding: 5px 10px;
   padding-top: 70px;
 }
@@ -461,6 +494,7 @@ nav.navbar {
   .column-3{
     display: none;
   }
+
 }
 
 @media (min-width: 801px) {

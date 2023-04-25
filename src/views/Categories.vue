@@ -86,7 +86,7 @@
         :key="tab"
         @click="switchTab(tab)"
         :class="[
-          'py-2 px-4 font-bold rounded-xl hover:bg-cyan-700',
+          'py-2 px-3 font-bold rounded-xl hover:bg-cyan-700',
           activeTab === tab ? 'bg-cyan-200 text-gray-700 hover:text-white font-bold' : 'text-white bg-cyan-950'
         ]"
       >
