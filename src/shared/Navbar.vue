@@ -524,7 +524,7 @@ nav.navbar {
 
 @media (max-width: 456px){
   .homelink{
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 @media (min-width: 800px) {
