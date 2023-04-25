@@ -123,8 +123,8 @@ const teammateList = [
 }
 
 .team-member-photo {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: 20px;

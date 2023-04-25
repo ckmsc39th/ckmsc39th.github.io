@@ -20,7 +20,7 @@
 
 .tab-page {
   margin: auto;
-  width: 80%;
+  width: 90%;
   padding: 2.5%;
   font-family: "cwTeXYen", Signika, "Segoe UI", sans-serif;
   color: #fff;
@@ -29,8 +29,8 @@
 }
 
 .div-page{
-  margin: 3% auto;
-  width: 95%;
+  margin: 2% auto;
+  width: 97%;
   padding: 2.5%;
   background-color: rgba(191, 191, 191, 0.1);
   border-radius: 0.5em;
@@ -39,7 +39,7 @@
 .return-btn {
   display: flex;
   width: 90%;
-  margin: 3% auto;
+  margin: 2% auto;
   padding: 20px;
   place-content: flex-end;
 }
@@ -48,7 +48,7 @@ h1 {
   font-weight: bold;
   margin-top: 30px;
   margin-bottom: 20px;
-  margin-left: 3%;
+  margin-left: 2%;
 }
   
 h2 {

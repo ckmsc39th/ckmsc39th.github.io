@@ -195,7 +195,7 @@ nav.navbar {
   gap: 6px;
   width: max-content;
   position: absolute;
-  top: 50px;
+  top: 45px;
   right: 20px;
   z-index: 10;
   cursor: pointer;
@@ -522,6 +522,11 @@ nav.navbar {
   }
 }
 
+@media (max-width: 456px){
+  .homelink{
+    font-size: 2.5rem;
+  }
+}
 @media (min-width: 800px) {
   .column-4{
     display: none;
