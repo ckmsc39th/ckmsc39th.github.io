@@ -17,8 +17,11 @@
       <router-link :to="{ name: 'Contact' }" class="link">Contact</router-link>
     </div>
 
+
     <div class="column-3">
+
       <button class="login-button" @click="showLogin">Login</button>
+
       <div class="login-overlay" v-if="showingLogin">
         <div class="login-container">
           <h2>Login</h2>
@@ -40,22 +43,26 @@
           <button class="close-button" @click="hideLogin">Cancel</button>
         </div>
       </div>
-      <a
-        href="https://www.youtube.com/@ckmsc39th_luminescence"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="icon"
-      >
-        <vue-feather type="youtube" size="20"></vue-feather>
-      </a>
-      <a
-        href="https://instagram.com/luminescence_ckmsc39th_"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="icon"
-      >
-        <vue-feather type="instagram" size="20"></vue-feather>
-      </a>
+
+      <div class="outer-links">
+          <a
+          href="https://www.youtube.com/@ckmsc39th_luminescence"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="icon"
+        >
+          <vue-feather type="youtube" size="20"></vue-feather>
+        </a>
+        <a
+          href="https://instagram.com/luminescence_ckmsc39th_"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="icon"
+        >
+          <vue-feather type="instagram" size="20"></vue-feather>
+        </a>
+      </div>
+      
     </div>
 
     <div class="column-4">
@@ -65,23 +72,23 @@
         
       <aside class="sidebar-overlay">
         <div class="sidebar">
-          <div>
-            <router-link :to="{ name: 'About' }" class="mobile-link" @click="uncheck"
+          <div class="mobile-link">
+            <router-link :to="{ name: 'About' }" @click="uncheck" class="hover-mobile-link"
             >About</router-link>
           </div>
 
-          <div>
-            <router-link :to="{ name: 'Categories' }" class="mobile-link" @click="uncheck"
+          <div class="mobile-link">
+            <router-link :to="{ name: 'Categories' }" @click="uncheck" class="hover-mobile-link"
             >Categories</router-link>
           </div>
 
-          <div>
-            <router-link :to="{ name: 'Schedule' }" class="mobile-link" @click="uncheck"
+          <div class="mobile-link">
+            <router-link :to="{ name: 'Schedule' }" @click="uncheck" class="hover-mobile-link"
             >Schedule</router-link>
           </div>
 
-          <div>
-            <router-link :to="{ name: 'Contact' }" class="mobile-link" @click="uncheck"
+          <div class="mobile-link">
+            <router-link :to="{ name: 'Contact' }" @click="uncheck" class="hover-mobile-link"
             >Contact</router-link>
           </div>
 
@@ -172,8 +179,8 @@ nav.navbar {
   display: flex;
   align-items: center;
   gap: 1px;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 .column-3{
@@ -188,7 +195,7 @@ nav.navbar {
   gap: 6px;
   width: max-content;
   position: absolute;
-  top: 20px;
+  top: 50px;
   right: 20px;
   z-index: 10;
   cursor: pointer;
@@ -198,10 +205,10 @@ nav.navbar {
 .hamburger-menu::after,
 .hamburger-menu input{
   content: "";
-  width: 60px;
+  width: 40px;
   height: 8px;
   background-color: white;
-  border-radius: 6px;
+  border-radius: 4px;
   transform-origin: left center;
   transition: opacity 200ms ease-in-out, 
               width 200ms ease-in-out,
@@ -244,19 +251,17 @@ nav.navbar {
   bottom: 0;
   transition: translate 200ms ease-in-out;
   translate: 300%;
-  padding: 0.5rem 1rem;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(51, 51, 51, 0.9);
   color: white;
   max-width: 100vw;
   min-height: 100vh
 }
 
 .sidebar {
-  margin: auto;
+  height: 100vh;
   position: absolute;
-  right: 50px;
-  padding: 5px 10px;
-  padding-top: 70px;
+  right: 0px;
+  top: 150px;
 }
 
 .hamburger-menu:has(input:checked) + .sidebar-overlay{
@@ -311,6 +316,21 @@ nav.navbar {
   box-shadow: 0px 0px 0.5em 0px hsl(66, 83%, 93%);
   animation: text-flicker 3s linear infinite;
   color: black;
+}
+
+.mobile-link{
+  margin-bottom: 60px;
+}
+
+.hover-mobile-link{
+  padding: 20px;
+  text-align: center;
+  border-radius: 0.5rem;
+  
+}
+
+.mobile-icon{
+  padding: 20px;
 }
 
 .login-button {
@@ -462,11 +482,14 @@ nav.navbar {
   }
 
   .icon{
-    padding: 14px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1099px) {
   .homelink{
     font-size: 3rem;
   }
@@ -482,22 +505,24 @@ nav.navbar {
   }
 
   .icon{
-    padding: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 }
 
-@media (max-width: 801px) {
+@media (max-width: 800px) {
   .column-2{
     display: none;
   }
 
-  .column-3{
+  .outer-links{
     display: none;
   }
-
 }
 
-@media (min-width: 801px) {
+@media (min-width: 800px) {
   .column-4{
     display: none;
   }
