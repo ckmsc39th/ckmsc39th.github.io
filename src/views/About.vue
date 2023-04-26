@@ -58,7 +58,7 @@ const invitationLetter = "invitationLetter.png";
 }
 
 .music-mv iframe{
-  border-radius: 0.45em;
+  border-radius: 0.3em;
 }
 
 .invitation img {
@@ -66,7 +66,7 @@ const invitationLetter = "invitationLetter.png";
   height: auto;
   display: block;
   margin: 20px 0;
-  border-radius: 0.45em;
+  border-radius: 0.3em;
 }
 
 .staff-member:hover{

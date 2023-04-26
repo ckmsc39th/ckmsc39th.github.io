@@ -93,11 +93,11 @@ const sendEmail = () => {
 
 
 .event-info iframe{
-  border-radius: 0.45em;
+  border-radius: 0.3em;
 }
 
 .event-info .time-location {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
 }
@@ -107,6 +107,7 @@ const sendEmail = () => {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  padding-right: 4%
 }
 
 .event-info .event-time-details span,
