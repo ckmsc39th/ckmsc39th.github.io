@@ -152,6 +152,37 @@ th, td {
 
 @media (max-width: 2000px) {
   h1 {
+    font-size: 2.4em;
+  }
+
+  h2 {
+    font-size: 2.0em;
+  }
+
+  h3 {
+    font-size: 1.6em;
+  }
+
+  h4 {
+    font-size: 1.4em;
+  }
+
+  p {
+    font-size: 1.4em;
+  }
+
+  li {
+    font-size: 1.2em;
+  }
+
+  td, th {
+    font-size: 1.4em;
+  }
+}
+
+
+@media (max-width: 1100px) {
+  h1 {
     font-size: 2.2em;
   }
 
@@ -172,7 +203,7 @@ th, td {
   }
 
   li {
-    font-size: 1em;
+    font-size: 1.0em;
   }
 
   td, th {
@@ -180,8 +211,37 @@ th, td {
   }
 }
 
+@media (max-width: 800px) {
+  h1 {
+    font-size: 2.0em;
+  }
 
-@media (max-width: 1100px) {
+  h2 {
+    font-size: 1.6em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  h4 {
+    font-size: 1.0em;
+  }
+
+  p {
+    font-size: 1.0em;
+  }
+
+  li {
+    font-size: 1.0em;
+  }
+
+  td, th {
+    font-size: 1.0em;
+  }
+}
+
+@media (max-width: 480px) {
   h1 {
     font-size: 1.8em;
   }
@@ -195,19 +255,19 @@ th, td {
   }
 
   h4 {
-    font-size: 1.0em;
+    font-size: 0.8em;
   }
 
   p {
-    font-size: 1.0em;
+    font-size: 0.8em;
   }
 
   li {
-    font-size: 1em;
+    font-size: 0.8em;
   }
 
   td, th {
-    font-size: 1em;
+    font-size: 0.8em;
   }
 }
 
