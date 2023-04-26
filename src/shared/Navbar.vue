@@ -167,6 +167,7 @@ nav.navbar {
   align-items: center;
   justify-content: space-between;
   padding: 2% 5%;
+  background-color: rgba(55, 55, 55, 0.7);
 }
 
 .column-1{
@@ -255,7 +256,7 @@ nav.navbar {
   bottom: 0;
   transition: translate 200ms ease-in-out;
   translate: 300%;
-  background-color: rgba(51, 51, 51, 0.9);
+  background-color: rgba(66, 66, 66, 0.9);
   color: white;
   max-width: 100vw;
   min-height: 100vh
@@ -277,7 +278,6 @@ nav.navbar {
   font-weight: bold;
   font-family: cursiveFont;
   padding: 20px;
-  border: 0.05em solid;
   border-radius: 0.45em;
 }
 
@@ -290,9 +290,8 @@ nav.navbar {
 }
 
 .link {
-  font-family: Calisto MT;
+  font-family: sans-serif;
   font-weight: bold;
-  border: 0.15em solid;
   border-radius: 0.45em;
   text-align: center;
   padding-top: 15px;
@@ -309,7 +308,6 @@ nav.navbar {
 
 .icon {
   align-items: center;
-  border: 0.2em solid;
   border-radius: 0.5em;
   color: white;
 }
@@ -330,7 +328,6 @@ nav.navbar {
   padding: 20px;
   text-align: center;
   border-radius: 0.5rem;
-  
 }
 
 .mobile-icon{
@@ -341,9 +338,8 @@ nav.navbar {
   background-color: transparent;
   color: white;
   cursor: pointer;
-  font-family: Calisto MT;
+  font-family: sans-serif;
   font-weight: bold;
-  border: 0.15em solid;
   border-radius: 0.45em;
   text-align: center;
   padding-top: 15px;
