@@ -86,7 +86,7 @@
         :key="tab"
         @click="switchTab(tab)"
         :class="[
-          'py-2 px-3 font-bold rounded-xl hover:bg-cyan-700',
+          'py-[1.5%] px-[2%] font-bold rounded-xl hover:bg-cyan-700',
           activeTab === tab ? 'bg-cyan-200 text-gray-700 hover:text-white font-bold' : 'text-white bg-cyan-950'
         ]"
       >
@@ -108,7 +108,7 @@
         </div>
 
         <div class="div-page">
-          <h4>作品列表 (點擊作品名稱可查看詳細資訊)</h4>
+          <h3>作品列表 (點擊作品名稱可查看詳細資訊)</h3>
           <center>
           <table>
             <thead>
@@ -173,7 +173,7 @@
           </div>
 
           <div class="div-page">
-            <h4>作品列表 (點擊作品名稱可查看詳細資訊)</h4>
+            <h3>作品列表 (點擊作品名稱可查看詳細資訊)</h3>
             <center>
             <table>
               <thead>
@@ -226,7 +226,7 @@
         </div>
 
         <div class="div-page">
-          <h4>作品列表 (點擊作品名稱可查看詳細資訊)</h4>
+          <h3>作品列表 (點擊作品名稱可查看詳細資訊)</h3>
           <center>
           <table>
             <thead>
@@ -290,7 +290,7 @@
         </div>
 
         <div class="div-page">
-          <h4>作品列表 (點擊作品名稱可查看詳細資訊)</h4>
+          <h3>作品列表 (點擊作品名稱可查看詳細資訊)</h3>
           <center>
           <table>
             <thead>
@@ -335,7 +335,7 @@
         </div>
 
         <div class="div-page">
-          <h4>作品列表 (點擊作品名稱可查看詳細資訊)</h4>
+          <h3>作品列表 (點擊作品名稱可查看詳細資訊)</h3>
           <center>
           <table>
             <thead>
@@ -381,7 +381,7 @@
         </div>
 
         <div class="div-page">
-          <h4>作品列表 (點擊作品名稱可查看詳細資訊)</h4>
+          <h3>作品列表 (點擊作品名稱可查看詳細資訊)</h3>
           <center>
           <table>
             <thead>
@@ -471,7 +471,6 @@ body.showpopup {
   backdrop-filter: blur(5px);
 }
 .close-btn {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
   font-weight: bold;
   line-height: 25px;

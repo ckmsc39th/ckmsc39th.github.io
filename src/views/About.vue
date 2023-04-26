@@ -48,12 +48,12 @@ const invitationLetter = "invitationLetter.png";
   max-width: 100%;
   min-height: fit-content;
 }
+
 .music-mv a {
-  text-decoration: none;
+  color: #007bff;
 }
 
 .music-mv a:hover {
-  color: #007bff;
   text-decoration: underline;
 }
 

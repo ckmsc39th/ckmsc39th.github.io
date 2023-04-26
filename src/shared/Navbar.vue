@@ -166,7 +166,7 @@ nav.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2% 5%;
+  padding: 0.5% 5%;
   background-color: rgba(55, 55, 55, 0.7);
 }
 
@@ -256,7 +256,7 @@ nav.navbar {
   bottom: 0;
   transition: translate 200ms ease-in-out;
   translate: 300%;
-  background-color: rgba(66, 66, 66, 0.9);
+  background-color: rgba(50, 50, 50, 0.9);
   color: white;
   max-width: 100vw;
   min-height: 100vh
@@ -265,7 +265,7 @@ nav.navbar {
 .sidebar {
   height: 100vh;
   position: absolute;
-  right: 0px;
+  right: 40px;
   top: 150px;
 }
 
@@ -277,7 +277,7 @@ nav.navbar {
   text-align: center;
   font-weight: bold;
   font-family: cursiveFont;
-  padding: 20px;
+  padding: 10px;
   border-radius: 0.45em;
 }
 
@@ -321,17 +321,32 @@ nav.navbar {
 }
 
 .mobile-link{
-  margin-bottom: 60px;
+  display: flex;
+  margin-bottom: 10px;
+  padding: 10%;
 }
 
-.hover-mobile-link{
-  padding: 20px;
-  text-align: center;
-  border-radius: 0.5rem;
+.mobile-link:hover {
+  border-radius: 0.25em;
+  border-color: hsl(186, 100%, 78%);
+  background-color: hsl(186 100% 78%);
+  box-shadow: 0px 0px 0.75em 1px hsl(186 100% 78%);
+  animation: text-flicker 3s linear infinite;
+  color: black;
 }
 
 .mobile-icon{
-  padding: 20px;
+  margin: 15px;
+  padding: 10px;
+}
+
+.mobile-icon:hover{
+  border-radius: 0.5em;
+  border-color: hsl(65, 100%, 89%);
+  background-color: hsl(66, 83%, 93%);
+  box-shadow: 0px 0px 0.5em 0px hsl(66, 83%, 93%);
+  animation: text-flicker 3s linear infinite;
+  color: black;
 }
 
 .login-button {

@@ -11,7 +11,10 @@
         <div class="event-time">
           <h2>舉辦時間</h2>
           <div class="event-time-details">
-            <span>{{ eventDate }} | {{ eventTime }}</span>
+            <span>{{ eventDate }}</span>
+            <br>
+            <span>{{ eventTime }}</span>
+            <br>
             <a :href="googleCalendarLink" target="_blank" rel="noopener"
               >加入Google Calendar</a
             >
@@ -21,6 +24,7 @@
           <h2>舉辦地點</h2>
           <div class="event-location-details">
             <span>{{ eventLocation }}</span>
+            <br>
             <a :href="googleMapsLink" target="_blank" rel="noopener"
               >在Google Maps上查看</a
             >
@@ -29,7 +33,7 @@
       </div>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.0972926964214!2d121.51011581643546!3d25.030772083973787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9483fb05b03%3A0xe2d4710b90afdf1a!2z6Ie65YyX5biC56uL5bu65ZyL6auY57Sa5Lit5a24!5e0!3m2!1szh-TW!2stw!4v1680545181231!5m2!1szh-TW!2stw"
-        width="90%"
+        width="100%"
         height="360"
         style="border: 0"
         allowfullscreen=""
@@ -93,35 +97,27 @@ const sendEmail = () => {
 
 
 .event-info iframe{
-  border-radius: 0.3em;
+  border-radius: 0.25em;
 }
 
 .event-info .time-location {
-  margin-bottom: 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 2%;
+  margin-bottom: 20px;
+  border: solid;
+  border-radius: 0.25em;
 }
+
 
 .event-info .event-time-details,
 .event-info .event-location-details {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  padding-right: 4%
-}
-
-.event-info .event-time-details span,
-.event-info .event-location-details span {
-  font-size: 18px;
-  margin-right: 10px;
 }
 
 .event-info .event-time-details a,
 .event-info .event-location-details a {
-  font-size: 18px;
   color: #007bff;
-  text-decoration: none;
-  margin-left: 10px;
 }
 
 .event-info .event-time-details a:hover,
@@ -130,7 +126,12 @@ const sendEmail = () => {
 }
 
 .event-info .description {
+  border: solid;
+  border-radius: 0.25em;
   margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 2%;
+
 }
 
 .register-email {
