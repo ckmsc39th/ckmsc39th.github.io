@@ -2,7 +2,7 @@
   <div class="home-page tab-page">
     <h1>建中數理資優班第39屆成果發表</h1>
     <div class="group-photo div-page">
-      <h2>(這裡將會放225 226團體照片)</h2>
+      <h2>團照</h2>
       <img :src="groupPhotoSrc" alt="Group Photo" />
     </div>
     <div class="event-info div-page">
@@ -59,7 +59,7 @@ const groupPhotoSrc = "groupPhoto.jpg";
 const eventDate = "2023年5月25&26日 (週四/五)";
 const eventTime = "2:00 PM - 5:00 PM";
 const eventLocation = "100台北市中正區南海路56號";
-const eventDescription = "一定要來喔";
+const eventDescription = "一定要來喔!";
 const googleCalendarLink = "待加入";
 const googleMapsLink = "https://goo.gl/maps/kWBUJyyp6iXVHmib8";
 
@@ -91,16 +91,15 @@ const sendEmail = () => {
   border-radius: 0.25em;
 }
 
+
+.event-info iframe{
+  border-radius: 0.45em;
+}
+
 .event-info .time-location {
   margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
-}
-
-.event-info .time-location h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
 }
 
 .event-info .event-time-details,
@@ -129,16 +128,8 @@ const sendEmail = () => {
   text-decoration: underline;
 }
 
-.event-info .description h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.event-info .description p {
-  font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 40px;
+.event-info .description {
+  margin-top: 20px;
 }
 
 .register-email {

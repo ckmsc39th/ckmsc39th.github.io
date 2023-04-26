@@ -189,6 +189,11 @@ nav.navbar {
   gap: 1px
 }
 
+.column-4{
+  display: flex;
+  align-items: center;
+}
+
 .hamburger-menu{
   display: flex;
   flex-direction: column;

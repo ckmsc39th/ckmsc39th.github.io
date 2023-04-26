@@ -9,7 +9,7 @@
     <div class="music-mv div-page">
       <h2>音樂MV</h2>
       <p>
-        快來看看我們最新的成果發表主題曲:
+        快來看看我們最新的成果發表主題曲(?):
         <a :href="musicMVLink" target="_blank">點擊我^^</a>
         <iframe
           width="100%"
@@ -25,7 +25,6 @@
 
     <div class="invitation div-page">
       <h2>邀請函</h2>
-      <p>其實是這張啦(?)</p>
       <img :src="invitationLetter" alt="Invitation Letter" />
     </div>
 
@@ -58,12 +57,16 @@ const invitationLetter = "invitationLetter.png";
   text-decoration: underline;
 }
 
+.music-mv iframe{
+  border-radius: 0.45em;
+}
+
 .invitation img {
   max-width: 100%;
   height: auto;
   display: block;
   margin: 20px 0;
-  border-radius: 0.25em;
+  border-radius: 0.45em;
 }
 
 .staff-member:hover{
