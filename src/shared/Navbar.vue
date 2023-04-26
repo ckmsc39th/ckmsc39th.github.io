@@ -290,7 +290,7 @@ nav.navbar {
 }
 
 .link {
-  font-family: sans-serif;
+  font-family: 'Recursive', sans-serif;
   font-weight: bold;
   border-radius: 0.45em;
   text-align: center;
@@ -338,7 +338,7 @@ nav.navbar {
   background-color: transparent;
   color: white;
   cursor: pointer;
-  font-family: sans-serif;
+  font-family: 'Recursive', sans-serif;
   font-weight: bold;
   border-radius: 0.45em;
   text-align: center;
