@@ -8,7 +8,8 @@
     </div>
 
     <div class="event-info div-page">
-      <h2>(這裡要放成發標語)</h2>
+      <h2>Shine your own light.</h2>
+      <h2>Illuminate your own way!</h2>
 
       <div class="time-location">
 

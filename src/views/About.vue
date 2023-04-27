@@ -3,7 +3,12 @@
     <h1>About Us</h1>
     <div class="theme div-page">
       <h2>主題含意</h2>
-      <p>{{ themeMeaning }}</p>
+      <p>在知識的泡沫中沉淪</p>
+      <p>智慧的螢光向外發散</p>
+      <p>引領未來光茫的方向</p>
+      <br>
+      <p>Luminescence：</p>
+      <p>Spontaneous emission of radiation from an electronically excited species (or from a vibrationally excited species) not in thermal equilibrium with its environment.</p>
     </div>
 
     <div class="music-mv div-page">
@@ -37,7 +42,6 @@
 </template>
 
 <script setup>
-const themeMeaning = "施工中...";
 const musicMVLink = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 const invitationLetter = "invitationLetter.png";
 </script>
