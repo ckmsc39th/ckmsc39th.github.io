@@ -8,12 +8,8 @@
 
     <div class="column-2">
       <router-link :to="{ name: 'About' }" class="link">About</router-link>
-      <router-link :to="{ name: 'Categories' }" class="link"
-        >Categories</router-link
-      >
-      <router-link :to="{ name: 'Schedule' }" class="link"
-        >Schedule</router-link
-      >
+      <router-link :to="{ name: 'Categories' }" class="link">Categories</router-link>
+      <router-link :to="{ name: 'Schedule' }" class="link">Schedule</router-link>
       <router-link :to="{ name: 'Contact' }" class="link">Contact</router-link>
     </div>
 
@@ -63,56 +59,55 @@
         </a>
       </div>
       
-    </div>
-
-    <div class="column-4">
-      <label class="hamburger-menu">
-        <input type="checkbox" id="checkID"/>
-      </label>
-        
-      <aside class="sidebar-overlay">
-        <div class="sidebar">
-          <div class="mobile-link">
-            <router-link :to="{ name: 'About' }" @click="uncheck" class="hover-mobile-link"
-            >About</router-link>
-          </div>
-
-          <div class="mobile-link">
-            <router-link :to="{ name: 'Categories' }" @click="uncheck" class="hover-mobile-link"
-            >Categories</router-link>
-          </div>
-
-          <div class="mobile-link">
-            <router-link :to="{ name: 'Schedule' }" @click="uncheck" class="hover-mobile-link"
-            >Schedule</router-link>
-          </div>
-
-          <div class="mobile-link">
-            <router-link :to="{ name: 'Contact' }" @click="uncheck" class="hover-mobile-link"
-            >Contact</router-link>
-          </div>
-
-          <div>
-            <a
-              href="https://www.youtube.com/@ckmsc39th_luminescence"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="mobile-icon"
-            >
-            <vue-feather type="youtube" size="20"></vue-feather>
-            </a>
-            <a
-              href="https://instagram.com/luminescence_ckmsc39th_"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="mobile-icon"
-            >
-            <vue-feather type="instagram" size="20"></vue-feather>
-            </a>
-          </div>
+      <div class="mobile">
+        <label class="hamburger-menu">
+          <input type="checkbox" id="checkID"/>
+        </label>
           
-        </div>
-      </aside>
+        <aside class="sidebar-overlay">
+          <div class="sidebar">
+            <div class="mobile-link">
+              <router-link :to="{ name: 'About' }" @click="uncheck" class="hover-mobile-link"
+              >About</router-link>
+            </div>
+
+            <div class="mobile-link">
+              <router-link :to="{ name: 'Categories' }" @click="uncheck" class="hover-mobile-link"
+              >Categories</router-link>
+            </div>
+
+            <div class="mobile-link">
+              <router-link :to="{ name: 'Schedule' }" @click="uncheck" class="hover-mobile-link"
+              >Schedule</router-link>
+            </div>
+
+            <div class="mobile-link">
+              <router-link :to="{ name: 'Contact' }" @click="uncheck" class="hover-mobile-link"
+              >Contact</router-link>
+            </div>
+
+            <div>
+              <a
+                href="https://www.youtube.com/@ckmsc39th_luminescence"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mobile-icon"
+              >
+              <vue-feather type="youtube" size="20"></vue-feather>
+              </a>
+              <a
+                href="https://instagram.com/luminescence_ckmsc39th_"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mobile-icon"
+              >
+              <vue-feather type="instagram" size="20"></vue-feather>
+              </a>
+            </div>
+            
+          </div>
+        </aside>
+      </div>
     </div>
 
   </nav>
@@ -166,7 +161,7 @@ nav.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2% 5%;
+  padding: 0.5% 5%;
   background-color: rgba(55, 55, 55, 0.7);
 }
 
@@ -179,18 +174,17 @@ nav.navbar {
 .column-2{
   display: flex;
   align-items: center;
-  gap: 1px;
-  padding-left: 3%;
-  padding-right: 3%;
+  gap: 3px;
+
 }
 
 .column-3{
   display: flex;
   align-items: center;
-  gap: 1px
 }
 
-.column-4{
+.mobile{
+  margin-right: 30px;
   display: flex;
   align-items: center;
 }
@@ -256,7 +250,7 @@ nav.navbar {
   bottom: 0;
   transition: translate 200ms ease-in-out;
   translate: 300%;
-  background-color: rgba(66, 66, 66, 0.9);
+  background-color: rgba(50, 50, 50, 0.9);
   color: white;
   max-width: 100vw;
   min-height: 100vh
@@ -265,7 +259,7 @@ nav.navbar {
 .sidebar {
   height: 100vh;
   position: absolute;
-  right: 0px;
+  right: 40px;
   top: 150px;
 }
 
@@ -277,7 +271,7 @@ nav.navbar {
   text-align: center;
   font-weight: bold;
   font-family: cursiveFont;
-  padding: 20px;
+  padding: 5%;
   border-radius: 0.45em;
 }
 
@@ -290,12 +284,12 @@ nav.navbar {
 }
 
 .link {
+  min-width: fit-content;
   font-family: 'Recursive', sans-serif;
   font-weight: bold;
   border-radius: 0.45em;
   text-align: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 15px 2%;
 }
 
 .link:hover {
@@ -321,17 +315,32 @@ nav.navbar {
 }
 
 .mobile-link{
-  margin-bottom: 60px;
+  display: flex;
+  margin-bottom: 10px;
+  padding: 10%;
 }
 
-.hover-mobile-link{
-  padding: 20px;
-  text-align: center;
-  border-radius: 0.5rem;
+.mobile-link:hover {
+  border-radius: 0.25em;
+  border-color: hsl(186, 100%, 78%);
+  background-color: hsl(186 100% 78%);
+  box-shadow: 0px 0px 0.75em 1px hsl(186 100% 78%);
+  animation: text-flicker 3s linear infinite;
+  color: black;
 }
 
 .mobile-icon{
-  padding: 20px;
+  margin: 15px;
+  padding: 10px;
+}
+
+.mobile-icon:hover{
+  border-radius: 0.5em;
+  border-color: hsl(65, 100%, 89%);
+  background-color: hsl(66, 83%, 93%);
+  box-shadow: 0px 0px 0.5em 0px hsl(66, 83%, 93%);
+  animation: text-flicker 3s linear infinite;
+  color: black;
 }
 
 .login-button {
@@ -359,8 +368,8 @@ nav.navbar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 9999;
   display: flex;
@@ -370,8 +379,8 @@ nav.navbar {
 
 .login-container {
   background-color: #fff;
-  width: 400px;
-  padding: 30px;
+  width: 80%;
+  padding: 10%;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   text-align: center;
@@ -468,16 +477,16 @@ nav.navbar {
 
 @media (max-width: 2000px) {
   .homelink{
-    font-size: 3.75rem;
+    font-size: 3.75em;
   }
 
   .link{
-    font-size: 1.1rem;
+    font-size: 1.1em;
     width: 100px;
   }
 
   .login-button{
-    font-size: 1.1rem;
+    font-size: 1.1em;
     width: 100px;
   }
 
@@ -491,16 +500,16 @@ nav.navbar {
 
 @media (max-width: 1099px) {
   .homelink{
-    font-size: 3rem;
+    font-size: 3em;
   }
 
   .link{
-    font-size: 0.8rem;
+    font-size: 0.8em;
     width: 70px;
   }
 
   .login-button{
-    font-size: 0.8rem;
+    font-size: 0.8em;
     width: 70px;
   }
 
@@ -524,11 +533,25 @@ nav.navbar {
 
 @media (max-width: 480px){
   .homelink{
-    font-size: 2rem;
+    font-size: 2em;
   }
 }
+
+@media (max-width: 360px){
+  .homelink{
+    font-size: 1.6em;
+  }
+
+  .login-button{
+    margin-right: 30px;
+    padding-left: 1px;
+    padding-right: 1px;
+    width: 100%;
+  }
+}
+
 @media (min-width: 800px) {
-  .column-4{
+  .mobile{
     display: none;
   }
 }

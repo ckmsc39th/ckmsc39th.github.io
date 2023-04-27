@@ -22,7 +22,7 @@
 
 .tab-page {
   margin: auto;
-  margin-top: 15px;
+  margin-top: 5%;
   width: 90%;
   padding: 2.5%;
   font-family: "cwTeXYen", Signika, "Segoe UI", sans-serif;
@@ -35,22 +35,20 @@
   margin: 2% auto;
   width: 97%;
   padding: 2.5%;
-  background-color: rgba(191, 191, 191, 0.1);
+  background-color: rgba(40, 40, 40, 0.8);
   border-radius: 0.5em;
 }
 
 .return-btn {
   display: flex;
-  width: 90%;
-  margin: 2% auto;
-  padding: 20px;
+  width: 100%;
+  margin: 1% -2%;
   place-content: flex-end;
 }
 
 h1 {
   font-weight: bold;
-  margin-top: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   margin-left: 2%;
 }
   
@@ -140,7 +138,7 @@ th, td {
   30% {
     opacity: 1;
   }
-  55% {
+  40% {
     opacity: 0.7;
   }
   60% {
@@ -175,6 +173,14 @@ th, td {
     font-size: 1.4em;
   }
 
+  a {
+    font-size: 1.4em;
+  }
+
+  span{
+    font-size: 1.4em;
+  }
+
   li {
     font-size: 1.2em;
   }
@@ -203,6 +209,14 @@ th, td {
   }
 
   p {
+    font-size: 1.2em;
+  }
+
+  a {
+    font-size: 1.2em;
+  }
+
+  span{
     font-size: 1.2em;
   }
 
@@ -235,6 +249,14 @@ th, td {
   p {
     font-size: 1.0em;
   }
+  
+  a {
+    font-size: 1.0em;
+  }
+
+  span{
+    font-size: 1.0em;
+  }
 
   li {
     font-size: 1.0em;
@@ -263,6 +285,14 @@ th, td {
   }
 
   p {
+    font-size: 0.8em;
+  }
+
+  a{
+    font-size: 0.8em;
+  }
+
+  span{
     font-size: 0.8em;
   }
 

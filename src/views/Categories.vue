@@ -80,13 +80,13 @@
   <div class="tab-page">
     <h1>Categories</h1>
     <br/>
-    <div class="flex justify-start space-x-4 ml-[2%]">
+    <div class="flex justify-center space-x-4 ml-[2%]">
       <div
         v-for="tab in tabs"
         :key="tab"
         @click="switchTab(tab)"
         :class="[
-          'py-2 px-3 font-bold rounded-xl hover:bg-cyan-700',
+          'py-[1.5%] px-[2%] text-center font-bold rounded-xl hover:bg-cyan-700 tab',
           activeTab === tab ? 'bg-cyan-200 text-gray-700 hover:text-white font-bold' : 'text-white bg-cyan-950'
         ]"
         style="font-size: 20px"
@@ -109,7 +109,7 @@
         </div>
 
         <div class="div-page">
-          <h4>作品列表 (點擊作品名稱可查看詳細資訊)</h4>
+          <h3>作品列表 (點擊作品名稱可查看詳細資訊)</h3>
           <center>
           <table>
             <thead>
@@ -174,7 +174,7 @@
           </div>
 
           <div class="div-page">
-            <h4>作品列表 (點擊作品名稱可查看詳細資訊)</h4>
+            <h3>作品列表 (點擊作品名稱可查看詳細資訊)</h3>
             <center>
             <table>
               <thead>
@@ -227,7 +227,7 @@
         </div>
 
         <div class="div-page">
-          <h4>作品列表 (點擊作品名稱可查看詳細資訊)</h4>
+          <h3>作品列表 (點擊作品名稱可查看詳細資訊)</h3>
           <center>
           <table>
             <thead>
@@ -291,7 +291,7 @@
         </div>
 
         <div class="div-page">
-          <h4>作品列表 (點擊作品名稱可查看詳細資訊)</h4>
+          <h3>作品列表 (點擊作品名稱可查看詳細資訊)</h3>
           <center>
           <table>
             <thead>
@@ -336,7 +336,7 @@
         </div>
 
         <div class="div-page">
-          <h4>作品列表 (點擊作品名稱可查看詳細資訊)</h4>
+          <h3>作品列表 (點擊作品名稱可查看詳細資訊)</h3>
           <center>
           <table>
             <thead>
@@ -383,7 +383,7 @@
         </div>
 
         <div class="div-page">
-          <h4>作品列表 (點擊作品名稱可查看詳細資訊)</h4>
+          <h3>作品列表 (點擊作品名稱可查看詳細資訊)</h3>
           <center>
           <table>
             <thead>
@@ -473,7 +473,6 @@ body.showpopup {
   backdrop-filter: blur(5px);
 }
 .close-btn {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
   font-weight: bold;
   line-height: 25px;
@@ -487,4 +486,21 @@ body.showpopup {
   color: #666;
 }
 
+@media (max-width: 2000px) {
+  .tab{
+    font-size: 1.6em;
+  }
+}
+
+@media (max-width: 800px) {
+  .tab{
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 360px) {
+  .tab{
+    font-size: 0.8em;
+  }
+}
 </style>
