@@ -122,7 +122,7 @@
             <tbody>
             <tr v-for="group in math" :key="group.id">
                 <td>{{ group.mark }}</td>
-                <td @click="showPopup(group)" class="touch">{{ group.title }}</td>
+                <td @click="showPopup(group)" class="touch title">{{ group.title }}</td>
                 <td>{{ group.author }}</td>
             </tr>
             </tbody>
@@ -187,7 +187,7 @@
               <tbody>
               <tr v-for="group in physics" :key="group.id">
                   <td>{{ group.mark }}</td>
-                  <td @click="showPopup(group) " class="touch">{{ group.title }}</td>
+                  <td @click="showPopup(group) " class="touch title">{{ group.title }}</td>
                   <td>{{ group.author }}</td>
               </tr>
               </tbody>
@@ -240,7 +240,7 @@
             <tbody>
             <tr v-for="group in chemistry" :key="group.id">
                 <td>{{ group.mark }}</td>
-                <td @click="showPopup(group)" class="touch">{{ group.title }}</td>
+                <td @click="showPopup(group)" class="touch title">{{ group.title }}</td>
                 <td>{{ group.author }}</td>
             </tr>
             </tbody>
@@ -304,7 +304,7 @@
             <tbody>
             <tr v-for="group in biology" :key="group.id">
                 <td>{{ group.mark }}</td>
-                <td @click="showPopup(group)" class="touch">{{ group.title }}</td>
+                <td @click="showPopup(group)" class="touch title">{{ group.title }}</td>
                 <td>{{ group.author }}</td>
             </tr>
             </tbody>
@@ -349,7 +349,7 @@
             <tbody>
             <tr v-for="group in infor" :key="group.id">
                 <td>{{ group.mark }}</td>
-                <td @click="showPopup(group)" class="touch">{{ group.title }}</td>
+                <td @click="showPopup(group)" class="touch title">{{ group.title }}</td>
                 <td>{{ group.author }}</td>
             </tr>
             </tbody>
@@ -396,7 +396,7 @@
             <tbody>
             <tr v-for="group in grouplist" :key="group.id">
                 <td>{{ group.mark }}</td>
-                <td @click="showPopup(group)" class="touch">{{ group.title }}</td>
+                <td @click="showPopup(group)" class="touch title">{{ group.title }}</td>
                 <td>{{ group.author }}</td>
             </tr>
             </tbody>
@@ -484,6 +484,12 @@ body.showpopup {
 }
 .close-btn:hover {
   color: #666;
+}
+
+.title {
+  max-width: 700px;
+  padding: 2% 2% 2% 2%;
+  text-align: left;
 }
 
 @media (max-width: 2000px) {
