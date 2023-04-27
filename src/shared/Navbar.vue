@@ -529,9 +529,18 @@ nav.navbar {
   .outer-links{
     display: none;
   }
+
+  .login-button{
+    margin-right: 10px;
+  }
 }
 
 @media (max-width: 480px){
+  .login-button{
+    margin-right: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
   .homelink{
     font-size: 2em;
   }
@@ -544,8 +553,8 @@ nav.navbar {
 
   .login-button{
     margin-right: 30px;
-    padding-left: 1px;
-    padding-right: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
     width: 100%;
   }
 }

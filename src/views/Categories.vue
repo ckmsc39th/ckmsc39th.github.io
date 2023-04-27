@@ -80,13 +80,13 @@
   <div class="tab-page">
     <h1>Categories</h1>
     <br/>
-    <div class="flex justify-center space-x-4 ml-[2%]">
+    <div class="flex justify-center space-x-4 ml-[2%] tab">
       <div
         v-for="tab in tabs"
         :key="tab"
         @click="switchTab(tab)"
         :class="[
-          'py-[1.5%] px-[2%] text-center font-bold rounded-xl hover:bg-cyan-700 tab',
+          'py-[1.5%] px-[2%] text-center font-bold rounded-xl hover:bg-cyan-700',
           activeTab === tab ? 'bg-cyan-200 text-gray-700 hover:text-white font-bold' : 'text-white bg-cyan-950'
         ]"
         style="font-size: 20px"
