@@ -6,7 +6,6 @@ import Categories from "../views/Categories.vue";
 import Schedule from "../views/Schedule.vue";
 import Contact from "../views/Contact.vue";
 import Members from "../views/Members.vue";
-import Test from "../views/Test.vue";
 import ScheduleChild1 from "../views/ScheduleChild1.vue";
 import ScheduleChild2 from "../views/ScheduleChild2.vue";
 import ScheduleChild3 from "../views/ScheduleChild3.vue";
@@ -42,11 +41,6 @@ const routes = [
     path: "/members",
     name: "Members",
     component: Members,
-  },
-  {
-    path: "/test",
-    name: Test,
-    component: Test,
   },
   {
     path: "/day1-2F",
