@@ -8,12 +8,8 @@
 
     <div class="column-2">
       <router-link :to="{ name: 'About' }" class="link">About</router-link>
-      <router-link :to="{ name: 'Categories' }" class="link"
-        >Categories</router-link
-      >
-      <router-link :to="{ name: 'Schedule' }" class="link"
-        >Schedule</router-link
-      >
+      <router-link :to="{ name: 'Categories' }" class="link">Categories</router-link>
+      <router-link :to="{ name: 'Schedule' }" class="link">Schedule</router-link>
       <router-link :to="{ name: 'Contact' }" class="link">Contact</router-link>
     </div>
 
