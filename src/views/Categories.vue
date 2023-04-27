@@ -86,7 +86,7 @@
         :key="tab"
         @click="switchTab(tab)"
         :class="[
-          'py-[1.5%] px-[2%] font-bold rounded-xl hover:bg-cyan-700 tab',
+          'py-[1.5%] px-[2%] text-center font-bold rounded-xl hover:bg-cyan-700 tab',
           activeTab === tab ? 'bg-cyan-200 text-gray-700 hover:text-white font-bold' : 'text-white bg-cyan-950'
         ]"
       >
@@ -484,13 +484,19 @@ body.showpopup {
   color: #666;
 }
 
-@media (min-width: 800px) {
+@media (max-width: 2000px) {
   .tab{
-    font-size: 2em;
+    font-size: 1.6em;
   }
 }
 
-@media (min-width: 360px) {
+@media (max-width: 800px) {
+  .tab{
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 360px) {
   .tab{
     font-size: 0.8em;
   }
