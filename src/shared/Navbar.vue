@@ -372,8 +372,8 @@ nav.navbar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 9999;
   display: flex;
@@ -383,8 +383,8 @@ nav.navbar {
 
 .login-container {
   background-color: #fff;
-  width: 400px;
-  padding: 30px;
+  width: 80%;
+  padding: 10%;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   text-align: center;

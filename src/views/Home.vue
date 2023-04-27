@@ -24,7 +24,7 @@
             >
           </div>
         </div>
-        
+
         <div class="event-location">
           <h2>舉辦地點</h2>
           <div class="event-location-details">
@@ -51,25 +51,11 @@
         <h2>活動宗旨與簡介</h2>
         <p>{{ eventDescription }}</p>
       </div>
-
-      <div class="register">
-        <input
-        class="register-email"
-        v-model="email"
-        type="email"
-        placeholder="請輸入您的電子郵件地址"
-        />
-        <button @click="saveEmail" class="register-button">登記參加</button>
-      </div>
-
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from "vue";
-import axios from "axios";
-
 const groupPhotoSrc = "groupPhoto.jpg";
 const eventDate = "2023年5月25&26日 (週四/五)";
 const eventTime = "2:00 PM - 5:00 PM";
@@ -77,24 +63,6 @@ const eventLocation = "100台北市中正區南海路56號";
 const eventDescription = "一定要來喔!";
 const googleCalendarLink = "待加入";
 const googleMapsLink = "https://goo.gl/maps/kWBUJyyp6iXVHmib8";
-
-const email = ref("");
-const message = "hello";
-function saveEmail() {
-  console.log(`Email saved: ${email.value}`);
-  // TODO: add the code to send the email to server or do any other action with it
-  email.value = "";
-}
-const sendEmail = () => {
-  const data = {
-    email: email.value,
-    message: message.value,
-  };
-  axios
-    .post("/api/send-email", data)
-    .then(() => console.log("Email sent successfully"))
-    .catch((error) => console.error("Error sending email:", error));
-};
 </script>
 
 <style scoped>
@@ -142,32 +110,4 @@ const sendEmail = () => {
 
 }
 
-.register{
-  display: flex;
-  justify-items: center;
-}
-.register-email {
-  padding: 10px;
-  margin-right: 10px;
-  border: 1px solid gray;
-  border-radius: 5px;
-  color: #007bff;
-}
-
-.register-button {
-  min-width: fit-content;
-  padding: 10px;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 1em;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-}
-
-.register-button:hover {
-  background-color: #0062cc;
-}
 </style>

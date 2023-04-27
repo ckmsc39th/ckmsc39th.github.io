@@ -80,13 +80,13 @@
   <div class="tab-page">
     <h1>Categories</h1>
     <br/>
-    <div class="flex justify-start space-x-4 ml-[2%]">
+    <div class="flex justify-center space-x-4 ml-[2%]">
       <div
         v-for="tab in tabs"
         :key="tab"
         @click="switchTab(tab)"
         :class="[
-          'py-[1.5%] px-[2%] font-bold rounded-xl hover:bg-cyan-700',
+          'py-[1.5%] px-[2%] font-bold rounded-xl hover:bg-cyan-700 tab',
           activeTab === tab ? 'bg-cyan-200 text-gray-700 hover:text-white font-bold' : 'text-white bg-cyan-950'
         ]"
       >
@@ -484,4 +484,15 @@ body.showpopup {
   color: #666;
 }
 
+@media (min-width: 800px) {
+  .tab{
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 360px) {
+  .tab{
+    font-size: 0.8em;
+  }
+}
 </style>
