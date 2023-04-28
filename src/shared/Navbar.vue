@@ -85,7 +85,7 @@
               <router-link :to="{ name: 'Contact' }" @click="uncheck" class="hover-mobile-link"
               >Contact</router-link>
             </div>
-
+            <br>
             <div>
               <a
                 href="https://www.youtube.com/@ckmsc39th_luminescence"
@@ -257,6 +257,7 @@ nav.navbar {
 }
 
 .sidebar {
+  width: 25%;
   height: 100vh;
   position: absolute;
   right: 40px;
@@ -316,6 +317,7 @@ nav.navbar {
 
 .mobile-link{
   display: flex;
+  border-bottom: solid 1px rgba(161, 161, 161, 1);
   margin-bottom: 10px;
   padding: 10%;
 }
@@ -330,8 +332,8 @@ nav.navbar {
 }
 
 .mobile-icon{
-  margin: 15px;
-  padding: 10px;
+  margin: 2%;
+  padding: 10%;
 }
 
 .mobile-icon:hover{

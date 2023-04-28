@@ -1,6 +1,7 @@
 <template>
   <div class="home-page tab-page">
-    <h1>建中數理資優班第39屆成果發表</h1>
+    <h1 id="title">台北市立建國高級中學</h1>
+    <h1>數理資優班第39屆成果發表</h1>
 
     <div class="group-photo div-page">
       <h2>大合照</h2>
@@ -111,4 +112,11 @@ const googleMapsLink = "https://goo.gl/maps/kWBUJyyp6iXVHmib8";
 
 }
 
+@media (max-width: 300px) {
+
+  h1 {
+  font-size: 1.2em;
+  }
+
+}
 </style>
