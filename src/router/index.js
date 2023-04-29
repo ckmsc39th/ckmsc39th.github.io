@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory, createWebHistory } from "vue-router";
 import { comment } from "postcss";
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
@@ -65,7 +65,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  mode: 'hash',
+  history: createWebHashHistory(),
   routes,
 });
 
