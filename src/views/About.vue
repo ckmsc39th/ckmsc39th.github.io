@@ -14,9 +14,9 @@
     <div class="music-mv div-page">
       <h2>音樂MV</h2>
       <p>
-        快來看看我們最新的成果發表主題曲(?):
-        <a :href="musicMVLink" target="_blank">點擊我^^</a>
-        <iframe
+        努力趕工錄音中...:
+        <!-- <a :href="musicMVLink" target="_blank">點擊我^^</a> -->
+        <!-- <iframe
           width="100%"
           height="360"
           src="https://www.youtube-nocookie.com/embed/z0jQZxH7NgM"
@@ -24,7 +24,7 @@
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
-        ></iframe>
+        ></iframe> -->
       </p>
     </div>
 
