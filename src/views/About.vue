@@ -14,7 +14,7 @@
     <div class="music-mv div-page">
       <h2>音樂MV</h2>
       <p>
-        努力趕工錄音中...:
+        努力趕工錄音中...
         <!-- <a :href="musicMVLink" target="_blank">點擊我^^</a> -->
         <!-- <iframe
           width="100%"
