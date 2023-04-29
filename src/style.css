@@ -29,6 +29,7 @@
   color: #fff;
   background-color: rgba(191, 191, 191, 0.07);
   border-radius: 0.5em;
+  text-align: center;
 }
 
 .div-page{
@@ -37,6 +38,7 @@
   padding: 2.5%;
   background-color: rgba(40, 40, 40, 0.8);
   border-radius: 0.5em;
+  text-align: start;
 }
 
 .return-btn {
@@ -303,6 +305,27 @@ th, td {
 
   td, th {
     font-size: 0.8em;
+  }
+
+}
+
+@media (max-width: 360px){
+  h1 {
+    font-size: 1.4em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 360px){
+  h1 {
+    font-size: 1.2em;
+  }
+
+  h2 {
+    font-size: 1.0em;
   }
 }
 

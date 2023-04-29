@@ -80,7 +80,7 @@
   <div class="tab-page">
     <h1>Categories</h1>
     <br/>
-    <div class="flex justify-center space-x-4 ml-[2%] tab">
+    <div class="flex justify-center space-x-4 ml-[2%] 3xl:text-3xl md:text-md sm:text-sm">
       <div
         v-for="tab in tabs"
         :key="tab"

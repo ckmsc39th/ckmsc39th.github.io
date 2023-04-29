@@ -37,6 +37,16 @@ module.exports = {
           },
         },
       },
+      screens: {
+        '3xl' : {'max': '2000px'},
+        md : {'max': '800px'},
+        sm : {'max': '360px'},
+      },
+      fontSize: {
+        '3xl' : '1.6rem',
+        md : '1.2rem',
+        sm : '0.8rem', 
+      },
     },
   },
   plugins: [],
