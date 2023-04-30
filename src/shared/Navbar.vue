@@ -59,9 +59,9 @@
         </a>
       </div>
       
-      <div @click="showNavbar" class="mobile">
+      <div class="mobile">
         <label class="hamburger-menu">
-          <input type="checkbox" id="checkID"/>
+          <input @click="toggleNavbar" type="checkbox" id="checkID"/>
         </label>
           
         <aside class="sidebar-overlay">
@@ -122,6 +122,7 @@ const email = ref("");
 const password = ref("");
 const loggingIn = ref(false);
 const showingLogin = ref(false);
+const showingNavbar = ref(false);
 
 const correctEmail = "123@email.com";
 const correctPasswd = "1234";
@@ -140,9 +141,15 @@ async function login() {
   loggingIn.value = false;
 }
 
-function showNavbar() {
+function toggleNavbar() {
   const body = document.body;
-  body.style.overflowY = 'hidden';
+  showingNavbar.value = !showingNavbar.value
+  if (showingNavbar.value){
+    body.style.overflowY = 'hidden';
+  }else{
+    body.style.overflowY = '';
+  }
+  
 }
 
 function showLogin() {
