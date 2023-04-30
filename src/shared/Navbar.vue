@@ -71,22 +71,30 @@
               >About</router-link>
             </div>
 
+            <div class="seperated_line"></div>
+
             <div class="mobile-link">
               <router-link :to="{ name: 'Categories' }" @click="uncheck" class="hover-mobile-link"
               >Categories</router-link>
             </div>
+
+            <div class="seperated_line"></div>
 
             <div class="mobile-link">
               <router-link :to="{ name: 'Schedule' }" @click="uncheck" class="hover-mobile-link"
               >Schedule</router-link>
             </div>
 
+            <div class="seperated_line"></div>
+
             <div class="mobile-link">
               <router-link :to="{ name: 'Contact' }" @click="uncheck" class="hover-mobile-link"
               >Contact</router-link>
             </div>
+
+            <div class="seperated_line"></div>
             <br>
-            <div>
+            <div class="flex justify-evenly">
               <a
                 href="https://www.youtube.com/@ckmsc39th_luminescence"
                 target="_blank"
@@ -144,12 +152,12 @@ async function login() {
 function toggleNavbar() {
   const body = document.body;
   showingNavbar.value = !showingNavbar.value
+
   if (showingNavbar.value){
     body.style.overflowY = 'hidden';
   }else{
     body.style.overflowY = '';
   }
-  
 }
 
 function showLogin() {
@@ -163,6 +171,7 @@ function hideLogin() {
 function uncheck() {
   let input = document.getElementById('checkID')
   input.checked = false;
+  toggleNavbar()
 }
 
 </script>
@@ -276,6 +285,10 @@ nav.navbar {
   top: 150px;
 }
 
+.seperated_line {
+  border: solid 1px rgba(241, 241, 241, 0.8);
+}
+
 .hamburger-menu:has(input:checked) + .sidebar-overlay{
   translate: 0;
 }
@@ -293,7 +306,7 @@ nav.navbar {
   background-color: hsl(272, 71%, 81%);
   box-shadow: 0px 0px 0.5em 0.5px hsl(272, 100%, 81%);
   animation: text-flicker 3s linear infinite;
-  color: black;
+  color: rgb(55, 55, 55);
 }
 
 .link {
@@ -309,8 +322,8 @@ nav.navbar {
   border-color: hsl(186, 100%, 78%);
   background-color: hsl(186 100% 78%);
   box-shadow: 0px 0px 0.75em 1px hsl(186 100% 78%);
-  animation: text-flicker 3s linear infinite;
-  color: black;
+  animation: text-flicker 6s linear infinite;
+  color: rgb(55, 55, 55);
 }
 
 .icon {
@@ -323,23 +336,23 @@ nav.navbar {
   border-color: hsl(65, 100%, 89%);
   background-color: hsl(66, 83%, 93%);
   box-shadow: 0px 0px 0.5em 0px hsl(66, 83%, 93%);
-  animation: text-flicker 3s linear infinite;
+  animation: text-flicker 6s linear infinite;
   color: black;
 }
 
 .mobile-link{
-  display: flex;
-  border-bottom: solid 1px rgba(161, 161, 161, 1);
-  margin-bottom: 10px;
+  font-family: 'Recursive';
+  margin-top: 5px;
+  margin-bottom: 5px;
   padding: 10%;
 }
 
-.mobile-link:hover {
+.mobile-link:has(.hover-mobile-link:hover) {
   border-radius: 0.25em;
   border-color: hsl(186, 100%, 78%);
   background-color: hsl(186 100% 78%);
   box-shadow: 0px 0px 0.75em 1px hsl(186 100% 78%);
-  animation: text-flicker 3s linear infinite;
+  animation: text-flicker 6s linear infinite;
   color: black;
 }
 
@@ -353,7 +366,7 @@ nav.navbar {
   border-color: hsl(65, 100%, 89%);
   background-color: hsl(66, 83%, 93%);
   box-shadow: 0px 0px 0.5em 0px hsl(66, 83%, 93%);
-  animation: text-flicker 3s linear infinite;
+  animation: text-flicker 6s linear infinite;
   color: black;
 }
 
@@ -374,7 +387,7 @@ nav.navbar {
   border-radius: 0.45em;
   background-color: hsl(104, 100%, 86%);
   box-shadow: 0px 0px 0.75em 1px hsl(104, 100%, 86%);
-  animation: text-flicker 1.5s linear infinite;
+  animation: text-flicker 6s linear infinite;
   color: black;
 }
 
@@ -491,16 +504,16 @@ nav.navbar {
 
 @media (max-width: 2000px) {
   .homelink{
-    font-size: 3.75em;
+    font-size: 3.75rem;
   }
 
   .link{
-    font-size: 1.1em;
+    font-size: 1.1rem;
     width: 100px;
   }
 
   .login-button{
-    font-size: 1.1em;
+    font-size: 1.1rem;
     width: 100px;
   }
 
@@ -512,18 +525,18 @@ nav.navbar {
   }
 }
 
-@media (max-width: 1099px) {
+@media (max-width: 1100px) {
   .homelink{
-    font-size: 3em;
+    font-size: 3rem;
   }
 
   .link{
-    font-size: 0.8em;
+    font-size: 0.9rem;
     width: 70px;
   }
 
   .login-button{
-    font-size: 0.8em;
+    font-size: 0.9rem;
     width: 70px;
   }
 
@@ -547,6 +560,10 @@ nav.navbar {
   .login-button{
     margin-right: 10px;
   }
+
+  .hover-mobile-link {
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 480px){
@@ -556,13 +573,13 @@ nav.navbar {
     padding-right: 5px;
   }
   .homelink{
-    font-size: 2em;
+    font-size: 2rem;
   }
 }
 
-@media (max-width: 360px){
+@media (max-width: 375px){
   .homelink{
-    font-size: 1.6em;
+    font-size: 1.6rem;
   }
 
   .login-button{
@@ -571,9 +588,13 @@ nav.navbar {
     padding-right: 3px;
     width: 100%;
   }
+
+  .hover-mobile-link {
+    font-size: 0.8rem;
+  }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 801px) {
   .mobile{
     display: none;
   }

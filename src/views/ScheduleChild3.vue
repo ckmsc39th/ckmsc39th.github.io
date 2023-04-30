@@ -7,7 +7,7 @@
       
       <table>
         <tr>
-          <th>Mark</th>
+          <th>Index</th>
           <th>Title</th>
           <th>Time</th>
         </tr>
