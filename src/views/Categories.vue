@@ -2,7 +2,7 @@
   import { ref } from 'vue'
   const tabs = ref(['數學', '物理', '化學', '生物', '資訊', '地科'])
   let activeTab = ref('數學')
-  const grouplist = ([
+  const earth = ([
     {id: 1, mark: "G1", title: "模擬原行星盤氣體在光致蒸發作用下之吸積模型", author: "胡軒綸、蕭宇博", description: "我們在研究原始行星盤上氣體是如何演化，藉由 VADER 程式去模擬氣體密度隨著時間的變化，研究中著重於光致蒸發和黏滯係數如何對原行星盤產生影響。\n\n在原行星盤演化中，恆星輻射會給予外圍氣體能量，氣體因而獲得能量而逃逸，稱為光致蒸發，這過程會導致盤面出現密度相對低的區域，而黏滯係數最終會影響角動量傳遞快慢，進而影響演化速度與方式，以上就是我們的研究啦~"},
     {id: 2, mark: "G2", title: "大屯火山土壤二氧化碳逸出之分析", author: "鄧喻羲", description: "早期學者利用鉀氬定年法，判斷大屯火山最後一次噴發是十萬年前，但這種方法誤差極大，近年來許多地震分析、地殼變動、地球化學和氣體監測等研究，說明了大屯火山的火山作用依然很活躍，不排除有噴發的可能。\n\n本研究聚焦在八煙地區的土壤二氧化碳監測，以區域的微震資料以及環境數據為基礎，利用多項式回歸，對原有的二氧化碳數據進行過濾，以方便日後監測火山訊號。當中我們發現尤其以大氣溫度關聯最大，且具有時間延遲性。\n\n如果你覺得這專題聽起來很水的話，確實挺水的，沒有用什麼太厲害的工具，就是用excel瘋狂整理數據而已，只能說我太弱啦。"}
   ]);
@@ -130,7 +130,9 @@
           </center>
           <div v-if="popupVisible" class="popup">
             <div class="popup__header">
-              <h3>作品名稱: {{ selectedWork.title }}<br>作者: {{ selectedWork.author }}</h3>
+              <h2>{{ selectedWork.title }}</h2>
+              <br>
+              <h4>{{ selectedWork.author }}</h4>
               <button class="close-btn" @click="hidePopup">🞫</button>
             </div>
             <p class="popup__content">{{ selectedWork.description }}</p>
@@ -157,52 +159,54 @@
           走向有相當程度的認識。</p>
 
           <h3># 專題課</h3>
-            <p>學期初時，基於物理組可能的辛苦以及困難，專題課開始時才發現只有4人在物理組。一連串的努力後，老師終於帶領我們做了物理奧林匹亞初試的詳解、用Python學投資、以及提醒大家壓力不要太大，「高中專題做到哪裡就算哪裡」，儘管各位同學都做得非常完善，毫無缺漏，真是擁有大愛的老師啊。</p>
+          <p>學期初時，基於物理組可能的辛苦以及困難，專題課開始時才發現只有4人在物理組。一連串的努力後，老師終於帶領我們做了物理奧林匹亞初試的詳解、用Python學投資、以及提醒大家壓力不要太大，「高中專題做到哪裡就算哪裡」，儘管各位同學都做得非常完善，毫無缺漏，真是擁有大愛的老師啊。</p>
 
-            <p>以下一些簡單的語助詞讓你瞬間變成物理老師:</p>
-            <ol>
-              <li>將語句中的"笨"換成"豬頭"</li>
-              <li>驚訝的語助詞全部換成"哇靠"</li>
-              <li>表示認同的時候"有懂"，膩了請改"了"</li>
-              <li>打字的時候強調請用『』以及！</li>
-              <li>表情符號請用饅頭人表符不要用小黃人，而且一定要一次三個</li>
-              <li>讚嘆的時候：太~厲~害~了~</li>
-              <li>把所有的"好"換成"OK"</li>
-              <li>把"Tracker"念成"垂可"</li>
-              <li>當你不想算小學數學時，"經過一番努力"就有答案了(偷看答案)</li>
-            </ol>
-          </div>
+          <p>以下一些簡單的語助詞讓你瞬間變成物理老師:</p>
+          <ol>
+            <li>將語句中的"笨"換成"豬頭"</li>
+            <li>驚訝的語助詞全部換成"哇靠"</li>
+            <li>表示認同的時候"有懂"，膩了請改"了"</li>
+            <li>打字的時候強調請用『』以及！</li>
+            <li>表情符號請用饅頭人表符不要用小黃人，而且一定要一次三個</li>
+            <li>讚嘆的時候：太~厲~害~了~</li>
+            <li>把所有的"好"換成"OK"</li>
+            <li>把"Tracker"念成"垂可"</li>
+            <li>當你不想算小學數學時，"經過一番努力"就有答案了(偷看答案)</li>
+          </ol>
+        </div>
 
-          <div class="div-page">
-            <h2>作品列表</h2>
-            <h3>(點擊作品名稱可查看詳細資訊)</h3>
-            <center>
-            <table>
-              <thead>
-              <tr>
-                <th>Index</th>
-                <th>Title</th>
-                <th>Authors</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr v-for="group in physics" :key="group.id">
-                  <td>{{ group.mark }}</td>
-                  <td @click="showPopup(group) " class="touch title">{{ group.title }}</td>
-                  <td>{{ group.author }}</td>
-              </tr>
-              </tbody>
-            </table>
-            </center>
-            <div v-if="popupVisible" class="popup">
-              <div class="popup__header">
-                <h3>作品名稱: {{ selectedWork.title }}<br>作者: {{ selectedWork.author }}</h3>
-                <button class="close-btn" @click="hidePopup">🞫</button>
-              </div>
-              <p class="popup__content">{{ selectedWork.description }}</p>
-              <!-- <button class="popup__close" @click="hidePopup"><u>關閉</u></button> -->
+        <div class="div-page">
+          <h2>作品列表</h2>
+          <h3>(點擊作品名稱可查看詳細資訊)</h3>
+          <center>
+          <table>
+            <thead>
+            <tr>
+              <th>Index</th>
+              <th>Title</th>
+              <th>Authors</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="group in physics" :key="group.id">
+                <td>{{ group.mark }}</td>
+                <td @click="showPopup(group) " class="touch title">{{ group.title }}</td>
+                <td>{{ group.author }}</td>
+            </tr>
+            </tbody>
+          </table>
+          </center>
+          <div v-if="popupVisible" class="popup">
+            <div class="popup__header">
+              <h2>{{ selectedWork.title }}</h2>
+              <br>
+              <h4> {{ selectedWork.author }}</h4>
+              <button class="close-btn" @click="hidePopup">🞫</button>
             </div>
+            <p class="popup__content">{{ selectedWork.description }}</p>
+            <!-- <button class="popup__close" @click="hidePopup"><u>關閉</u></button> -->
           </div>
+        </div>
       </div>
 
       <div v-if="activeTab === '化學'">
@@ -250,7 +254,9 @@
           </center>
           <div v-if="popupVisible" class="popup">
             <div class="popup__header">
-              <h3>作品名稱: {{ selectedWork.title }}<br>作者: {{ selectedWork.author }}</h3>
+              <h2>{{ selectedWork.title }}</h2>
+              <br>
+              <h4> {{ selectedWork.author }}</h4>
               <button class="close-btn" @click="hidePopup">🞫</button>
             </div>
             <p class="popup__content">{{ selectedWork.description }}</p>
@@ -315,7 +321,9 @@
           </center>
           <div v-if="popupVisible" class="popup">
             <div class="popup__header">
-              <h3>作品名稱: {{ selectedWork.title }}<br>作者: {{ selectedWork.author }}</h3>
+              <h2>{{ selectedWork.title }}</h2>
+              <br>
+              <h4> {{ selectedWork.author }}</h4>
               <button class="close-btn" @click="hidePopup">🞫</button>
             </div>
             <p class="popup__content">{{ selectedWork.description }}</p>
@@ -361,7 +369,9 @@
           </center>
           <div v-if="popupVisible" class="popup">
             <div class="popup__header">
-              <h3>作品名稱: {{ selectedWork.title }}<br>作者: {{ selectedWork.author }}</h3>
+              <h2>{{ selectedWork.title }}</h2>
+              <br>
+              <h4> {{ selectedWork.author }}</h4>
               <button class="close-btn" @click="hidePopup">🞫</button>
             </div>
             <!-- <img :alt="I5" /> -->
@@ -399,7 +409,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr v-for="group in grouplist" :key="group.id">
+            <tr v-for="group in earth" :key="group.id">
                 <td>{{ group.mark }}</td>
                 <td @click="showPopup(group)" class="touch title">{{ group.title }}</td>
                 <td>{{ group.author }}</td>
@@ -409,7 +419,9 @@
           </center>
           <div v-if="popupVisible" class="popup">
             <div class="popup__header">
-              <h3>作品名稱: {{ selectedWork.title }}<br>作者: {{ selectedWork.author }}</h3>
+              <h2>{{ selectedWork.title }}</h2>
+              <br>
+              <h4> {{ selectedWork.author }}</h4>
               <button class="close-btn" @click="hidePopup">🞫</button>
             </div>
             <p class="popup__content">{{ selectedWork.description }}</p>
@@ -423,7 +435,7 @@
 </template>
 
 <style scoped>
-.showpopup {
+/* .showpopup {
   display: block;
 }
 body.showpopup {
@@ -432,7 +444,7 @@ body.showpopup {
 
 .text-blue-500 {
   color: #22a7f0;
-}
+} */
 
 .popup {
   position: fixed;
@@ -445,8 +457,9 @@ body.showpopup {
   overflow: visible;
   overflow-y: auto;
   z-index: 100;
-  background-color: rgb(34, 0, 75);
-  box-shadow: 0 0 50px rgba(165, 255, 247, 0.703);
+  background-color: rgba(30, 32, 48, 0.69);
+  box-shadow: 0 0 20px rgba(194, 233, 241, 0.568);
+  backdrop-filter: blur(10px);
   border-radius: 30px;
   display: flex;
   flex-direction: column;
