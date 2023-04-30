@@ -129,14 +129,14 @@
           </table>
           </center>
           <div v-if="popupVisible" class="popup">
-            <div class="popup__header">
-              <h2>{{ selectedWork.title }}</h2>
-              <br>
-              <h4>{{ selectedWork.author }}</h4>
+            <div class="popup__title">
+              <h2 class="no-top-bottom-margin">{{ selectedWork.title }}</h2>
               <button class="close-btn" @click="hidePopup">🞫</button>
             </div>
+            <div class="popup__author">
+              <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
+            </div>
             <p class="popup__content">{{ selectedWork.description }}</p>
-            <!-- <button class="popup__close" @click="hidePopup"><u>關閉</u></button> -->
           </div>
         </div>
       </div>
@@ -197,14 +197,14 @@
           </table>
           </center>
           <div v-if="popupVisible" class="popup">
-            <div class="popup__header">
-              <h2>{{ selectedWork.title }}</h2>
-              <br>
-              <h4> {{ selectedWork.author }}</h4>
+            <div class="popup__title">
+              <h2 class="no-top-bottom-margin">{{ selectedWork.title }}</h2>
               <button class="close-btn" @click="hidePopup">🞫</button>
             </div>
+            <div class="popup__author">
+              <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
+            </div>
             <p class="popup__content">{{ selectedWork.description }}</p>
-            <!-- <button class="popup__close" @click="hidePopup"><u>關閉</u></button> -->
           </div>
         </div>
       </div>
@@ -253,14 +253,14 @@
           </table>
           </center>
           <div v-if="popupVisible" class="popup">
-            <div class="popup__header">
-              <h2>{{ selectedWork.title }}</h2>
-              <br>
-              <h4> {{ selectedWork.author }}</h4>
+            <div class="popup__title">
+              <h2 class="no-top-bottom-margin">{{ selectedWork.title }}</h2>
               <button class="close-btn" @click="hidePopup">🞫</button>
             </div>
+            <div class="popup__author">
+              <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
+            </div>
             <p class="popup__content">{{ selectedWork.description }}</p>
-            <!-- <button class="popup__close" @click="hidePopup"><u>關閉</u></button> -->
           </div>
         </div>
       </div>
@@ -320,14 +320,14 @@
           </table>
           </center>
           <div v-if="popupVisible" class="popup">
-            <div class="popup__header">
-              <h2>{{ selectedWork.title }}</h2>
-              <br>
-              <h4> {{ selectedWork.author }}</h4>
+            <div class="popup__title">
+              <h2 class="no-top-bottom-margin">{{ selectedWork.title }}</h2>
               <button class="close-btn" @click="hidePopup">🞫</button>
             </div>
+            <div class="popup__author">
+              <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
+            </div>
             <p class="popup__content">{{ selectedWork.description }}</p>
-            <!-- <button class="popup__close" @click="hidePopup"><u>關閉</u></button> -->
           </div>
         </div>
       </div>
@@ -367,19 +367,19 @@
             </tbody>
           </table>
           </center>
+            <!-- <img :alt="I5" /> -->
+            <!-- <img :src="require('/works/I5.jpg')"/> -->
           <div v-if="popupVisible" class="popup">
-            <div class="popup__header">
-              <h2>{{ selectedWork.title }}</h2>
-              <br>
-              <h4> {{ selectedWork.author }}</h4>
+            <div class="popup__title">
+              <h2 class="no-top-bottom-margin">{{ selectedWork.title }}</h2>
               <button class="close-btn" @click="hidePopup">🞫</button>
+            </div>
+            <div class="popup__author">
+              <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
             </div>
             <!-- <img :alt="I5" /> -->
             <!-- <img :src="require('/works/I5.jpg')"/> -->
-            <p class="popup__content">
-              {{ selectedWork.description }}
-            </p>
-            <!-- <button class="popup__close" @click="hidePopup"><u>關閉</u></button> -->
+            <p class="popup__content">{{ selectedWork.description }}</p>
           </div>
         </div>
       </div>
@@ -418,14 +418,14 @@
           </table>
           </center>
           <div v-if="popupVisible" class="popup">
-            <div class="popup__header">
-              <h2>{{ selectedWork.title }}</h2>
-              <br>
-              <h4> {{ selectedWork.author }}</h4>
+            <div class="popup__title">
+              <h2 class="no-top-bottom-margin">{{ selectedWork.title }}</h2>
               <button class="close-btn" @click="hidePopup">🞫</button>
             </div>
+            <div class="popup__author">
+              <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
+            </div>
             <p class="popup__content">{{ selectedWork.description }}</p>
-            <!-- <button class="popup__close" @click="hidePopup"><u>關閉</u></button> -->
           </div>
         </div>
       </div>
@@ -467,22 +467,36 @@ body.showpopup {
   justify-content: center;
 }
 
-.popup__header {
+.popup__title {
   width: 100%;
-  padding: 50px;
-  padding-top: 20px;
-  padding-bottom: 15px;
+  padding-left: 50px;
+  padding-top: 30px;
+  padding-bottom: 5px;
+  padding-right: 30px;
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: normal;
+}
+.popup__author {
+  width: 100%;
+  padding-left: 50px;
+  margin-top: 2px;
+  padding-top: 5px;
+  padding-bottom: 30px;
   border-bottom: 2px solid #ccc;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
 }
 .popup__content {
   padding-top: 10px;
   padding: 50px;
   max-height: 70vh;
   overflow-y: auto;
-  text-align: justify;
+  text-align: left;
   white-space: pre-line;
 }
 
@@ -494,7 +508,7 @@ body.showpopup {
   font-size: 30px;
   font-weight: bold;
   line-height: 25px;
-  color: #5ee1ff;
+  color: #939ab7;
   background: none;
   border: none;
   cursor: pointer;
@@ -538,5 +552,9 @@ body.showpopup {
   .tab{
     font-size: 0.8rem;
   }
+}
+.no-top-bottom-margin {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 </style>
