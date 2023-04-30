@@ -59,7 +59,7 @@
         </a>
       </div>
       
-      <div class="mobile">
+      <div @click="showNavbar" class="mobile">
         <label class="hamburger-menu">
           <input type="checkbox" id="checkID"/>
         </label>
@@ -138,6 +138,11 @@ async function login() {
     console.error(error);
   }
   loggingIn.value = false;
+}
+
+function showNavbar() {
+  const body = document.body;
+  body.style.overflowY = 'hidden';
 }
 
 function showLogin() {
