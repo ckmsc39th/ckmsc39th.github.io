@@ -577,7 +577,7 @@ nav.navbar {
   }
 }
 
-@media (max-width: 375px){
+@media (max-width: 380px){
   .homelink{
     font-size: 1.6rem;
   }

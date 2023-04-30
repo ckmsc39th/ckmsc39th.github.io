@@ -521,7 +521,7 @@ body.showpopup {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 385px) {
   .tab{
     font-size: 0.8rem;
   }
