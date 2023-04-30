@@ -131,7 +131,7 @@
           <div v-if="popupVisible" class="popup">
             <div class="popup__header">
               <h3>作品名稱: {{ selectedWork.title }}<br>作者: {{ selectedWork.author }}</h3>
-              <button class="close-btn" @click="hidePopup">X</button>
+              <button class="close-btn" @click="hidePopup">🞫</button>
             </div>
             <p class="popup__content">{{ selectedWork.description }}</p>
             <!-- <button class="popup__close" @click="hidePopup"><u>關閉</u></button> -->
@@ -197,7 +197,7 @@
             <div v-if="popupVisible" class="popup">
               <div class="popup__header">
                 <h3>作品名稱: {{ selectedWork.title }}<br>作者: {{ selectedWork.author }}</h3>
-                <button class="close-btn" @click="hidePopup">X</button>
+                <button class="close-btn" @click="hidePopup">🞫</button>
               </div>
               <p class="popup__content">{{ selectedWork.description }}</p>
               <!-- <button class="popup__close" @click="hidePopup"><u>關閉</u></button> -->
@@ -251,7 +251,7 @@
           <div v-if="popupVisible" class="popup">
             <div class="popup__header">
               <h3>作品名稱: {{ selectedWork.title }}<br>作者: {{ selectedWork.author }}</h3>
-              <button class="close-btn" @click="hidePopup">X</button>
+              <button class="close-btn" @click="hidePopup">🞫</button>
             </div>
             <p class="popup__content">{{ selectedWork.description }}</p>
             <!-- <button class="popup__close" @click="hidePopup"><u>關閉</u></button> -->
@@ -316,7 +316,7 @@
           <div v-if="popupVisible" class="popup">
             <div class="popup__header">
               <h3>作品名稱: {{ selectedWork.title }}<br>作者: {{ selectedWork.author }}</h3>
-              <button class="close-btn" @click="hidePopup">X</button>
+              <button class="close-btn" @click="hidePopup">🞫</button>
             </div>
             <p class="popup__content">{{ selectedWork.description }}</p>
             <!-- <button class="popup__close" @click="hidePopup"><u>關閉</u></button> -->
@@ -362,7 +362,7 @@
           <div v-if="popupVisible" class="popup">
             <div class="popup__header">
               <h3>作品名稱: {{ selectedWork.title }}<br>作者: {{ selectedWork.author }}</h3>
-              <button class="close-btn" @click="hidePopup">X</button>
+              <button class="close-btn" @click="hidePopup">🞫</button>
             </div>
             <!-- <img :alt="I5" /> -->
             <!-- <img :src="require('/works/I5.jpg')"/> -->
@@ -410,7 +410,7 @@
           <div v-if="popupVisible" class="popup">
             <div class="popup__header">
               <h3>作品名稱: {{ selectedWork.title }}<br>作者: {{ selectedWork.author }}</h3>
-              <button class="close-btn" @click="hidePopup">X</button>
+              <button class="close-btn" @click="hidePopup">🞫</button>
             </div>
             <p class="popup__content">{{ selectedWork.description }}</p>
             <!-- <button class="popup__close" @click="hidePopup"><u>關閉</u></button> -->
