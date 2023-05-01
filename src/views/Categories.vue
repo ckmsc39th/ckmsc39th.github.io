@@ -1,5 +1,5 @@
 <script setup> 
-  import { ref } from 'vue'
+  import { ref, onMounted } from 'vue'
   const tabs = ref(['數學', '物理', '化學', '生物', '資訊', '地科'])
   let activeTab = ref('數學')
   const earth = ([
@@ -74,6 +74,14 @@
       // play a sound effect
     }
   }
+  onMounted(() => {
+    window.addEventListener('keydown', function(event) {
+        if (event.key === "Escape") { 
+          hidePopup();
+        }
+      }
+    )
+  });
 </script>
 
 <template>
