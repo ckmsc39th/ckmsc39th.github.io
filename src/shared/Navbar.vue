@@ -156,6 +156,7 @@ function uncheck() {
 </script>
 
 <style>
+
 nav.navbar {
   width: 100%;
   display: flex;
@@ -253,7 +254,7 @@ nav.navbar {
   background-color: rgba(50, 50, 50, 0.9);
   color: white;
   max-width: 100vw;
-  min-height: 100vh
+  min-height: 100vh;
 }
 
 .sidebar {
@@ -261,7 +262,7 @@ nav.navbar {
   height: 100vh;
   position: absolute;
   right: 40px;
-  top: 150px;
+  top: 100px;
 }
 
 .hamburger-menu:has(input:checked) + .sidebar-overlay{
