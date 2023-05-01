@@ -112,7 +112,7 @@ const googleMapsLink = "https://goo.gl/maps/kWBUJyyp6iXVHmib8";
 
 }
 
-@media (max-width: 300px) {
+@media (max-width: 385px) {
 
   h1 {
   font-size: 1.2rem;

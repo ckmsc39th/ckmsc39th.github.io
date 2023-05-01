@@ -262,11 +262,11 @@ th, td {
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 
   h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   h3 {
@@ -299,13 +299,13 @@ th, td {
 
 }
 
-@media (max-width: 375px){
+@media (max-width: 385px){
   h1 {
     font-size: 1.4rem;
   }
 
   h2 {
-    font-size: 1.1rem;
+    font-size: 1.0rem;
   }
 }
 
