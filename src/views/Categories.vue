@@ -139,7 +139,7 @@
           <div v-if="popupVisible" class="popup">
             <div class="popup__title">
               <h2 class="no-top-bottom-margin">{{ selectedWork.title }}</h2>
-              <button class="close-btn" @click="hidePopup">🞫</button>
+              <button class="close-btn" @click="hidePopup" title="按Esc也可以關掉喔">🞫</button>
             </div>
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
@@ -207,7 +207,7 @@
           <div v-if="popupVisible" class="popup">
             <div class="popup__title">
               <h2 class="no-top-bottom-margin">{{ selectedWork.title }}</h2>
-              <button class="close-btn" @click="hidePopup">🞫</button>
+              <button class="close-btn" @click="hidePopup" title="按Esc也可以關掉喔">🞫</button>
             </div>
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
@@ -263,7 +263,7 @@
           <div v-if="popupVisible" class="popup">
             <div class="popup__title">
               <h2 class="no-top-bottom-margin">{{ selectedWork.title }}</h2>
-              <button class="close-btn" @click="hidePopup">🞫</button>
+              <button class="close-btn" @click="hidePopup" title="按Esc也可以關掉喔">🞫</button>
             </div>
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
@@ -330,7 +330,7 @@
           <div v-if="popupVisible" class="popup">
             <div class="popup__title">
               <h2 class="no-top-bottom-margin">{{ selectedWork.title }}</h2>
-              <button class="close-btn" @click="hidePopup">🞫</button>
+              <button class="close-btn" @click="hidePopup" title="按Esc也可以關掉喔">🞫</button>
             </div>
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
@@ -380,7 +380,7 @@
           <div v-if="popupVisible" class="popup">
             <div class="popup__title">
               <h2 class="no-top-bottom-margin">{{ selectedWork.title }}</h2>
-              <button class="close-btn" @click="hidePopup">🞫</button>
+              <button class="close-btn" @click="hidePopup" title="按Esc也可以關掉喔">🞫</button>
             </div>
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
@@ -428,7 +428,7 @@
           <div v-if="popupVisible" class="popup">
             <div class="popup__title">
               <h2 class="no-top-bottom-margin">{{ selectedWork.title }}</h2>
-              <button class="close-btn" @click="hidePopup">🞫</button>
+              <button class="close-btn" @click="hidePopup" title="按Esc也可以關掉喔">🞫</button>
             </div>
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
