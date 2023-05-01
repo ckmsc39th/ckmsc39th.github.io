@@ -80,7 +80,7 @@
   <div class="tab-page">
     <h1>Categories</h1>
     <br/>
-    <div class="flex justify-center space-x-4 ml-[2%] 3xl:text-3xl md:text-md sm:text-sm">
+    <div class="flex justify-center space-x-4 ml-[2%] tab">
       <div
         v-for="tab in tabs"
         :key="tab"
@@ -89,7 +89,6 @@
           'py-[1.5%] px-[2%] text-center font-bold rounded-xl hover:bg-cyan-700',
           activeTab === tab ? 'bg-cyan-200 text-gray-700 hover:text-white font-bold' : 'text-white bg-cyan-950'
         ]"
-        style="font-size: 20px"
       >
         {{ tab }}
       </div>
@@ -109,14 +108,15 @@
         </div>
 
         <div class="div-page">
-          <h3>作品列表 (點擊作品名稱可查看詳細資訊)</h3>
+          <h2>作品列表</h2>
+          <h3>(點擊作品名稱可查看詳細資訊)</h3>
           <center>
           <table>
             <thead>
             <tr>
-              <th>作品編號</th>
-              <th>作品名稱</th>
-              <th>作者</th>
+              <th>Index</th>
+              <th>Title</th>
+              <th>Authors</th>
             </tr>
             </thead>
             <tbody>
@@ -174,14 +174,15 @@
           </div>
 
           <div class="div-page">
-            <h3>作品列表 (點擊作品名稱可查看詳細資訊)</h3>
+            <h2>作品列表</h2>
+            <h3>(點擊作品名稱可查看詳細資訊)</h3>
             <center>
             <table>
               <thead>
               <tr>
-                <th>作品編號</th>
-                <th>作品名稱</th>
-                <th>作者</th>
+                <th>Index</th>
+                <th>Title</th>
+                <th>Authors</th>
               </tr>
               </thead>
               <tbody>
@@ -227,14 +228,15 @@
         </div>
 
         <div class="div-page">
-          <h3>作品列表 (點擊作品名稱可查看詳細資訊)</h3>
+          <h2>作品列表</h2>
+          <h3>(點擊作品名稱可查看詳細資訊)</h3>
           <center>
           <table>
             <thead>
             <tr>
-              <th>作品編號</th>
-              <th>作品名稱</th>
-              <th>作者</th>
+              <th>Index</th>
+              <th>Title</th>
+              <th>Authors</th>
             </tr>
             </thead>
             <tbody>
@@ -291,14 +293,15 @@
         </div>
 
         <div class="div-page">
-          <h3>作品列表 (點擊作品名稱可查看詳細資訊)</h3>
+          <h2>作品列表</h2>
+          <h3>(點擊作品名稱可查看詳細資訊)</h3>
           <center>
           <table>
             <thead>
             <tr>
-              <th>作品編號</th>
-              <th>作品名稱</th>
-              <th>作者</th>
+              <th>Index</th>
+              <th>Title</th>
+              <th>Authors</th>
             </tr>
             </thead>
             <tbody>
@@ -336,14 +339,15 @@
         </div>
 
         <div class="div-page">
-          <h3>作品列表 (點擊作品名稱可查看詳細資訊)</h3>
+          <h2>作品列表</h2>
+          <h3>(點擊作品名稱可查看詳細資訊)</h3>
           <center>
           <table>
             <thead>
             <tr>
-              <th>作品編號</th>
-              <th>作品名稱</th>
-              <th>作者</th>
+              <th>Index</th>
+              <th>Title</th>
+              <th>Authors</th>
             </tr>
             </thead>
             <tbody>
@@ -383,14 +387,15 @@
         </div>
 
         <div class="div-page">
-          <h3>作品列表 (點擊作品名稱可查看詳細資訊)</h3>
+          <h2>作品列表</h2>
+          <h3>(點擊作品名稱可查看詳細資訊)</h3>
           <center>
           <table>
             <thead>
             <tr>
-              <th>作品編號</th>
-              <th>作品名稱</th>
-              <th>作者</th>
+              <th>Index</th>
+              <th>Title</th>
+              <th>Authors</th>
             </tr>
             </thead>
             <tbody>
@@ -494,19 +499,31 @@ body.showpopup {
 
 @media (max-width: 2000px) {
   .tab{
-    font-size: 1.6em;
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .tab{
+    font-size: 1.4rem;
   }
 }
 
 @media (max-width: 800px) {
   .tab{
-    font-size: 1.2em;
+    font-size: 1.2rem;
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 480px) {
   .tab{
-    font-size: 0.8em;
+    font-size: 1.0rem;
+  }
+}
+
+@media (max-width: 385px) {
+  .tab{
+    font-size: 0.8rem;
   }
 }
 </style>

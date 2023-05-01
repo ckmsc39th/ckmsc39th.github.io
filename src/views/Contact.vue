@@ -7,21 +7,21 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        <i class="fas fa-envelope"></i> Email
+        <i class="fas fa-envelope"></i> <h2>Email</h2>
       </a>
       <a
         href="https://instagram.com/luminescence_ckmsc39th_"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <i class="fab fa-instagram"></i> Instagram
+        <i class="fab fa-instagram"></i> <h2>Instagram</h2>
       </a>
       <a
         href="https://github.com/ckmsc39th/ckmsc39th.github.io"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <i class="fab fa-github"></i> Github
+        <i class="fab fa-github"></i> <h2>Github</h2>
       </a>
     </div>
 
@@ -75,30 +75,25 @@ const teammateList = [
   {
     id: 4,
     name: "謝秉宸",
-    position: "非網管空降支援",
+    position: "空降支援",
     intro: "超弱。",
     photo: "/team/xie.png",
   },
 ];
 </script>
 <style scoped>
-.contact-pg h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
 .contact-methods a {
   display: flex;
   align-items: center;
-  font-size: 24px;
-  margin-bottom: 10px;
+  width: fit-content;
+  margin-bottom: 2%;
   margin-left: 3%;
   color: #007bff;
   text-decoration: none;
 }
 
 .contact-methods a i {
-  margin-right: 10px;
+  margin-right: 2%;
 }
 
 .contact-methods a:hover {
@@ -145,7 +140,6 @@ const teammateList = [
 }
 
 .team-member-info p {
-  font-size: 16px;
   line-height: 1.4;
   margin-bottom: 5px;
 }
