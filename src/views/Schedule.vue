@@ -37,8 +37,8 @@ export default {
 h2{
   margin: 0;
 }
-.sublink:hover {
-  color: #007bff;
+.sublink:hover h2{
+  color:#007bff;
   text-decoration: underline;
 }
 </style>

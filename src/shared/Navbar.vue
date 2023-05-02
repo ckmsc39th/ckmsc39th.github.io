@@ -177,6 +177,14 @@ function uncheck() {
 </script>
 
 <style>
+:root{
+  --bar-width: 30px;
+  --bar-height: 4px;
+  --gap: 6px;
+  --hamburger-height: calc(var(--bar-height)*3 + var(--gap)*2);
+  --x-width: calc(var(--hamburger-height) * 1.414213562)
+}
+
 nav.navbar {
   width: 100%;
   display: flex;
@@ -213,7 +221,7 @@ nav.navbar {
 .hamburger-menu{
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: var(--gap);
   width: max-content;
   position: absolute;
   right: 20px;
@@ -225,8 +233,8 @@ nav.navbar {
 .hamburger-menu::after,
 .hamburger-menu input{
   content: "";
-  width: 40px;
-  height: 8px;
+  width: var(--bar-width);
+  height: var(--bar-height);
   background-color: white;
   border-radius: 4px;
   transform-origin: left center;
@@ -240,14 +248,14 @@ nav.navbar {
 
 .hamburger-menu:has(input:checked)::before {
   rotate: 45deg;
-  width: 50.91167px;
-  translate: 0 -4px;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / -2);
 }
 
 .hamburger-menu:has(input:checked)::after {
   rotate: -45deg;
-  width: 50.91167px;
-  translate: 0 4px;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / 2);
 }
 
 .hamburger-menu input{
@@ -271,13 +279,14 @@ nav.navbar {
   bottom: 0;
   transition: translate 200ms ease-in-out;
   translate: 300%;
-  background-color: rgba(50, 50, 50, 0.9);
+  background-color: rgba(33, 29, 41, 0.9);
   color: white;
   max-width: 100vw;
   min-height: 100vh
 }
 
 .sidebar {
+  font-weight: bold;
   width: 25%;
   height: 100vh;
   position: absolute;
