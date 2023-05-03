@@ -2,7 +2,11 @@
   <div class="app">
     <div class="navbar">
       <navbar></navbar>
-      <router-view />
+        <router-view v-slot="{ Component }">
+          <transition name="page-opacity" mode="out-in">
+            <component :is="Component"></component>
+          </transition>
+        </router-view>
     </div>
   </div>
 </template>
@@ -50,6 +54,24 @@ const isMobile = () => {
   animation: background-flicker 7s linear infinite;
 }
 
+
+.page-opacity-enter-from{
+  opacity: 0;
+  transform: translateY(-100px);
+}
+
+.page-opacity-enter-active{
+  transition: all 0.3s ease-out;
+}
+
+.page-opacity-leave-to{
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.page-opacity-leave-active{
+  transition: all 0.3s ease-in;
+}
 @keyframes background-flicker {
   0% {
     opacity: 0.9;
