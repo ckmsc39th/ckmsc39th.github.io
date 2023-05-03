@@ -96,7 +96,11 @@ const teammateList = [
   margin-right: 2%;
 }
 
-.contact-methods a:hover {
+.contact-methods h2{
+  color:#007bff;
+}
+
+.contact-methods h2:hover {
   text-decoration: underline;
 }
 
