@@ -72,7 +72,7 @@
     activeTab.value = newTab;
     if (newTab === '化學') {
       // play a sound effect
-      var audio = new Audio(require('blaster.mp3'));
+      var audio = new Audio('blaster.mp3');
       audio.play();
     }
   }
