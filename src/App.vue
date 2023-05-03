@@ -72,6 +72,7 @@ const isMobile = () => {
 .page-opacity-leave-active{
   transition: all 0.3s ease-in;
 }
+
 @keyframes background-flicker {
   0% {
     opacity: 0.9;
