@@ -282,7 +282,7 @@ nav.navbar {
   background-color: rgba(33, 29, 41, 0.9);
   color: white;
   max-width: 100vw;
-  min-height: 100vh
+  min-height: 100vh;
 }
 
 .sidebar {
@@ -291,7 +291,7 @@ nav.navbar {
   height: 100vh;
   position: absolute;
   right: 40px;
-  top: 150px;
+  top: 100px;
 }
 
 .seperated_line {
