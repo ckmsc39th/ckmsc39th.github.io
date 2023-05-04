@@ -539,7 +539,7 @@ body.showpopup {
 }
 .works-photo {
   margin-bottom: 20px;
-  width: 30%;
+  width: 50%;
   display: block;
   padding-bottom: 25px;
   margin: auto;
