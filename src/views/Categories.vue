@@ -473,7 +473,7 @@ body.showpopup {
   z-index: 100;
   background-color: rgba(30, 32, 48, 0.69);
   box-shadow: 0 0 20px rgba(194, 233, 241, 0.568);
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
   border-radius: 30px;
   display: flex;
   flex-direction: column;
