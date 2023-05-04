@@ -41,7 +41,7 @@
   background-color: rgba(33, 29, 41, 0.8);
   border-radius: 0.5em;
   text-align: start;
-  animation: fade-in-animation ease 0.55s;
+  animation: fade-in-animation ease 0.9s;
 }
 
 .return-btn {
