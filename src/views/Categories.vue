@@ -479,6 +479,7 @@ body.showpopup {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  animation: fade-in-animation ease-in 0.2s;
 }
 
 .popup__title {
