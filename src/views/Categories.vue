@@ -159,10 +159,10 @@
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
             </div>
-            <p class="popup__content">
+            <div class="popup__content">
               <img :src="'/works/'+selectedWork.mark+'.jpg'" class="works-photo" :alt="'/works/'+selectedWork.mark+'.jpg'">
-              {{ selectedWork.description }}
-            </p>
+              <p class="popup__description">{{ selectedWork.description }}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -230,10 +230,10 @@
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
             </div>
-            <p class="popup__content">
+            <div class="popup__content">
               <img :src="'/works/'+selectedWork.mark+'.jpg'" class="works-photo" :alt="'/works/'+selectedWork.mark+'.jpg'">
-              {{ selectedWork.description }}
-            </p>
+              <p class="popup__description">{{ selectedWork.description }}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -289,10 +289,10 @@
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
             </div>
-            <p class="popup__content">
+            <div class="popup__content">
               <img :src="'/works/'+selectedWork.mark+'.jpg'" class="works-photo" :alt="'/works/'+selectedWork.mark+'.jpg'">
-              {{ selectedWork.description }}
-            </p>
+              <p class="popup__description">{{ selectedWork.description }}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -359,10 +359,10 @@
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
             </div>
-            <p class="popup__content">
+            <div class="popup__content">
               <img :src="'/works/'+selectedWork.mark+'.jpg'" class="works-photo" :alt="'/works/'+selectedWork.mark+'.jpg'">
-              {{ selectedWork.description }}
-            </p>
+              <p class="popup__description">{{ selectedWork.description }}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -410,10 +410,10 @@
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
             </div>
-            <p class="popup__content">
+            <div class="popup__content">
               <img :src="'/works/'+selectedWork.mark+'.jpg'" class="works-photo" :alt="'/works/'+selectedWork.mark+'.jpg'">
-              {{ selectedWork.description }}
-            </p>
+              <p class="popup__description">{{ selectedWork.description }}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -460,10 +460,10 @@
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
             </div>
             
-            <p class="popup__content">
+            <div class="popup__content">
               <img :src="'/works/'+selectedWork.mark+'.jpg'" class="works-photo" :alt="'/works/'+selectedWork.mark+'.jpg'">
-              {{ selectedWork.description }}
-            </p>
+              <p class="popup__description">{{ selectedWork.description }}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -544,6 +544,9 @@ body.showpopup {
   margin: auto;
   border-radius: 30px;
   box-shadow: 30px aquamarine
+}
+.popup__description{
+  margin: 5%;
 }
 .popup.is-active {
   display: block;
