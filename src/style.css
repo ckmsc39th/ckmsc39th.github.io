@@ -31,7 +31,7 @@
   background-color: rgba(33, 29, 41, 0.2);
   border-radius: 0.5em;
   text-align: center;
-  animation: fade-in-animation ease-in 0.5s;
+  animation: fade-in-animation ease-in 0.3s;
 }
 
 .div-page{
@@ -41,7 +41,7 @@
   background-color: rgba(33, 29, 41, 0.8);
   border-radius: 0.5em;
   text-align: start;
-  animation: fade-in-animation ease 0.75s;
+  animation: fade-in-animation ease 0.55s;
 }
 
 .return-btn {

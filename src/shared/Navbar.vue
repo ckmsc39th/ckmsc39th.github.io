@@ -411,6 +411,7 @@ nav.navbar {
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: fade-in-animation ease-in 0.2s;
 }
 
 .login-container {
