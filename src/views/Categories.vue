@@ -531,21 +531,19 @@ body.showpopup {
 
 }
 .popup__content {
-  padding-top: 10px;
-  padding: 50px;
+  padding-top: 30px;
   max-height: 70vh;
   overflow-y: auto;
   text-align: left;
   white-space: pre-line;
 }
 .works-photo {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  padding: 15px;
   width: 50%;
-  display: block;
-  padding-bottom: 25px;
   margin: auto;
-  border-radius: 20px 20px 20px 20px;
-  border-collapse: separate;
+  border-radius: 30px;
+  box-shadow: 30px aquamarine
 }
 .popup.is-active {
   display: block;
