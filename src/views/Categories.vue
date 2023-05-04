@@ -3,8 +3,8 @@
   const tabs = ref(['數學', '物理', '化學', '生物', '資訊', '地科']);
   let activeTab = ref('數學');
   const earth = ([
-    {id: 1, mark: "G1", title: "模擬原行星盤氣體在光致蒸發作用下之吸積模型", author: "胡軒綸、蕭宇博", description: "我們在研究原始行星盤上氣體是如何演化，藉由 VADER 程式去模擬氣體密度隨著時間的變化，研究中著重於光致蒸發和黏滯係數如何對原行星盤產生影響。\n\n在原行星盤演化中，恆星輻射會給予外圍氣體能量，氣體因而獲得能量而逃逸，稱為光致蒸發，這過程會導致盤面出現密度相對低的區域，而黏滯係數最終會影響角動量傳遞快慢，進而影響演化速度與方式，以上就是我們的研究啦~", photo: "/work/I5.jpg"},
-    {id: 2, mark: "G2", title: "大屯火山土壤二氧化碳逸出之分析", author: "鄧喻羲", description: "早期學者利用鉀氬定年法，判斷大屯火山最後一次噴發是十萬年前，但這種方法誤差極大，近年來許多地震分析、地殼變動、地球化學和氣體監測等研究，說明了大屯火山的火山作用依然很活躍，不排除有噴發的可能。\n\n本研究聚焦在八煙地區的土壤二氧化碳監測，以區域的微震資料以及環境數據為基礎，利用多項式回歸，對原有的二氧化碳數據進行過濾，以方便日後監測火山訊號。當中我們發現尤其以大氣溫度關聯最大，且具有時間延遲性。\n\n如果你覺得這專題聽起來很水的話，確實挺水的，沒有用什麼太厲害的工具，就是用excel瘋狂整理數據而已，只能說我太弱啦。", photo: "/works/I5.jpg"}
+    {id: 1, mark: "G1", title: "模擬原行星盤氣體在光致蒸發作用下之吸積模型", author: "胡軒綸、蕭宇博", description: "我們在研究原始行星盤上氣體是如何演化，藉由 VADER 程式去模擬氣體密度隨著時間的變化，研究中著重於光致蒸發和黏滯係數如何對原行星盤產生影響。\n\n在原行星盤演化中，恆星輻射會給予外圍氣體能量，氣體因而獲得能量而逃逸，稱為光致蒸發，這過程會導致盤面出現密度相對低的區域，而黏滯係數最終會影響角動量傳遞快慢，進而影響演化速度與方式，以上就是我們的研究啦~", photo: "/wors/G1.jpg"},
+    {id: 2, mark: "G2", title: "大屯火山土壤二氧化碳逸出之分析", author: "鄧喻羲", description: "早期學者利用鉀氬定年法，判斷大屯火山最後一次噴發是十萬年前，但這種方法誤差極大，近年來許多地震分析、地殼變動、地球化學和氣體監測等研究，說明了大屯火山的火山作用依然很活躍，不排除有噴發的可能。\n\n本研究聚焦在八煙地區的土壤二氧化碳監測，以區域的微震資料以及環境數據為基礎，利用多項式回歸，對原有的二氧化碳數據進行過濾，以方便日後監測火山訊號。當中我們發現尤其以大氣溫度關聯最大，且具有時間延遲性。\n\n如果你覺得這專題聽起來很水的話，確實挺水的，沒有用什麼太厲害的工具，就是用excel瘋狂整理數據而已，只能說我太弱啦。", photo: "/works/G2.jpg"}
   ]);
   const math = ([
     {id: 3, mark: "M1", title: "The Broken Stick Problem - 木棒切割問題之推廣", author: "李允中", description: "本研究要探討的問題是由經典的 《Broken stick problem 》所延伸的問題，雖在文獻中已有了用電腦所運算出來的答案，但沒有提供數學方法，因此我決定親手嘗試找出一個完整且詳盡的統一解法甚至通式。研究初期原本是想由連續隨機變數的方向作切入，但是由於太過複雜，因此最後決定回歸找規律、推導一般式、求出機率、再由一般式回頭證明規律的一般性。 研究過程中雖遭遇到不少困難以及錯誤的思路，但最後仍試著找出了規律及一般式。過程中大量地使用了組合數及數列求和的技巧來整理一般式，計算量龐大。\n\n註: 經典的《The Broken Stick Problem》原始題目為：將一條隨機長度的木條，分成三段隨機長度的木條，則這三段木條 能構成三角形的機率為何？"},
@@ -146,7 +146,10 @@
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
             </div>
-            <p class="popup__content">{{ selectedWork.description }}</p>
+            <p class="popup__content">
+              <img :src="'/works/'+selectedWork.mark+'.jpg'" class="works-photo" :alt="'/works/'+selectedWork.mark+'.jpg'">
+              {{ selectedWork.description }}
+            </p>
           </div>
         </div>
       </div>
@@ -214,7 +217,10 @@
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
             </div>
-            <p class="popup__content">{{ selectedWork.description }}</p>
+            <p class="popup__content">
+              <img :src="'/works/'+selectedWork.mark+'.jpg'" class="works-photo" :alt="'/works/'+selectedWork.mark+'.jpg'">
+              {{ selectedWork.description }}
+            </p>
           </div>
         </div>
       </div>
@@ -270,7 +276,10 @@
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
             </div>
-            <p class="popup__content">{{ selectedWork.description }}</p>
+            <p class="popup__content">
+              <img :src="'/works/'+selectedWork.mark+'.jpg'" class="works-photo" :alt="'/works/'+selectedWork.mark+'.jpg'">
+              {{ selectedWork.description }}
+            </p>
           </div>
         </div>
       </div>
@@ -337,7 +346,10 @@
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
             </div>
-            <p class="popup__content">{{ selectedWork.description }}</p>
+            <p class="popup__content">
+              <img :src="'/works/'+selectedWork.mark+'.jpg'" class="works-photo" :alt="'/works/'+selectedWork.mark+'.jpg'">
+              {{ selectedWork.description }}
+            </p>
           </div>
         </div>
       </div>
@@ -389,7 +401,10 @@
             </div>
             <!-- <img :alt="I5" /> -->
             <!-- <img :src="require('/works/I5.jpg')"/> -->
-            <p class="popup__content">{{ selectedWork.description }}</p>
+            <p class="popup__content">
+              <img :src="'/works/'+selectedWork.mark+'.jpg'" class="works-photo" :alt="'/works/'+selectedWork.mark+'.jpg'">
+              {{ selectedWork.description }}
+            </p>
           </div>
         </div>
       </div>
@@ -437,7 +452,7 @@
             </div>
             
             <p class="popup__content">
-              <img :src="selectedWork.photo" class="works-photo">
+              <img :src="'/works/'+selectedWork.mark+'.jpg'" class="works-photo" :alt="'/works/'+selectedWork.mark+'.jpg'">
               {{ selectedWork.description }}
             </p>
           </div>
@@ -516,7 +531,11 @@ body.showpopup {
 }
 .works-photo {
   margin-bottom: 20px;
-  width: 60%
+  width: 30%;
+  display: block;
+  padding-bottom: 25px;
+  margin: auto;
+  border-radius: 20px;
 }
 .popup.is-active {
   display: block;
