@@ -1,8 +1,11 @@
 <script setup> 
   import { ref, onMounted } from 'vue';
-  // import foojson from '/src/works-description.json'
   const tabs = ref(['數學', '物理', '化學', '生物', '資訊', '地科']);
   let activeTab = ref('數學');
+  const earth = ([
+    {id: 1, mark: "G1", title: "模擬原行星盤氣體在光致蒸發作用下之吸積模型", author: "胡軒綸、蕭宇博", description: "我們在研究原始行星盤上氣體是如何演化，藉由 VADER 程式去模擬氣體密度隨著時間的變化，研究中著重於光致蒸發和黏滯係數如何對原行星盤產生影響。\n\n在原行星盤演化中，恆星輻射會給予外圍氣體能量，氣體因而獲得能量而逃逸，稱為光致蒸發，這過程會導致盤面出現密度相對低的區域，而黏滯係數最終會影響角動量傳遞快慢，進而影響演化速度與方式，以上就是我們的研究啦~"},
+    {id: 2, mark: "G2", title: "大屯火山土壤二氧化碳逸出之分析", author: "鄧喻羲", description: "早期學者利用鉀氬定年法，判斷大屯火山最後一次噴發是十萬年前，但這種方法誤差極大，近年來許多地震分析、地殼變動、地球化學和氣體監測等研究，說明了大屯火山的火山作用依然很活躍，不排除有噴發的可能。\n\n本研究聚焦在八煙地區的土壤二氧化碳監測，以區域的微震資料以及環境數據為基礎，利用多項式回歸，對原有的二氧化碳數據進行過濾，以方便日後監測火山訊號。當中我們發現尤其以大氣溫度關聯最大，且具有時間延遲性。\n\n如果你覺得這專題聽起來很水的話，確實挺水的，沒有用什麼太厲害的工具，就是用excel瘋狂整理數據而已，只能說我太弱啦。"}
+  ]);
   const math = ([
     {id: 3, mark: "M1", title: "The Broken Stick Problem - 木棒切割問題之推廣", author: "李允中", description: "本研究要探討的問題是由經典的 《Broken stick problem 》所延伸的問題，雖在文獻中已有了用電腦所運算出來的答案，但沒有提供數學方法，因此我決定親手嘗試找出一個完整且詳盡的統一解法甚至通式。研究初期原本是想由連續隨機變數的方向作切入，但是由於太過複雜，因此最後決定回歸找規律、推導一般式、求出機率、再由一般式回頭證明規律的一般性。 研究過程中雖遭遇到不少困難以及錯誤的思路，但最後仍試著找出了規律及一般式。過程中大量地使用了組合數及數列求和的技巧來整理一般式，計算量龐大。\n\n註: 經典的《The Broken Stick Problem》原始題目為：將一條隨機長度的木條，分成三段隨機長度的木條，則這三段木條 能構成三角形的機率為何？"},
     {id: 4, mark: "M2", title: "單位圓中內接n邊形與圓心O所成向量之係數比", author: "洪楷威、張哲宇", description: "我們的研究目的是要找出一個固定的計算方式，使得圓內接正n邊形中，任何一條圓心對頂點所做向量，在乘上對應係數後，相加會等於零向量。在尋找我們的專題題目時，偶然想到了之前曾經使用過的奔馳定理，於是我們就想說能否將用在三角形的奔馳定理加以推廣至更多邊形的情況，並使用圓內接多邊形的方式固定兩邊長，使三角形面積可以以三角函數的方式呈現，而在過程中還推演出了另一項命題：如何表示sin(a+b+c+…)"},
@@ -39,10 +42,6 @@
     {id: 29, mark: "B11", title: "靈長類組蛋白去乙醯基酶(HDAC)演化與蛋白結構分析摘要", author: "楊致綸、葉諭陽", description: "組蛋白去乙醯化酶(HDA)是能將組蛋白賴氨酸上乙醯基水解掉的一類酶，這使得 DNA 纏繞組蛋白更加緊密。因為 DNA 纏繞著組蛋白，而 DNA 的表達水平受到組蛋白乙醯化與去乙醯化水平的影響，所以這使組蛋白去乙醯化酶會影響性狀表現，就阿拉伯芥而言，組蛋白乙醯化與去乙醯化可以影響生長素等對植物發育造成變化的激素。這也是表觀遺傳的調控機制之一。為了確認究竟會有怎麼樣的改變並量化分析，我們進行了不同 HDA 開花時間的測試與葉片觀察、 測量的實驗，想要找出 HDA 對植物的影響與差異。\n研究結果指出HDA可能對開花時間呈現正相關或負相關，並且從發芽到開花時間的天數與開花時的葉片個數大致呈正比。而HDA也會本身對下胚軸(子葉到初生根的部分)的生長產生影響。未來期待可以研究HDA究竟是如何挑控生長素，進而對開花時間等造成影響。"},
     {id: 30, mark: "B12", title: "泛素化酶 Peli1對T 細胞耗竭之影響與機制探討", author: "黃品睿", description: "#研究動機\n-\n腫瘤微環境常造就一個免疫抑制的環境而使 T cell 呈現耗竭的狀態使得免疫治療受到影響，若能在未來能夠有機會配合免疫療法治療，降低 T cell exhaustion，可進而提升免疫療法的成效\n-\n#研究目的\n-\n1.利用Jurkat細胞為研究模式，探討Peli1對於T cell exhaustion相關分子的調控\n2.分析Peli1 對於調控T cell exhaustion重要的轉錄因子所扮演的角色\n3.探討Peli1 調控 T cell exhaustion之路徑\n-\n#研究結果\n-\n這當然要等當天再講啊"},
   ]);
-  const earth = ([
-    {id: 1, mark: "G1", title: "模擬原行星盤氣體在光致蒸發作用下之吸積模型", author: "胡軒綸、蕭宇博", description: "我們在研究原始行星盤上氣體是如何演化，藉由 VADER 程式去模擬氣體密度隨著時間的變化，研究中著重於光致蒸發和黏滯係數如何對原行星盤產生影響。\n\n在原行星盤演化中，恆星輻射會給予外圍氣體能量，氣體因而獲得能量而逃逸，稱為光致蒸發，這過程會導致盤面出現密度相對低的區域，而黏滯係數最終會影響角動量傳遞快慢，進而影響演化速度與方式，以上就是我們的研究啦~"},
-    {id: 2, mark: "G2", title: "大屯火山土壤二氧化碳逸出之分析", author: "鄧喻羲", description: "早期學者利用鉀氬定年法，判斷大屯火山最後一次噴發是十萬年前，但這種方法誤差極大，近年來許多地震分析、地殼變動、地球化學和氣體監測等研究，說明了大屯火山的火山作用依然很活躍，不排除有噴發的可能。\n\n本研究聚焦在八煙地區的土壤二氧化碳監測，以區域的微震資料以及環境數據為基礎，利用多項式回歸，對原有的二氧化碳數據進行過濾，以方便日後監測火山訊號。當中我們發現尤其以大氣溫度關聯最大，且具有時間延遲性。\n\n如果你覺得這專題聽起來很水的話，確實挺水的，沒有用什麼太厲害的工具，就是用excel瘋狂整理數據而已，只能說我太弱啦。"}
-  ]);
   const infor = ([
     {id: 31, mark: "I1", title: "以元啟發式搜尋演算法進行鐵路時刻表排點", author: "吳亞倫", description: "摘要:\n本研究採⽤啟發式最佳化演算法及模擬器進⾏旅客列⾞鐵路時刻表 排點，以取代傳統⼈工排點⽅式，希望能找出⼀份針對旅客需求、提升 旅客運輸成功率且降低旅途時間的時刻表。我們提出⼀種班表編碼機 制，可依此產⽣班表草稿。我們研發⼀個模擬器，能夠在短時間內排解 衝突，將班表草稿轉換為合法無衝突之班表，並且依照乘客資料評估⼀ 時刻表的優劣度。我們透過登⼭演算法及基因演算法來搜尋班表草稿， 並以模擬器評估班表優劣。"},
     {id: 32, mark: "I2", title: "動圖生成器", author: "鄭宇程、陳立宸", description: "ACG動圖是近年來二次元文化下的產物。精緻的人物在圖片中微微的動作，讓平時靜止的圖片增添了些許動感，在靜態的圖片和動態的影片取得微妙的平衡。但製作一張漂亮的動圖是一件十分有挑戰性的事。須由動畫師由靜止的圖片開始後製，首先先規劃好圖片中要移動的元素、軌跡，並一幀一幀的繪製動作，再以逐格動畫的方式將單純的圖片拉伸成循環性影片。這種作法通常對於專業知識和時間成本的要求都偏高，普羅大眾絕非能輕易完成。網路上雖然也有圖片後製軟體能夠讓使用者輕易地對圖片進行後製，但效果卻容易失真，且較以動畫方式製作差。因此我們希望能夠運用機器學習和圖像辨識技術來輔助完成動圖的製作。\n\n過程採用了Mask RCNN以產生根據圖片元素輪廓而成的遮罩，並搭配Open-CV先進行簡單的後製，例如裁減、切割等，並在最後製成動畫。"},
@@ -73,6 +72,8 @@
     activeTab.value = newTab;
     if (newTab === '化學') {
       // play a sound effect
+      var audio = new Audio('blaster.mp3');
+      audio.play();
     }
   }
   onMounted(() => {
@@ -81,9 +82,20 @@
           hidePopup();
         }
       }
-    );
-    // TODO: add a listener to close the popup when the user clicks outside of it
+    )
   });
+
+  // mounted () {
+  //   document.addEventListener('mouseup', (e) =>{
+  //       let _wrap = this.$refs.wrap;
+  //       if (_wrap) {
+  //         if(!_wrap.contains(e.target)) {
+  //           hidePopup();
+  //         }
+  //       }
+  //   })
+  // };
+
 </script>
 
 <template>
@@ -132,7 +144,7 @@
             <tbody>
             <tr v-for="group in math" :key="group.id">
                 <td>{{ group.mark }}</td>
-                <td @click="showPopup(group)" class="touch title">{{ group.title }}</td>
+                <td @click="showPopup(group)" class="touch title" ref="wrap">{{ group.title }}</td>
                 <td>{{ group.author }}</td>
             </tr>
             </tbody>
@@ -146,7 +158,10 @@
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
             </div>
-            <p class="popup__content">{{ selectedWork.description }}</p>
+            <p class="popup__content">
+              <img :src="'/works/'+selectedWork.mark+'.jpg'" class="works-photo" :alt="'/works/'+selectedWork.mark+'.jpg'">
+              {{ selectedWork.description }}
+            </p>
           </div>
         </div>
       </div>
@@ -214,7 +229,10 @@
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
             </div>
-            <p class="popup__content">{{ selectedWork.description }}</p>
+            <p class="popup__content">
+              <img :src="'/works/'+selectedWork.mark+'.jpg'" class="works-photo" :alt="'/works/'+selectedWork.mark+'.jpg'">
+              {{ selectedWork.description }}
+            </p>
           </div>
         </div>
       </div>
@@ -270,7 +288,10 @@
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
             </div>
-            <p class="popup__content">{{ selectedWork.description }}</p>
+            <p class="popup__content">
+              <img :src="'/works/'+selectedWork.mark+'.jpg'" class="works-photo" :alt="'/works/'+selectedWork.mark+'.jpg'">
+              {{ selectedWork.description }}
+            </p>
           </div>
         </div>
       </div>
@@ -337,7 +358,10 @@
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
             </div>
-            <p class="popup__content">{{ selectedWork.description }}</p>
+            <p class="popup__content">
+              <img :src="'/works/'+selectedWork.mark+'.jpg'" class="works-photo" :alt="'/works/'+selectedWork.mark+'.jpg'">
+              {{ selectedWork.description }}
+            </p>
           </div>
         </div>
       </div>
@@ -377,8 +401,6 @@
             </tbody>
           </table>
           </center>
-            <!-- <img :alt="I5" /> -->
-            <!-- <img :src="require('/works/I5.jpg')"/> -->
           <div v-if="popupVisible" class="popup">
             <div class="popup__title">
               <h2 class="no-top-bottom-margin">{{ selectedWork.title }}</h2>
@@ -387,9 +409,10 @@
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
             </div>
-            <!-- <img :alt="I5" /> -->
-            <!-- <img :src="require('/works/I5.jpg')"/> -->
-            <p class="popup__content">{{ selectedWork.description }}</p>
+            <p class="popup__content">
+              <img :src="'/works/'+selectedWork.mark+'.jpg'" class="works-photo" :alt="'/works/'+selectedWork.mark+'.jpg'">
+              {{ selectedWork.description }}
+            </p>
           </div>
         </div>
       </div>
@@ -435,7 +458,11 @@
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
             </div>
-            <p class="popup__content">{{ selectedWork.description }}</p>
+            
+            <p class="popup__content">
+              <img :src="'/works/'+selectedWork.mark+'.jpg'" class="works-photo" :alt="'/works/'+selectedWork.mark+'.jpg'">
+              {{ selectedWork.description }}
+            </p>
           </div>
         </div>
       </div>
@@ -475,6 +502,7 @@ body.showpopup {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  animation: fade-in-animation ease-in 0.2s;
 }
 
 .popup__title {
@@ -509,7 +537,14 @@ body.showpopup {
   text-align: left;
   white-space: pre-line;
 }
-
+.works-photo {
+  margin-bottom: 20px;
+  width: 30%;
+  display: block;
+  padding-bottom: 25px;
+  margin: auto;
+  border-radius: 20px;
+}
 .popup.is-active {
   display: block;
   backdrop-filter: blur(5px);
