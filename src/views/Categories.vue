@@ -86,17 +86,6 @@
     )
   });
 
-  // mounted () {
-  //   document.addEventListener('mouseup', (e) =>{
-  //       let _wrap = this.$refs.wrap;
-  //       if (_wrap) {
-  //         if(!_wrap.contains(e.target)) {
-  //           hidePopup();
-  //         }
-  //       }
-  //   })
-  // };
-
 </script>
 
 <template>
@@ -110,7 +99,7 @@
         @click="switchTab(tab)"
         :class="[
           'py-[1.5%] px-[2%] text-center font-bold rounded-xl hover:bg-cyan-700',
-          activeTab === tab ? 'bg-cyan-200 text-gray-700 hover:text-white font-bold' : 'text-white bg-cyan-950'
+          activeTab === tab ? 'bg-cyan-200 text-gray-700 hover:text-white font-bold' : 'text-white bg-cyan-950',
         ]"
       >
         {{ tab }}
@@ -427,7 +416,7 @@
           <h4># 喜歡嘗試各種活動、新科技</h4>
           <p>文禮常常找各種科學活動問同學要不要參加，又或是最近流行甚麼ChatGPT，文禮都會找學生討論。</p>
           <h4># 你是我的花朵</h4>
-          <p>請以<b>李文禮-我的花朵</b>為關鍵字搜尋，會查到不少有趣的影片，如: <a href="https://www.youtube.com/watch?v=Q-_XMqxa0Ck&ab_channel=%E8%8B%B1%E9%9B%84Brine">Leek Roll</a> X)</p>
+          <p>請以<b>李文禮-我的花朵</b>為關鍵字搜尋，會查到不少有趣的影片，如: <a href="https://www.youtube.com/watch?v=Q-_XMqxa0Ck&ab_channel=%E8%8B%B1%E9%9B%84Brine">leeroll</a> X)</p>
         </div>
 
         <div class="div-page">
@@ -483,7 +472,7 @@ body.showpopup {
 .text-blue-500 {
   color: #22a7f0;
 } */
-
+a:hover{ color: rgb(0, 144, 216); }
 .popup {
   position: fixed;
   top: 50%;
@@ -505,7 +494,6 @@ body.showpopup {
   justify-content: center;
   animation: fade-in-animation ease-in 0.2s;
 }
-
 .popup__title {
   width: 100%;
   padding-left: 50px;
