@@ -1,9 +1,7 @@
 <template>
   <nav class="navbar">
     <div class="column-1">
-      <router-link :to="{ name: 'Home' }" class="homelink"
-        >Luminescence</router-link
-      >
+      <router-link :to="{ name: 'Home' }" class="homelink">Luminescence</router-link>
     </div>
 
     <div class="column-2">
@@ -26,11 +24,7 @@
               <input v-model="email" type="email" placeholder="Email" />
             </div>
             <div class="form-group">
-              <input
-                v-model="password"
-                type="password"
-                placeholder="Password"
-              />
+              <input v-model="password" type="password" placeholder="Password" />
             </div>
             <button type="button" @click="login" :disabled="loggingIn">
               {{ loggingIn ? "Logging in..." : "Log in" }}
@@ -41,78 +35,57 @@
       </div>
 
       <div class="outer-links">
-          <a
-          href="https://www.youtube.com/@ckmsc39th_luminescence"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="icon"
-        >
+        <a href="https://www.youtube.com/@ckmsc39th_luminescence" target="_blank" rel="noopener noreferrer" class="icon">
           <vue-feather type="youtube" size="20"></vue-feather>
         </a>
-        <a
-          href="https://instagram.com/luminescence_ckmsc39th_"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="icon"
-        >
+        <a href="https://instagram.com/luminescence_ckmsc39th_" target="_blank" rel="noopener noreferrer" class="icon">
           <vue-feather type="instagram" size="20"></vue-feather>
         </a>
       </div>
-      
+
       <div class="mobile">
         <label class="hamburger-menu">
-          <input @click="toggleNavbar" type="checkbox" id="checkID"/>
+          <input @click="toggleNavbar" type="checkbox" id="checkID" />
         </label>
-          
+
         <aside class="sidebar-overlay">
           <div class="sidebar">
             <div class="mobile-link">
-              <router-link :to="{ name: 'About' }" @click="uncheck" class="hover-mobile-link"
-              >About</router-link>
+              <router-link :to="{ name: 'About' }" @click="uncheck" class="hover-mobile-link">About</router-link>
             </div>
 
             <div class="seperated_line"></div>
 
             <div class="mobile-link">
-              <router-link :to="{ name: 'Categories' }" @click="uncheck" class="hover-mobile-link"
-              >Categories</router-link>
+              <router-link :to="{ name: 'Categories' }" @click="uncheck"
+                class="hover-mobile-link">Categories</router-link>
             </div>
 
             <div class="seperated_line"></div>
 
             <div class="mobile-link">
-              <router-link :to="{ name: 'Schedule' }" @click="uncheck" class="hover-mobile-link"
-              >Schedule</router-link>
+              <router-link :to="{ name: 'Schedule' }" @click="uncheck" class="hover-mobile-link">Schedule</router-link>
             </div>
 
             <div class="seperated_line"></div>
 
             <div class="mobile-link">
-              <router-link :to="{ name: 'Contact' }" @click="uncheck" class="hover-mobile-link"
-              >Contact</router-link>
+              <router-link :to="{ name: 'Contact' }" @click="uncheck" class="hover-mobile-link">Contact</router-link>
             </div>
 
             <div class="seperated_line"></div>
             <br>
             <div class="flex justify-evenly">
-              <a
-                href="https://www.youtube.com/@ckmsc39th_luminescence"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="mobile-icon"
-              >
-              <vue-feather type="youtube" size="20"></vue-feather>
+              <a href="https://www.youtube.com/@ckmsc39th_luminescence" target="_blank" rel="noopener noreferrer"
+                class="mobile-icon">
+                <vue-feather type="youtube" size="20"></vue-feather>
               </a>
-              <a
-                href="https://instagram.com/luminescence_ckmsc39th_"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="mobile-icon"
-              >
-              <vue-feather type="instagram" size="20"></vue-feather>
+              <a href="https://instagram.com/luminescence_ckmsc39th_" target="_blank" rel="noopener noreferrer"
+                class="mobile-icon">
+                <vue-feather type="instagram" size="20"></vue-feather>
               </a>
             </div>
-            
+
           </div>
         </aside>
       </div>
@@ -153,9 +126,9 @@ function toggleNavbar() {
   const body = document.body;
   showingNavbar.value = !showingNavbar.value
 
-  if (showingNavbar.value){
+  if (showingNavbar.value) {
     body.style.overflowY = 'hidden';
-  }else{
+  } else {
     body.style.overflowY = '';
   }
 }
@@ -177,7 +150,7 @@ function uncheck() {
 </script>
 
 <style>
-:root{
+:root {
   --bar-width: 30px;
   --bar-height: 4px;
   --gap: 6px;
@@ -194,31 +167,31 @@ nav.navbar {
   background-color: rgba(55, 55, 55, 0.7);
 }
 
-.column-1{
+.column-1 {
   display: flex;
   align-items: center;
   gap: 1px
 }
 
-.column-2{
+.column-2 {
   display: flex;
   align-items: center;
   gap: 3px;
 
 }
 
-.column-3{
+.column-3 {
   display: flex;
   align-items: center;
 }
 
-.mobile{
+.mobile {
   margin-right: 30px;
   display: flex;
   align-items: center;
 }
 
-.hamburger-menu{
+.hamburger-menu {
   display: flex;
   flex-direction: column;
   gap: var(--gap);
@@ -231,18 +204,18 @@ nav.navbar {
 
 .hamburger-menu::before,
 .hamburger-menu::after,
-.hamburger-menu input{
+.hamburger-menu input {
   content: "";
   width: var(--bar-width);
   height: var(--bar-height);
   background-color: white;
   border-radius: 4px;
   transform-origin: left center;
-  transition: opacity 200ms ease-in-out, 
-              width 200ms ease-in-out,
-              rotate 200ms ease-in-out,
-              translation 200ms ease-in-out,
-              background-color 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out,
+    width 200ms ease-in-out,
+    rotate 200ms ease-in-out,
+    translation 200ms ease-in-out,
+    background-color 200ms ease-in-out;
   z-index: 9999;
 }
 
@@ -258,7 +231,7 @@ nav.navbar {
   translate: 0 calc(var(--bar-height) / 2);
 }
 
-.hamburger-menu input{
+.hamburger-menu input {
   appearance: none;
   padding: 0;
   margin: 0;
@@ -298,7 +271,7 @@ nav.navbar {
   border: solid 1px rgba(241, 241, 241, 0.8);
 }
 
-.hamburger-menu:has(input:checked) + .sidebar-overlay{
+.hamburger-menu:has(input:checked)+.sidebar-overlay {
   translate: 0;
 }
 
@@ -349,7 +322,7 @@ nav.navbar {
   color: black;
 }
 
-.mobile-link{
+.mobile-link {
   font-family: 'Recursive';
   margin-top: 5px;
   margin-bottom: 5px;
@@ -365,12 +338,12 @@ nav.navbar {
   color: black;
 }
 
-.mobile-icon{
+.mobile-icon {
   margin: 2%;
   padding: 10%;
 }
 
-.mobile-icon:hover{
+.mobile-icon:hover {
   border-radius: 0.5em;
   border-color: hsl(65, 100%, 89%);
   background-color: hsl(66, 83%, 93%);
@@ -504,7 +477,8 @@ nav.navbar {
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #ddd;
-  opacity: 1; /* Firefox */
+  opacity: 1;
+  /* Firefox */
 }
 
 ::-ms-input-placeholder {
@@ -513,21 +487,21 @@ nav.navbar {
 }
 
 @media (max-width: 2000px) {
-  .homelink{
+  .homelink {
     font-size: 3.75rem;
   }
 
-  .link{
+  .link {
     font-size: 1.1rem;
     width: 100px;
   }
 
-  .login-button{
+  .login-button {
     font-size: 1.1rem;
     width: 100px;
   }
 
-  .icon{
+  .icon {
     padding-top: 18px;
     padding-bottom: 18px;
     padding-left: 10px;
@@ -536,21 +510,21 @@ nav.navbar {
 }
 
 @media (max-width: 1100px) {
-  .homelink{
+  .homelink {
     font-size: 3rem;
   }
 
-  .link{
+  .link {
     font-size: 0.9rem;
     width: 70px;
   }
 
-  .login-button{
+  .login-button {
     font-size: 0.9rem;
     width: 70px;
   }
 
-  .icon{
+  .icon {
     padding-left: 5px;
     padding-right: 5px;
     padding-top: 15px;
@@ -559,15 +533,15 @@ nav.navbar {
 }
 
 @media (max-width: 800px) {
-  .column-2{
+  .column-2 {
     display: none;
   }
 
-  .outer-links{
+  .outer-links {
     display: none;
   }
 
-  .login-button{
+  .login-button {
     margin-right: 10px;
   }
 
@@ -576,23 +550,24 @@ nav.navbar {
   }
 }
 
-@media (max-width: 480px){
-  .login-button{
+@media (max-width: 480px) {
+  .login-button {
     margin-right: 20px;
     padding-left: 5px;
     padding-right: 5px;
   }
-  .homelink{
+
+  .homelink {
     font-size: 2rem;
   }
 }
 
-@media (max-width: 380px){
-  .homelink{
+@media (max-width: 380px) {
+  .homelink {
     font-size: 1.6rem;
   }
 
-  .login-button{
+  .login-button {
     margin-right: 30px;
     padding-left: 3px;
     padding-right: 3px;
@@ -605,7 +580,7 @@ nav.navbar {
 }
 
 @media (min-width: 801px) {
-  .mobile{
+  .mobile {
     display: none;
   }
 }
