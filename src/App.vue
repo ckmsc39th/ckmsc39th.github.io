@@ -2,7 +2,11 @@
   <div class="app">
     <div class="navbar">
       <navbar></navbar>
-      <router-view />
+        <router-view v-slot="{ Component }">
+          <transition name="page-opacity" mode="out-in">
+            <component :is="Component"></component>
+          </transition>
+        </router-view>
     </div>
   </div>
 </template>
@@ -16,6 +20,10 @@ const isMobile = () => {
     /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
   );
 };
+
+if (!CSS.supports('selector(:has(*))') && window.innerWidth <= 800) {
+  alert('由於一些技術上的問題，右上角的漢堡選單在您的瀏覽器上將無法使用。我們正在努力解決這個問題。請您考慮暫時改用一個瀏覽器，謝謝。');
+}
 </script>
 
 <style>
@@ -48,6 +56,25 @@ const isMobile = () => {
   background-attachment: fixed;
   background-blend-mode: overlay;
   animation: background-flicker 7s linear infinite;
+}
+
+
+.page-opacity-enter-from{
+  opacity: 0;
+  transform: translateY(-100px);
+}
+
+.page-opacity-enter-active{
+  transition: all 0.3s ease-out;
+}
+
+.page-opacity-leave-to{
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.page-opacity-leave-active{
+  transition: all 0.3s ease-in;
 }
 
 @keyframes background-flicker {

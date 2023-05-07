@@ -3,6 +3,7 @@
   import desc from '/src/works-description.json'
   const tabs = ref(['數學', '物理', '化學', '生物', '資訊', '地科']);
   let activeTab = ref('數學');
+
   const math = ([
     {id: 3, mark: "M1", title: "The Broken Stick Problem - 木棒切割問題之推廣", author: "李允中", description: "本研究要探討的問題是由經典的 《Broken stick problem 》所延伸的問題，雖在文獻中已有了用電腦所運算出來的答案，但沒有提供數學方法，因此我決定親手嘗試找出一個完整且詳盡的統一解法甚至通式。研究初期原本是想由連續隨機變數的方向作切入，但是由於太過複雜，因此最後決定回歸找規律、推導一般式、求出機率、再由一般式回頭證明規律的一般性。 研究過程中雖遭遇到不少困難以及錯誤的思路，但最後仍試著找出了規律及一般式。過程中大量地使用了組合數及數列求和的技巧來整理一般式，計算量龐大。\n\n註: 經典的《The Broken Stick Problem》原始題目為：將一條隨機長度的木條，分成三段隨機長度的木條，則這三段木條 能構成三角形的機率為何？"},
     {id: 4, mark: "M2", title: "單位圓中內接n邊形與圓心O所成向量之係數比", author: "洪楷威、張哲宇", description: "我們的研究目的是要找出一個固定的計算方式，使得圓內接正n邊形中，任何一條圓心對頂點所做向量，在乘上對應係數後，相加會等於零向量。在尋找我們的專題題目時，偶然想到了之前曾經使用過的奔馳定理，於是我們就想說能否將用在三角形的奔馳定理加以推廣至更多邊形的情況，並使用圓內接多邊形的方式固定兩邊長，使三角形面積可以以三角函數的方式呈現，而在過程中還推演出了另一項命題：如何表示sin(a+b+c+…)"},
@@ -148,10 +149,12 @@
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
             </div>
+
             <div class="popup__content">
               <img :src="'/works/'+selectedWork.mark+'.jpg'" class="works-photo" :alt="'/works/'+selectedWork.mark+'.jpg'">
               <p class="popup__description">{{ selectedWork.description }}</p>
             </div>
+            
           </div>
         </div>
       </div>
@@ -219,10 +222,12 @@
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
             </div>
+
             <div class="popup__content">
               <img :src="'/works/'+selectedWork.mark+'.jpg'" class="works-photo" :alt="'/works/'+selectedWork.mark+'.jpg'">
               <p class="popup__description">{{ selectedWork.description }}</p>
             </div>
+
           </div>
         </div>
       </div>
@@ -278,10 +283,12 @@
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
             </div>
+
             <div class="popup__content">
               <img :src="'/works/'+selectedWork.mark+'.jpg'" class="works-photo" :alt="'/works/'+selectedWork.mark+'.jpg'">
               <p class="popup__description">{{ selectedWork.description }}</p>
             </div>
+
           </div>
         </div>
       </div>
@@ -348,10 +355,12 @@
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
             </div>
+
             <div class="popup__content">
               <img :src="'/works/'+selectedWork.mark+'.jpg'" class="works-photo" :alt="'/works/'+selectedWork.mark+'.jpg'">
               <p class="popup__description">{{ selectedWork.description }}</p>
             </div>
+
           </div>
         </div>
       </div>
@@ -399,10 +408,12 @@
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
             </div>
+
             <div class="popup__content">
               <img :src="'/works/'+selectedWork.mark+'.jpg'" class="works-photo" :alt="'/works/'+selectedWork.mark+'.jpg'">
               <p class="popup__description">{{ selectedWork.description }}</p>
             </div>
+
           </div>
         </div>
       </div>
@@ -453,6 +464,7 @@
               <img :src="'/works/'+selectedWork.mark+'.jpg'" class="works-photo" :alt="'/works/'+selectedWork.mark+'.jpg'">
               <p class="popup__description">{{ selectedWork.description }}</p>
             </div>
+
           </div>
         </div>
       </div>
@@ -494,6 +506,7 @@ a:hover{ color: rgb(0, 144, 216); }
   justify-content: center;
   animation: fade-in-animation ease-in 0.2s;
 }
+
 .popup__title {
   width: 100%;
   padding-left: 50px;
@@ -506,6 +519,7 @@ a:hover{ color: rgb(0, 144, 216); }
   justify-content: space-between;
   white-space: normal;
 }
+
 .popup__author {
   width: 100%;
   padding-left: 50px;
@@ -518,6 +532,7 @@ a:hover{ color: rgb(0, 144, 216); }
   justify-content: space-between;
 
 }
+
 .popup__content {
   padding-top: 30px;
   max-height: 70vh;
@@ -525,6 +540,7 @@ a:hover{ color: rgb(0, 144, 216); }
   text-align: left;
   white-space: pre-line;
 }
+
 .works-photo {
   margin-bottom: 30px;
   padding: 15px;
@@ -533,13 +549,16 @@ a:hover{ color: rgb(0, 144, 216); }
   border-radius: 30px;
   box-shadow: 30px aquamarine
 }
+
 .popup__description{
   margin: 5%;
 }
+
 .popup.is-active {
   display: block;
   backdrop-filter: blur(5px);
 }
+
 .close-btn {
   font-size: 30px;
   font-weight: bold;
@@ -550,6 +569,7 @@ a:hover{ color: rgb(0, 144, 216); }
   cursor: pointer;
   padding: 0;
 }
+
 .close-btn:hover {
   color: #666;
 }
