@@ -10,6 +10,7 @@ import ScheduleChild1 from "../views/ScheduleChild1.vue";
 import ScheduleChild2 from "../views/ScheduleChild2.vue";
 import ScheduleChild3 from "../views/ScheduleChild3.vue";
 import ScheduleChild4 from "../views/ScheduleChild4.vue";
+import TestJson from "../views/TestJson.vue";
 
 const routes = [
   {
@@ -61,6 +62,11 @@ const routes = [
     path: "/day2-4F",
     name: "Day2-4F",
     component: ScheduleChild4,
+  },
+  {
+    path: "/testjson",
+    name: "TestJson",
+    component: TestJson,
   },
 ];
 

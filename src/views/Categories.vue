@@ -1,11 +1,9 @@
 <script setup> 
   import { ref, onMounted } from 'vue';
+  import desc from '/src/works-description.json'
   const tabs = ref(['數學', '物理', '化學', '生物', '資訊', '地科']);
   let activeTab = ref('數學');
-  const earth = ([
-    {id: 1, mark: "E1", title: "模擬原行星盤氣體在光致蒸發作用下之吸積模型", author: "胡軒綸、蕭宇博", description: "我們在研究原始行星盤上氣體是如何演化，藉由 VADER 程式去模擬氣體密度隨著時間的變化，研究中著重於光致蒸發和黏滯係數如何對原行星盤產生影響。\n\n在原行星盤演化中，恆星輻射會給予外圍氣體能量，氣體因而獲得能量而逃逸，稱為光致蒸發，這過程會導致盤面出現密度相對低的區域，而黏滯係數最終會影響角動量傳遞快慢，進而影響演化速度與方式，以上就是我們的研究啦~"},
-    {id: 2, mark: "E2", title: "大屯火山土壤二氧化碳逸出之分析", author: "鄧喻羲", description: "早期學者利用鉀氬定年法，判斷大屯火山最後一次噴發是十萬年前，但這種方法誤差極大，近年來許多地震分析、地殼變動、地球化學和氣體監測等研究，說明了大屯火山的火山作用依然很活躍，不排除有噴發的可能。\n\n本研究聚焦在八煙地區的土壤二氧化碳監測，以區域的微震資料以及環境數據為基礎，利用多項式回歸，對原有的二氧化碳數據進行過濾，以方便日後監測火山訊號。當中我們發現尤其以大氣溫度關聯最大，且具有時間延遲性。\n\n如果你覺得這專題聽起來很水的話，確實挺水的，沒有用什麼太厲害的工具，就是用excel瘋狂整理數據而已，只能說我太弱啦。"}
-  ]);
+
   const math = ([
     {id: 3, mark: "M1", title: "The Broken Stick Problem - 木棒切割問題之推廣", author: "李允中", description: "本研究要探討的問題是由經典的 《Broken stick problem 》所延伸的問題，雖在文獻中已有了用電腦所運算出來的答案，但沒有提供數學方法，因此我決定親手嘗試找出一個完整且詳盡的統一解法甚至通式。研究初期原本是想由連續隨機變數的方向作切入，但是由於太過複雜，因此最後決定回歸找規律、推導一般式、求出機率、再由一般式回頭證明規律的一般性。 研究過程中雖遭遇到不少困難以及錯誤的思路，但最後仍試著找出了規律及一般式。過程中大量地使用了組合數及數列求和的技巧來整理一般式，計算量龐大。\n\n註: 經典的《The Broken Stick Problem》原始題目為：將一條隨機長度的木條，分成三段隨機長度的木條，則這三段木條 能構成三角形的機率為何？"},
     {id: 4, mark: "M2", title: "單位圓中內接n邊形與圓心O所成向量之係數比", author: "洪楷威、張哲宇", description: "我們的研究目的是要找出一個固定的計算方式，使得圓內接正n邊形中，任何一條圓心對頂點所做向量，在乘上對應係數後，相加會等於零向量。在尋找我們的專題題目時，偶然想到了之前曾經使用過的奔馳定理，於是我們就想說能否將用在三角形的奔馳定理加以推廣至更多邊形的情況，並使用圓內接多邊形的方式固定兩邊長，使三角形面積可以以三角函數的方式呈現，而在過程中還推演出了另一項命題：如何表示sin(a+b+c+…)"},
@@ -25,7 +23,7 @@
     {id: 14, mark: "CH1", title: "銠催化消去反應之掌性選擇性優化及探討", author: "王子銓、李鈺捷", description: "本研究發現了一個新的銠金屬催化反應，此反應的銠金屬是由sp2碳移動至sp3碳，由於銠金屬接在sp2碳上的能量會比銠金屬接在sp3碳上的能量較低，因此我們決定探討此反應的反應機構。推測反應如圖。我們推測此反應能由低能量往高能量反應的原因是因為1,4-shift的那步可逆反應。根據勒沙特列原理，當C被反應而減少時，會促進B向C反應，一旦反應成C，又會立刻進行消去反應形成產物，使反應成功克服能量上的障礙，成功進行。"},
     {id: 15, mark: "CH2", title: "殼聚醣-海藻酸鈉凝膠於魚類藥物釋放之應用可行性研究", author: "游書維、林柏碩", description: "殼聚醣-海藻酸鈉凝膠為一常見藥物釋放載體，但目前研究多以人類醫學作為目標應用。而魚類普遍使用之藥浴法可能造成魚體接觸較高藥物濃度之水體以達藥效而造成副作用，故本研究期望提供一於水中緩釋藥物之新方法，使水中魚類服藥穩定性增加。\n\n本研究以兩種染劑分子模擬藥物並予以進行包覆，探討不同釋放方式之釋放效率差異，並觀察此凝膠於不同酸鹼度、鹽度下之釋放情形，藉以瞭解此凝膠之藥物釋放功能是否適用於各式魚類之水體。\n\n本研究成果證實台盼藍分子可穩定於水中釋放，並瞭解凝膠於不同酸鹼度、鹽度下之釋放情形差異，可用於設計不同水質環境之魚類藥物凝膠。未來可進一步以實際藥物之凝膠處理魚類生物，觀察凝膠之釋放特性與本研究是否吻合。"},
     {id: 16, mark: "CH3", title: "不同厚度鎳鉻鐵合金對於鎳鈷鉻合金之腐蝕行為影響", author: "洪浩烜、劉允中", description: "多主金屬合金對於功能性多層材料設計至關重要,為了研究其電化學之穩定性,我們以光學顯微鏡結合電化學裝置,輔以常規脈衝伏安法對於其腐蝕行為進行分析。\n\n我們先前的研究顯示鎳鉻鐵合金有優於鎳鈷鉻合金的抗腐蝕能力,因鎳鈷鉻合金與底層的金元素間發生鉻元素的化學態變化進而產生氫氧化鉻導致合金薄膜脫落,故我們將鎳鉻鐵合金薄膜濺鍍於鎳鈷鉻合金薄膜之上,期望透過鎳鉻鐵合金的電化學穩定性抑制鎳鈷鉻合金的脫落情形。\n\n本研究結果表明鍍上鎳鉻鐵合金層的樣品發生腐蝕變化的極化電位較大,延後了腐蝕反應發生的電位。代表其可以有效抑制原先鎳鈷鉻合金的腐蝕現象。\n\n現階段對於鎳鉻鐵合金抑制鎳鈷鉻合金腐蝕的作用機制尚不明確,之後我們希望能利用X 射線光電子能譜進行樣品的表面元素分析,進一步觀察樣品的表面產生了何種物質,得以產生保護層的效果。"},
-    {id: 17, mark: "CH4", title: "不同鉑、錫添加順序下合成的陽極觸媒對甲醇電催化反應之效應", author: "蔡佾紘、譚雍澐", description: "鉑金屬在燃料電池中扮演著不可或缺的角色，負責催化甲醇的氧化反應。本研究將探討在混入錫金屬的前提下，不同鉑與錫的添加順序，對催化效果的影響。\n本研究中，在合成觸媒的過程中有三種不同的鉑、錫添加順序，分別是鉑先加、兩者同時加和錫先加。合成出觸媒後，以粉末式X光繞射儀(XRD)、掃描式電子顯微鏡(SEM)搭載能量散射光譜儀(EDX)分析表面晶體結構、粒徑大小與元素比例，並以交流阻抗電化學分析儀(Potentiostat)進行循環伏安法(Cyclic Voltammetry, CV)，得到觸媒的電化學性質。\n從表面與晶體分析的結果可得，三種不同的添加狀況會形成兩種金屬分別包覆對方與被包覆，或是有二元金屬特性的合金態。而從電化學的結果可得，同時加的電極有最大的ECSA值，而Sn先加的電極在MOR、MA、SA都有最佳的效果。"},
+    {id: 17, mark: "CH4", title: "不同鉑、錫添加順序下合成的陽極觸媒對甲醇電催化反應之效應", author: "高立瑾、蔡佾紘、譚雍澐", description: "鉑金屬在燃料電池中扮演著不可或缺的角色，負責催化甲醇的氧化反應。本研究將探討在混入錫金屬的前提下，不同鉑與錫的添加順序，對催化效果的影響。\n本研究中，在合成觸媒的過程中有三種不同的鉑、錫添加順序，分別是鉑先加、兩者同時加和錫先加。合成出觸媒後，以粉末式X光繞射儀(XRD)、掃描式電子顯微鏡(SEM)搭載能量散射光譜儀(EDX)分析表面晶體結構、粒徑大小與元素比例，並以交流阻抗電化學分析儀(Potentiostat)進行循環伏安法(Cyclic Voltammetry, CV)，得到觸媒的電化學性質。\n從表面與晶體分析的結果可得，三種不同的添加狀況會形成兩種金屬分別包覆對方與被包覆，或是有二元金屬特性的合金態。而從電化學的結果可得，同時加的電極有最大的ECSA值，而Sn先加的電極在MOR、MA、SA都有最佳的效果。"},
     {id: 18, mark: "CH5", title: "利用計算化學探討有機不對稱合成之光學選擇性—掌性分子熱力學模擬", author: "王世中", description: "四氫吡咯酮作為一種常用的藥物骨架，其已被發現在多種藥理學方面具有應用價值，例如預防骨質疏鬆、保護神經系統和抗癌。\n\n本研究的目的在於利用密度泛函理論進行全取代N-甲基吡咯酮的結構優化，並探索其掌性異構物中最穩定的結構。此外，本研究還針對此異構體進行熱力學反應模擬，試圖深入了解麥可加成反應與方醯胺類催化劑製備該化合物過程的反應機制，有文獻指出，氫鍵的形成可使分子的過渡態結構更加穩定，進而達到降低活化能的效果，因此本研究利用不同極性的溶劑（如甲苯和3-戊酮）和改變催化劑上苯胺基中苯環的取代基（CF3，NO2，NH2，H），試圖降低反應活化能來提升藥物合成之可行性。\n\n研究發現，部分掌性異構物在未產生顯著的立體障礙的情況下，其計算所得的能量相近。針對反應的部份，催化劑的修飾：若其苯環為拉電子基，將有助於降低反應的活化能溶劑效應：高極性的溶劑可有效降低反應活化能；未來將進一步分析氫鍵的作用程度來討論整個反應過程。而這些發現有助於有機藥物合成反應的設計，為未來的藥物研發提供了重要的參考依據。"},
   ]);
   const biology = ([
@@ -41,6 +39,10 @@
     {id: 28, mark: "B10", title: "NPF6.4的磷酸化對含氮物質運輸的影響", author: "謝竣宇", description: "研究動機:\n植物的許多防禦機制都與含氮物質脫不開關係，而NPF6.4正是阿拉伯芥其中一種含氮物質的蛋白質通道，在先前的研究中發現NPF6.4與阿拉伯芥的免疫機制有關，以及NPF6.4在不同環境下會有硝酸鹽的雙親和性，而後者的切換機制尚未完善，本實驗便致力於深入了解此一機制。\n\n研究簡介:\n通道蛋白上的點位磷酸化會影響運輸蛋白的親和性是先前觀察到的結果，查詢NPF6.4基酸序列較容易發生磷酸化的位置後，本實驗將NPF6.4基因進行點突變以達到對通道蛋白模擬磷酸化的效果，並且將不同基因點位的點突變株轉植至酵母菌中進行對二肽與多胺的運輸測試進而驗證其磷酸化點位，完整其雙親和性模型。\n\n研究心得:\n在實際進行實驗操作後，才意識到課本中看似簡單易懂的反應機構，在實驗室驗證的每一步驟都是費時費心又費力的，然而在專題的製作過程中確實也使我學到了不少的新知，並且結合所學對於生物學有了更深的了解。"},
     {id: 29, mark: "B11", title: "靈長類組蛋白去乙醯基酶(HDAC)演化與蛋白結構分析摘要", author: "楊致綸、葉諭陽", description: "組蛋白去乙醯化酶(HDA)是能將組蛋白賴氨酸上乙醯基水解掉的一類酶，這使得 DNA 纏繞組蛋白更加緊密。因為 DNA 纏繞著組蛋白，而 DNA 的表達水平受到組蛋白乙醯化與去乙醯化水平的影響，所以這使組蛋白去乙醯化酶會影響性狀表現，就阿拉伯芥而言，組蛋白乙醯化與去乙醯化可以影響生長素等對植物發育造成變化的激素。這也是表觀遺傳的調控機制之一。為了確認究竟會有怎麼樣的改變並量化分析，我們進行了不同 HDA 開花時間的測試與葉片觀察、 測量的實驗，想要找出 HDA 對植物的影響與差異。\n研究結果指出HDA可能對開花時間呈現正相關或負相關，並且從發芽到開花時間的天數與開花時的葉片個數大致呈正比。而HDA也會本身對下胚軸(子葉到初生根的部分)的生長產生影響。未來期待可以研究HDA究竟是如何挑控生長素，進而對開花時間等造成影響。"},
     {id: 30, mark: "B12", title: "泛素化酶 Peli1對T 細胞耗竭之影響與機制探討", author: "黃品睿", description: "#研究動機\n-\n腫瘤微環境常造就一個免疫抑制的環境而使 T cell 呈現耗竭的狀態使得免疫治療受到影響，若能在未來能夠有機會配合免疫療法治療，降低 T cell exhaustion，可進而提升免疫療法的成效\n-\n#研究目的\n-\n1.利用Jurkat細胞為研究模式，探討Peli1對於T cell exhaustion相關分子的調控\n2.分析Peli1 對於調控T cell exhaustion重要的轉錄因子所扮演的角色\n3.探討Peli1 調控 T cell exhaustion之路徑\n-\n#研究結果\n-\n這當然要等當天再講啊"},
+  ]);
+  const earth = ([
+    {id: 1, mark: "G1", title: "模擬原行星盤氣體在光致蒸發作用下之吸積模型", author: "胡軒綸、蕭宇博", description: "我們在研究原始行星盤上氣體是如何演化，藉由 VADER 程式去模擬氣體密度隨著時間的變化，研究中著重於光致蒸發和黏滯係數如何對原行星盤產生影響。\n\n在原行星盤演化中，恆星輻射會給予外圍氣體能量，氣體因而獲得能量而逃逸，稱為光致蒸發，這過程會導致盤面出現密度相對低的區域，而黏滯係數最終會影響角動量傳遞快慢，進而影響演化速度與方式，以上就是我們的研究啦~"},
+    {id: 2, mark: "G2", title: "大屯火山土壤二氧化碳逸出之分析", author: "鄧喻羲", description: "早期學者利用鉀氬定年法，判斷大屯火山最後一次噴發是十萬年前，但這種方法誤差極大，近年來許多地震分析、地殼變動、地球化學和氣體監測等研究，說明了大屯火山的火山作用依然很活躍，不排除有噴發的可能。\n\n本研究聚焦在八煙地區的土壤二氧化碳監測，以區域的微震資料以及環境數據為基礎，利用多項式回歸，對原有的二氧化碳數據進行過濾，以方便日後監測火山訊號。當中我們發現尤其以大氣溫度關聯最大，且具有時間延遲性。\n\n如果你覺得這專題聽起來很水的話，確實挺水的，沒有用什麼太厲害的工具，就是用excel瘋狂整理數據而已，只能說我太弱啦。"}
   ]);
   const infor = ([
     {id: 31, mark: "I1", title: "以元啟發式搜尋演算法進行鐵路時刻表排點", author: "吳亞倫", description: "摘要:\n本研究採⽤啟發式最佳化演算法及模擬器進⾏旅客列⾞鐵路時刻表 排點，以取代傳統⼈工排點⽅式，希望能找出⼀份針對旅客需求、提升 旅客運輸成功率且降低旅途時間的時刻表。我們提出⼀種班表編碼機 制，可依此產⽣班表草稿。我們研發⼀個模擬器，能夠在短時間內排解 衝突，將班表草稿轉換為合法無衝突之班表，並且依照乘客資料評估⼀ 時刻表的優劣度。我們透過登⼭演算法及基因演算法來搜尋班表草稿， 並以模擬器評估班表優劣。"},
@@ -85,17 +87,6 @@
     )
   });
 
-  // mounted () {
-  //   document.addEventListener('mouseup', (e) =>{
-  //       let _wrap = this.$refs.wrap;
-  //       if (_wrap) {
-  //         if(!_wrap.contains(e.target)) {
-  //           hidePopup();
-  //         }
-  //       }
-  //   })
-  // };
-
 </script>
 
 <template>
@@ -109,7 +100,7 @@
         @click="switchTab(tab)"
         :class="[
           'py-[1.5%] px-[2%] text-center font-bold rounded-xl hover:bg-cyan-700',
-          activeTab === tab ? 'bg-cyan-200 text-gray-700 hover:text-white font-bold' : 'text-white bg-cyan-950'
+          activeTab === tab ? 'bg-cyan-200 text-gray-700 hover:text-white font-bold' : 'text-white bg-cyan-950',
         ]"
       >
         {{ tab }}
@@ -158,10 +149,12 @@
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
             </div>
-            <p class="popup__content">
+
+            <div class="popup__content">
               <img :src="'/works/'+selectedWork.mark+'.jpg'" class="works-photo" :alt="'/works/'+selectedWork.mark+'.jpg'">
-              {{ selectedWork.description }}
-            </p>
+              <p class="popup__description">{{ selectedWork.description }}</p>
+            </div>
+            
           </div>
         </div>
       </div>
@@ -229,10 +222,12 @@
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
             </div>
-            <p class="popup__content">
+
+            <div class="popup__content">
               <img :src="'/works/'+selectedWork.mark+'.jpg'" class="works-photo" :alt="'/works/'+selectedWork.mark+'.jpg'">
-              {{ selectedWork.description }}
-            </p>
+              <p class="popup__description">{{ selectedWork.description }}</p>
+            </div>
+
           </div>
         </div>
       </div>
@@ -288,10 +283,12 @@
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
             </div>
-            <p class="popup__content">
+
+            <div class="popup__content">
               <img :src="'/works/'+selectedWork.mark+'.jpg'" class="works-photo" :alt="'/works/'+selectedWork.mark+'.jpg'">
-              {{ selectedWork.description }}
-            </p>
+              <p class="popup__description">{{ selectedWork.description }}</p>
+            </div>
+
           </div>
         </div>
       </div>
@@ -358,10 +355,12 @@
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
             </div>
-            <p class="popup__content">
+
+            <div class="popup__content">
               <img :src="'/works/'+selectedWork.mark+'.jpg'" class="works-photo" :alt="'/works/'+selectedWork.mark+'.jpg'">
-              {{ selectedWork.description }}
-            </p>
+              <p class="popup__description">{{ selectedWork.description }}</p>
+            </div>
+
           </div>
         </div>
       </div>
@@ -409,10 +408,12 @@
             <div class="popup__author">
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
             </div>
-            <p class="popup__content">
+
+            <div class="popup__content">
               <img :src="'/works/'+selectedWork.mark+'.jpg'" class="works-photo" :alt="'/works/'+selectedWork.mark+'.jpg'">
-              {{ selectedWork.description }}
-            </p>
+              <p class="popup__description">{{ selectedWork.description }}</p>
+            </div>
+
           </div>
         </div>
       </div>
@@ -426,7 +427,7 @@
           <h4># 喜歡嘗試各種活動、新科技</h4>
           <p>文禮常常找各種科學活動問同學要不要參加，又或是最近流行甚麼ChatGPT，文禮都會找學生討論。</p>
           <h4># 你是我的花朵</h4>
-          <p>請以<b>李文禮-我的花朵</b>為關鍵字搜尋，會查到不少有趣的影片，如: <a href="https://www.youtube.com/watch?v=Q-_XMqxa0Ck&ab_channel=%E8%8B%B1%E9%9B%84Brine">Leek Roll</a> X)</p>
+          <p>請以<b>李文禮-我的花朵</b>為關鍵字搜尋，會查到不少有趣的影片，如: <a href="https://www.youtube.com/watch?v=Q-_XMqxa0Ck&ab_channel=%E8%8B%B1%E9%9B%84Brine">leeroll</a> X)</p>
         </div>
 
         <div class="div-page">
@@ -459,10 +460,11 @@
               <h4 class="no-top-bottom-margin">{{ selectedWork.author }}</h4>
             </div>
             
-            <p class="popup__content">
+            <div class="popup__content">
               <img :src="'/works/'+selectedWork.mark+'.jpg'" class="works-photo" :alt="'/works/'+selectedWork.mark+'.jpg'">
-              {{ selectedWork.description }}
-            </p>
+              <p class="popup__description">{{ selectedWork.description }}</p>
+            </div>
+
           </div>
         </div>
       </div>
@@ -482,7 +484,7 @@ body.showpopup {
 .text-blue-500 {
   color: #22a7f0;
 } */
-
+a:hover{ color: rgb(0, 144, 216); }
 .popup {
   position: fixed;
   top: 50%;
@@ -517,6 +519,7 @@ body.showpopup {
   justify-content: space-between;
   white-space: normal;
 }
+
 .popup__author {
   width: 100%;
   padding-left: 50px;
@@ -529,26 +532,33 @@ body.showpopup {
   justify-content: space-between;
 
 }
+
 .popup__content {
-  padding-top: 10px;
-  padding: 50px;
+  padding-top: 30px;
   max-height: 70vh;
   overflow-y: auto;
   text-align: left;
   white-space: pre-line;
 }
+
 .works-photo {
-  margin-bottom: 20px;
-  width: 30%;
-  display: block;
-  padding-bottom: 25px;
+  margin-bottom: 30px;
+  padding: 15px;
+  width: 50%;
   margin: auto;
-  border-radius: 20px;
+  border-radius: 30px;
+  box-shadow: 30px aquamarine
 }
+
+.popup__description{
+  margin: 5%;
+}
+
 .popup.is-active {
   display: block;
   backdrop-filter: blur(5px);
 }
+
 .close-btn {
   font-size: 30px;
   font-weight: bold;
@@ -559,6 +569,7 @@ body.showpopup {
   cursor: pointer;
   padding: 0;
 }
+
 .close-btn:hover {
   color: #666;
 }

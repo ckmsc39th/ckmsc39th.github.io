@@ -62,7 +62,7 @@ const groupPhotoSrc = "groupPhoto.jpg";
 const eventDate = "2023年5月25&26日 (週四/五)";
 const eventTime = "2:00 PM - 5:00 PM";
 const eventLocation = "100台北市中正區南海路56號";
-const eventDescription = "一定要來喔!";
+const eventDescription = "本活動旨在提倡科學研究，藉由各組別的成果報告，認識不同科目的專業領域，提升大家對於科學的愛好以及熱忱。本校數理資優班的專題研究組別共分成數學、物理、化學、生物、資訊、地科六個科目，各組對該科的知識內容進行更深一層的探討，結合文獻的探究及自己的創意，完成一篇專題獨立研究，並發表於本活動。";
 const googleCalendarLink = "待加入";
 const googleMapsLink = "https://goo.gl/maps/kWBUJyyp6iXVHmib8";
 </script>
