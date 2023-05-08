@@ -68,10 +68,14 @@ const routes = [
     name: "TestJson",
     component: TestJson,
   },
+  {
+    path: "/:pathMatch(.*)*",
+    redirect: { name: "Home"},
+  }
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
 });
 
