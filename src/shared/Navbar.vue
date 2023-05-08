@@ -278,7 +278,7 @@ nav.navbar {
 .homelink {
   text-align: center;
   font-weight: bold;
-  font-family: cursiveFont;
+  font-family: cursiveFont, sans-serif;
   padding: 5%;
   border-radius: 0.45em;
 }
@@ -323,7 +323,7 @@ nav.navbar {
 }
 
 .mobile-link {
-  font-family: 'Recursive';
+  font-family: 'Recursive', sans-serif;
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 10%;
