@@ -278,7 +278,7 @@ nav.navbar {
 .homelink {
   text-align: center;
   font-weight: bold;
-  font-family: cursiveFont;
+  font-family: cursiveFont, sans-serif;
   padding: 5%;
   border-radius: 0.45em;
 }
@@ -286,7 +286,7 @@ nav.navbar {
 .homelink:hover {
   border-color: hsl(272, 71%, 81%);
   background-color: hsl(272, 71%, 81%);
-  box-shadow: 0px 0px 0.5em 0.5px hsl(272, 100%, 81%);
+  box-shadow: 0 0 0.5em 0.5px hsl(272, 100%, 81%);
   animation: text-flicker 3s linear infinite;
   color: rgb(55, 55, 55);
 }
@@ -303,7 +303,7 @@ nav.navbar {
 .link:hover {
   border-color: hsl(186, 100%, 78%);
   background-color: hsl(186 100% 78%);
-  box-shadow: 0px 0px 0.75em 1px hsl(186 100% 78%);
+  box-shadow: 0 0 0.75em 1px hsl(186 100% 78%);
   animation: text-flicker 6s linear infinite;
   color: rgb(55, 55, 55);
 }
@@ -317,13 +317,13 @@ nav.navbar {
 .icon:hover {
   border-color: hsl(65, 100%, 89%);
   background-color: hsl(66, 83%, 93%);
-  box-shadow: 0px 0px 0.5em 0px hsl(66, 83%, 93%);
+  box-shadow: 0 0 0.5em 0 hsl(66, 83%, 93%);
   animation: text-flicker 6s linear infinite;
   color: black;
 }
 
 .mobile-link {
-  font-family: 'Recursive';
+  font-family: 'Recursive', sans-serif;
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 10%;
@@ -333,7 +333,7 @@ nav.navbar {
   border-radius: 0.25em;
   border-color: hsl(186, 100%, 78%);
   background-color: hsl(186 100% 78%);
-  box-shadow: 0px 0px 0.75em 1px hsl(186 100% 78%);
+  box-shadow: 0 0 0.75em 1px hsl(186 100% 78%);
   animation: text-flicker 6s linear infinite;
   color: black;
 }
@@ -347,7 +347,7 @@ nav.navbar {
   border-radius: 0.5em;
   border-color: hsl(65, 100%, 89%);
   background-color: hsl(66, 83%, 93%);
-  box-shadow: 0px 0px 0.5em 0px hsl(66, 83%, 93%);
+  box-shadow: 0 0 0.5em 0 hsl(66, 83%, 93%);
   animation: text-flicker 6s linear infinite;
   color: black;
 }
@@ -368,7 +368,7 @@ nav.navbar {
   border-color: hsl(104, 100%, 86%);
   border-radius: 0.45em;
   background-color: hsl(104, 100%, 86%);
-  box-shadow: 0px 0px 0.75em 1px hsl(104, 100%, 86%);
+  box-shadow: 0 0 0.75em 1px hsl(104, 100%, 86%);
   animation: text-flicker 6s linear infinite;
   color: black;
 }
@@ -502,10 +502,7 @@ nav.navbar {
   }
 
   .icon {
-    padding-top: 18px;
-    padding-bottom: 18px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 18px 10px;
   }
 }
 
@@ -525,10 +522,7 @@ nav.navbar {
   }
 
   .icon {
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 15px 5px;
   }
 }
 
