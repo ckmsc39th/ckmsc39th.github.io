@@ -186,7 +186,9 @@ function toggleNoHasNav() {
 .no-has-selector-nav a, router-link {
   padding: 14px 16px;
   //text-decoration: none;
+  display: block;
 }
+
 
 /*
 @supports not (selector(:has(*))) {
