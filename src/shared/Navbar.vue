@@ -1,4 +1,5 @@
 <template>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <nav class="navbar">
     <div class="column-1">
       <router-link :to="{ name: 'Home' }" class="homelink">Luminescence</router-link>
@@ -89,9 +90,26 @@
           </div>
         </aside>
       </div>
+      <a href="javascript:void(0);" class="icon no-has-selector-menu" @click="toggleNoHasNav">
+        <i class="fa fa-bars"></i>
+      </a>
     </div>
 
   </nav>
+  <div class="no-has-selector-nav">
+    <div id="no-has-links" v-if="showingNoHasNav">
+      <router-link :to="{ name: 'About' }">About</router-link>
+      <router-link :to="{ name: 'Categories' }">Categories</router-link>
+      <router-link :to="{ name: 'Schedule' }">Schedule</router-link>
+      <router-link :to="{ name: 'Contact' }">Contact</router-link>
+      <a href="https://www.youtube.com/@ckmsc39th_luminescence" target="_blank" rel="noopener noreferrer">
+        <vue-feather type="youtube" size="20"></vue-feather> Youtube
+      </a>
+      <a href="https://instagram.com/luminescence_ckmsc39th_" target="_blank" rel="noopener noreferrer">
+        <vue-feather type="instagram" size="20"></vue-feather> Instagram
+      </a>
+    </div>
+  </div>
 </template>
 
 <script setup>
@@ -104,6 +122,7 @@ const password = ref("");
 const loggingIn = ref(false);
 const showingLogin = ref(false);
 const showingNavbar = ref(false);
+const showingNoHasNav = ref(false);
 
 const correctEmail = "123@email.com";
 const correctPasswd = "1234";
@@ -144,12 +163,45 @@ function hideLogin() {
 function uncheck() {
   let input = document.getElementById('checkID')
   input.checked = false;
-  toggleNavbar()
+  toggleNavbar();
+}
+
+function toggleNoHasNav() {
+  showingNoHasNav.value = !showingNoHasNav.value;
 }
 
 </script>
 
 <style>
+
+.no-has-selector-nav {
+  overflow: hidden;
+  position: relative;
+}
+
+.no-has-selector-nav #no-has-links {
+  //display: none;
+}
+
+.no-has-selector-nav a, router-link {
+  padding: 14px 16px;
+  //text-decoration: none;
+}
+
+/*
+@supports not (selector(:has(*))) {
+  .mobile {
+    display: none !important;
+  }
+}
+
+@supports (selector(:has(+ *))) {
+  .no-has-selector-nav {
+    display: none !important;
+  }
+}
+ */
+
 :root {
   --bar-width: 30px;
   --bar-height: 4px;
@@ -542,6 +594,27 @@ nav.navbar {
   .hover-mobile-link {
     font-size: 0.9rem;
   }
+
+  @supports (selector(:has(*))) {
+    .mobile {
+      display: flex;
+    }
+    .no-has-selector-nav, .no-has-selector-menu {
+      display: none;
+    }
+  }
+
+  @supports not (selector(:has(*))) {
+    .mobile {
+      display: none;
+    }
+    .no-has-selector-nav {
+      display: block;
+    }
+    .no-has-selector-menu {
+      display: flex;
+    }
+  }
 }
 
 @media (max-width: 480px) {
@@ -573,8 +646,14 @@ nav.navbar {
   }
 }
 
-@media (min-width: 801px) {
+@media (min-width: 800px) {
   .mobile {
+    display: none;
+  }
+  .no-has-selector-nav {
+    display: none;
+  }
+  .no-has-selector-menu {
     display: none;
   }
 }
