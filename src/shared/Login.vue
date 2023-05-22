@@ -28,7 +28,7 @@
 </template>
 
 <script setup>
-import {ref} from "vue";
+import { ref, onMounted } from "vue";
 
 const username = ref("");
 const password = ref("");
@@ -67,6 +67,14 @@ function showLogin() {
 function hideLogin() {
   showingLogin.value = false;
 }
+
+onMounted(() => {
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      hideLogin();
+    }
+  });
+})
 </script>
 
 <style scoped>
