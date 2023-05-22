@@ -6,7 +6,7 @@
       <form>
         <div class="form-group">
           <input
-              v-model="name"
+              v-model="username"
               type="text"
               placeholder="Username"
           />
@@ -30,24 +30,25 @@
 <script setup>
 import {ref} from "vue";
 
-const email = ref("");
+const username = ref("");
 const password = ref("");
 const loggingIn = ref(false);
 const showingLogin = ref(false);
 
 
-const usersData = ref([]);
+const usersData = [];
 const loadJSON = async () => {
-  const response = await fetch("/assets/usersData.json");
+  const response = await fetch("src/assets/usersData.json");
   const data = await response.json();
   usersData.value = data;
 };
 loadJSON();
 
-const matchedUser = usersData.find(user => user.id === email.value && user.code === password.value);
+let matchedUser = usersData.find(user => user.id === username.value && user.code === password.value);
 
 async function login() {
   loggingIn.value = true;
+  console.log(matchedUser);
   try {
     if (matchedUser) {
       console.log("true111");
