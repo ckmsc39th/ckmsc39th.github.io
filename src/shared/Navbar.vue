@@ -19,7 +19,7 @@
       <Login/>
 
       <div class="outer-links">
-          <a
+        <a
           href="https://www.youtube.com/@ckmsc39th_luminescence"
           target="_blank"
           rel="noopener noreferrer"
