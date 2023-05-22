@@ -45,6 +45,7 @@ const loadJSON = async () => {
 loadJSON();
 
 const matchedUser = usersData.find(user => user.id === email.value && user.code === password.value);
+
 async function login() {
   loggingIn.value = true;
   try {
@@ -195,35 +196,35 @@ function hideLogin() {
 
 
 @media (max-width: 2000px) {
-  .login-button{
+  .login-button {
     font-size: 1.1rem;
     width: 100px;
   }
 }
 
 @media (max-width: 1100px) {
-  .login-button{
+  .login-button {
     font-size: 0.9rem;
     width: 70px;
   }
 }
 
 @media (max-width: 800px) {
-  .login-button{
+  .login-button {
     margin-right: 10px;
   }
 }
 
-@media (max-width: 480px){
-  .login-button{
+@media (max-width: 480px) {
+  .login-button {
     margin-right: 20px;
     padding-left: 5px;
     padding-right: 5px;
   }
 }
 
-@media (max-width: 380px){
-  .login-button{
+@media (max-width: 380px) {
+  .login-button {
     margin-right: 30px;
     padding-left: 3px;
     padding-right: 3px;
