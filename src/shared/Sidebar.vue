@@ -2,55 +2,59 @@
 
   <div class="mobile">
     <label class="hamburger-menu">
-      <input @click="toggleNavbar" type="checkbox" id="checkID"/>
+      <input id="checkID" type="checkbox" @click="toggleNavbar"/>
     </label>
 
     <aside class="sidebar-overlay">
       <div class="sidebar">
         <div class="mobile-link">
-          <router-link :to="{ name: 'About' }" @click="uncheck" class="hover-mobile-link"
-          >About</router-link>
+          <router-link :to="{ name: 'About' }" class="hover-mobile-link" @click="uncheck">
+            About
+          </router-link>
         </div>
 
         <div class="seperated_line"></div>
 
         <div class="mobile-link">
-          <router-link :to="{ name: 'Categories' }" @click="uncheck" class="hover-mobile-link"
-          >Categories</router-link>
+          <router-link :to="{ name: 'Categories' }" class="hover-mobile-link" @click="uncheck">
+            Categories
+          </router-link>
         </div>
 
         <div class="seperated_line"></div>
 
         <div class="mobile-link">
-          <router-link :to="{ name: 'Schedule' }" @click="uncheck" class="hover-mobile-link"
-          >Schedule</router-link>
+          <router-link :to="{ name: 'Schedule' }" class="hover-mobile-link" @click="uncheck">
+            Schedule
+          </router-link>
         </div>
 
         <div class="seperated_line"></div>
 
         <div class="mobile-link">
-          <router-link :to="{ name: 'Contact' }" @click="uncheck" class="hover-mobile-link"
-          >Contact</router-link>
+          <router-link :to="{ name: 'Contact' }" class="hover-mobile-link" @click="uncheck">
+            Contact
+          </router-link>
         </div>
 
         <div class="seperated_line"></div>
         <br>
         <div class="flex justify-evenly">
           <a
-              href="https://www.youtube.com/@ckmsc39th_luminescence"
-              target="_blank"
-              rel="noopener noreferrer"
               class="mobile-icon"
+              href="https://www.youtube.com/@ckmsc39th_luminescence"
+              rel="noopener noreferrer"
+              target="_blank"
           >
-            <vue-feather type="youtube" size="20"></vue-feather>
+            <vue-feather size="20" type="youtube"></vue-feather>
           </a>
           <a
-              href="https://instagram.com/luminescence_ckmsc39th_"
-              target="_blank"
-              rel="noopener noreferrer"
               class="mobile-icon"
+              href="https://instagram.com/luminescence_ckmsc39th_"
+              rel="noopener noreferrer"
+              target="_blank"
           >
-            <vue-feather type="instagram" size="20"></vue-feather>
+            <vue-feather size="20" type="instagram"></vue-feather>
           </a>
         </div>
 
@@ -61,7 +65,9 @@
 
 <script setup>
 import { ref } from 'vue'
+
 const showingNavbar = ref(false);
+
 function uncheck() {
   let input = document.getElementById('checkID')
   input.checked = false;
@@ -72,22 +78,22 @@ function toggleNavbar() {
   const body = document.body;
   showingNavbar.value = !showingNavbar.value
 
-  if (showingNavbar.value){
+  if (showingNavbar.value) {
     body.style.overflowY = 'hidden';
-  }else{
+  } else {
     body.style.overflowY = '';
   }
 }
 </script>
 
 <style>
-.mobile{
+.mobile {
   margin-right: 30px;
   display: flex;
   align-items: center;
 }
 
-.hamburger-menu{
+.hamburger-menu {
   display: flex;
   flex-direction: column;
   gap: var(--gap);
@@ -100,7 +106,7 @@ function toggleNavbar() {
 
 .hamburger-menu::before,
 .hamburger-menu::after,
-.hamburger-menu input{
+.hamburger-menu input {
   content: "";
   width: var(--bar-width);
   height: var(--bar-height);
@@ -127,7 +133,7 @@ function toggleNavbar() {
   translate: 0 calc(var(--bar-height) / 2);
 }
 
-.hamburger-menu input{
+.hamburger-menu input {
   appearance: none;
   padding: 0;
   margin: 0;
@@ -167,11 +173,11 @@ function toggleNavbar() {
   border: solid 1px rgba(241, 241, 241, 0.8);
 }
 
-.hamburger-menu:has(input:checked) + .sidebar-overlay{
+.hamburger-menu:has(input:checked) + .sidebar-overlay {
   translate: 0;
 }
 
-.mobile-link{
+.mobile-link {
   font-family: 'Recursive';
   margin-top: 5px;
   margin-bottom: 5px;
@@ -187,12 +193,12 @@ function toggleNavbar() {
   color: black;
 }
 
-.mobile-icon{
+.mobile-icon {
   margin: 2%;
   padding: 10%;
 }
 
-.mobile-icon:hover{
+.mobile-icon:hover {
   border-radius: 0.5em;
   border-color: hsl(65, 100%, 89%);
   background-color: hsl(66, 83%, 93%);
@@ -207,14 +213,14 @@ function toggleNavbar() {
   }
 }
 
-@media (max-width: 380px){
+@media (max-width: 380px) {
   .hover-mobile-link {
     font-size: 0.8rem;
   }
 }
 
 @media (min-width: 801px) {
-  .mobile{
+  .mobile {
     display: none;
   }
 }
