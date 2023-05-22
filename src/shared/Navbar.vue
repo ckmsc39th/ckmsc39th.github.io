@@ -1,9 +1,8 @@
 <template>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <nav class="navbar">
     <div class="column-1">
-      <router-link :to="{ name: 'Home' }" class="homelink"
-        >Luminescence</router-link
-      >
+      <router-link :to="{ name: 'Home' }" class="homelink">Luminescence</router-link>
     </div>
 
     <div class="column-2">
@@ -41,14 +40,28 @@
 
     </div>
 
+    <!-- The hamburger menu for platforms without `:has()` support -->
+    <a href="javascript:void(0);" class="icon no-has-selector-menu" @click="toggleNoHasNav">
+      <i class="fa fa-bars"></i>
+    </a>
+
   </nav>
+
+  <NoHasNav v-if="showingNoHasNav"/>
 </template>
 
 <script setup>
+import {ref} from "vue";
 import Login from "./Login.vue";
 import Sidebar from "./Sidebar.vue";
+import NoHasNav from "./NoHasNav.vue";
 import feather from "feather-icons";
+const showingNoHasNav = ref(false);
 feather.replace();
+
+function toggleNoHasNav() {
+  showingNoHasNav.value = !showingNoHasNav.value;
+}
 </script>
 
 <style>
@@ -148,6 +161,9 @@ nav.navbar {
   color: black;
 }
 
+.no-has-selector-menu {
+  display: none;
+}
 
 @media (max-width: 2000px) {
   .homelink{
@@ -202,6 +218,17 @@ nav.navbar {
 
   .outer-links{
     display: none;
+  }
+  @supports (selector(:has(*))) {
+    .no-has-selector-menu {
+      display: none;
+    }
+  }
+
+  @supports not (selector(:has(*))) {
+    .no-has-selector-menu {
+      display: flex;
+    }
   }
 }
 
