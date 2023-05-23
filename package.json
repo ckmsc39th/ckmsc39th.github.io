@@ -9,7 +9,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "vite build && cd dist && xcopy index.html 404.html && cd .. && gh-pages -d dist -b gh-pages"
+    "deploy": "vite build && cp dist/index.html dist/404.html && gh-pages -d dist -b gh-pages"
   },
   "dependencies": {
     "firebase": "^9.19.1-20230331192943",
