@@ -211,7 +211,7 @@ function toggleNavbar() {
   .hover-mobile-link {
     font-size: 0.9rem;
   }
-  @supports not (selector(:has(*))) {
+  @supports not (selector(:has(+ *))) {
     .mobile {
       display: none;
     }

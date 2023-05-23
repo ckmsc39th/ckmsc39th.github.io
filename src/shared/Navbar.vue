@@ -219,13 +219,13 @@ nav.navbar {
   .outer-links{
     display: none;
   }
-  @supports (selector(:has(*))) {
+  @supports (selector(:has(+ *))) {
     .no-has-selector-menu {
       display: none;
     }
   }
 
-  @supports not (selector(:has(*))) {
+  @supports not (selector(:has(+ *))) {
     .no-has-selector-menu {
       display: flex;
     }
