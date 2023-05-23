@@ -15,6 +15,7 @@
 
     <div class="column-3">
 
+
       <Login/>
 
       <div class="outer-links">
@@ -24,18 +25,13 @@
           rel="noopener noreferrer"
           class="icon"
         >
-          <vue-feather type="youtube" size="20"></vue-feather>
+      <vue-feather type="youtube" size="20"></vue-feather>
         </a>
-        <a
-          href="https://instagram.com/luminescence_ckmsc39th_"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="icon"
-        >
+        <a href="https://instagram.com/luminescence_ckmsc39th_" target="_blank" rel="noopener noreferrer" class="icon">
           <vue-feather type="instagram" size="20"></vue-feather>
         </a>
       </div>
-
+      
       <Sidebar/>
 
     </div>
@@ -65,7 +61,7 @@ function toggleNoHasNav() {
 </script>
 
 <style>
-:root{
+:root {
   --bar-width: 30px;
   --bar-height: 4px;
   --gap: 6px;
@@ -94,30 +90,28 @@ nav.navbar {
   background-color: rgba(55, 55, 55, 0.7);
 }
 
-.column-1{
+.column-1 {
   display: flex;
   align-items: center;
   gap: 1px
 }
 
-.column-2{
+.column-2 {
   display: flex;
   align-items: center;
   gap: 3px;
 
 }
 
-.column-3{
+.column-3 {
   display: flex;
   align-items: center;
 }
 
-
-
 .homelink {
   text-align: center;
   font-weight: bold;
-  font-family: cursiveFont;
+  font-family: cursiveFont, sans-serif;
   padding: 5%;
   border-radius: 0.45em;
 }
@@ -125,7 +119,7 @@ nav.navbar {
 .homelink:hover {
   border-color: hsl(272, 71%, 81%);
   background-color: hsl(272, 71%, 81%);
-  box-shadow: 0px 0px 0.5em 0.5px hsl(272, 100%, 81%);
+  box-shadow: 0 0 0.5em 0.5px hsl(272, 100%, 81%);
   animation: text-flicker 3s linear infinite;
   color: rgb(55, 55, 55);
 }
@@ -142,7 +136,7 @@ nav.navbar {
 .link:hover {
   border-color: hsl(186, 100%, 78%);
   background-color: hsl(186 100% 78%);
-  box-shadow: 0px 0px 0.75em 1px hsl(186 100% 78%);
+  box-shadow: 0 0 0.75em 1px hsl(186 100% 78%);
   animation: text-flicker 6s linear infinite;
   color: rgb(55, 55, 55);
 }
@@ -156,7 +150,7 @@ nav.navbar {
 .icon:hover {
   border-color: hsl(65, 100%, 89%);
   background-color: hsl(66, 83%, 93%);
-  box-shadow: 0px 0px 0.5em 0px hsl(66, 83%, 93%);
+  box-shadow: 0 0 0.5em 0 hsl(66, 83%, 93%);
   animation: text-flicker 6s linear infinite;
   color: black;
 }
@@ -166,57 +160,51 @@ nav.navbar {
 }
 
 @media (max-width: 2000px) {
-  .homelink{
+  .homelink {
     font-size: 3.75rem;
   }
 
-  .link{
+  .link {
     font-size: 1.1rem;
     width: 100px;
   }
 
-  .login-button{
+  .login-button {
     font-size: 1.1rem;
     width: 100px;
   }
 
-  .icon{
-    padding-top: 18px;
-    padding-bottom: 18px;
-    padding-left: 10px;
-    padding-right: 10px;
+  .icon {
+    padding: 18px 10px;
   }
 }
 
 @media (max-width: 1100px) {
-  .homelink{
+  .homelink {
     font-size: 3rem;
   }
 
-  .link{
+  .link {
     font-size: 0.9rem;
     width: 70px;
   }
 
-  .login-button{
+  .login-button {
     font-size: 0.9rem;
     width: 70px;
   }
 
-  .icon{
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+  .icon {
+    padding: 15px 5px;
   }
 }
 
 @media (max-width: 800px) {
-  .column-2{
+  .column-2 {
     display: none;
   }
 
-  .outer-links{
+  .outer-links {
     display: none;
   }
   @supports (selector(:has(+ *))) {
@@ -233,15 +221,14 @@ nav.navbar {
 }
 
 @media (max-width: 480px){
-  .homelink{
+  .homelink {
     font-size: 2rem;
   }
 }
 
-@media (max-width: 380px){
-  .homelink{
+@media (max-width: 380px) {
+  .homelink {
     font-size: 1.6rem;
   }
 }
-
 </style>

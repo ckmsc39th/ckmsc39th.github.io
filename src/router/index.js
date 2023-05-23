@@ -11,6 +11,7 @@ import ScheduleChild1 from "../views/ScheduleChild1.vue";
 import ScheduleChild2 from "../views/ScheduleChild2.vue";
 import ScheduleChild3 from "../views/ScheduleChild3.vue";
 import ScheduleChild4 from "../views/ScheduleChild4.vue";
+import TestJson from "../views/TestJson.vue";
 
 const routes = [
   {
@@ -67,6 +68,15 @@ const routes = [
     path: "/success",
     name: "Success",
     component: Success,
+  },
+  {
+    path: "/testjson",
+    name: "TestJson",
+    component: TestJson,
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    redirect: { name: "Home"},
   }
 ];
 
