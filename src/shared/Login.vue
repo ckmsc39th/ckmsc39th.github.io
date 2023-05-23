@@ -68,7 +68,7 @@ const wrongPasswd = ref(false);
 
 const usersData = [];
 const loadJSON = async () => {
-  const response = await fetch("src/assets/usersData.json");
+  const response = await fetch("/usersData.json");
   const data = await response.json();
   usersData.value = data;
 };
