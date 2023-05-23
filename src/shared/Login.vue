@@ -9,7 +9,7 @@
             class="text-red-500"
             style="text-align: left"
         >
-          The email and password you entered did not match our records.
+          The id and password you entered did not match our records.
           Please double-check and try again.
         </div>
 
@@ -80,8 +80,9 @@ async function login() {
   try {
     if (matchedUser) {
       console.log("login success");
-      window.location.href = "/success";
+      // window.location.href = "/success";
       wrongPasswd.value = false;
+      alert("恭喜登入成功！請將這個畫面拿給服務台看，會有精美小禮物喔！\n\nid: " + username.value);
     } else {
       console.log("login failed");
       wrongPasswd.value = true;
