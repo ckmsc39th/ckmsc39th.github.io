@@ -4,6 +4,15 @@
     <div class="login-container">
       <h2>Login</h2>
       <form>
+        <div
+            v-if="wrongPasswd"
+            class="text-red-500"
+            style="text-align: left"
+        >
+          The email and password you entered did not match our records.
+          Please double-check and try again.
+        </div>
+
         <div class="form-group">
           <input
               v-model="username"
@@ -11,6 +20,7 @@
               placeholder="Username"
           />
         </div>
+
         <div class="form-group">
           <input
               v-model="password"
@@ -19,22 +29,41 @@
               @keyup.enter="login"
           />
         </div>
+
+        <div class="rememberMe">
+          <input type="checkbox" id="RememberMe" />
+          <label for="RememberMe" class="text-xs text-blue-600">Remember me</label>
+        </div>
+
         <button type="button" @click="login" :disabled="loggingIn">
           {{ loggingIn ? "Logging in..." : "Log in" }}
         </button>
+
       </form>
+
       <button class="close-button" @click="hideLogin">Cancel</button>
+
+      <div >
+        <a class="text-blue-500 text-sm" href="https://youtu.be/dQw4w9WgXcQ">
+          Forgot password?
+        </a>
+        <span class="text-gray-600 text-sm"> <strong> · </strong> </span>
+        <a class="text-blue-500 text-sm" href="https://youtu.be/D-UmfqFjpl0">
+          Sign up for Luminescence
+        </a>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import {ref, onMounted} from "vue";
 
 const username = ref("");
 const password = ref("");
 const loggingIn = ref(false);
 const showingLogin = ref(false);
+const wrongPasswd = ref(false);
 
 
 const usersData = [];
@@ -52,8 +81,10 @@ async function login() {
     if (matchedUser) {
       console.log("login success");
       window.location.href = "/success";
+      wrongPasswd.value = false;
     } else {
       console.log("login failed");
+      wrongPasswd.value = true;
     }
   } catch (error) {
     console.error(error);
@@ -151,14 +182,12 @@ onMounted(() => {
 }
 
 .login-container form label {
-  display: block;
   margin-bottom: 5px;
   font-size: 14px;
   color: #555;
 }
 
-.login-container form input {
-  display: block;
+.login-container form input[type="text"] {
   width: 100%;
   margin-bottom: 10px;
   padding: 10px;
@@ -168,7 +197,22 @@ onMounted(() => {
   transition: background-color 0.5s ease-in-out;
 }
 
-.login-container form input:focus {
+.login-container form input[type="text"]:focus {
+  outline: none;
+  background-color: #0069d9;
+}
+
+.login-container form input[type="password"] {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(0, 105, 217, 0.7);
+  transition: background-color 0.5s ease-in-out;
+}
+
+.login-container form input[type="password"]:focus {
   outline: none;
   background-color: #0069d9;
 }
@@ -193,6 +237,14 @@ onMounted(() => {
   transform: scale(0.95);
 }
 
+.rememberMe {
+  text-align: left;
+}
+
+.rememberMe input[type="checkbox"] {
+  margin-right: 10px;
+}
+
 .close-button {
   background-color: transparent;
   border: none;
@@ -201,7 +253,6 @@ onMounted(() => {
   cursor: pointer;
   margin-top: 20px;
 }
-
 
 @media (max-width: 2000px) {
   .login-button {
