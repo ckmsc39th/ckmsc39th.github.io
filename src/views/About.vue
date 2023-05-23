@@ -12,14 +12,14 @@
     </div>
 
     <div class="music-mv div-page">
-      <h2>音樂MV</h2>
-      <p>
-        <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/4L9CUCTfsyQ?rel=0"
+      <h2>成發主題MV</h2>
+      <div id="wrapper">
+        <iframe src="https://www.youtube-nocookie.com/embed/4L9CUCTfsyQ?rel=0"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
         ></iframe>
-      </p>
+      </div>
     </div>
 
     <div class="invitation div-page">
@@ -30,7 +30,7 @@
     <div class="div-page">
       <router-link :to="{ name: 'Members' }"><h2 class="staff-member">工作人員名單</h2></router-link>
     </div>
-    
+
   </div>
 
 </template>
@@ -41,27 +41,20 @@ const invitationLetter = "invitationLetter.png";
 
 <style scoped>
 
-.music-mv {
-  max-width: 100%;
-  min-height: fit-content;
-}
-
-.music-mv iframe {
-  display: block;
+.music-mv #wrapper {
+  position: relative;
+  width: 96%;
+  padding-bottom: 54%;
   margin-left: auto;
   margin-right: auto;
 }
 
-.music-mv a {
-  color: #007bff;
-}
-
-.music-mv a:hover {
-  text-decoration: underline;
-}
-
 .music-mv iframe {
-  border-radius: 0.3em;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .invitation img {
