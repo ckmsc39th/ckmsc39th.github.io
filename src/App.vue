@@ -20,10 +20,6 @@ const isMobile = () => {
     /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
   );
 };
-
-if (!CSS.supports('selector(:has(*))') && window.innerWidth <= 800) {
-  alert('由於一些技術上的問題，右上角的漢堡選單在您的瀏覽器上將無法使用。我們正在努力解決這個問題。請您考慮暫時改用一個瀏覽器，謝謝。');
-}
 </script>
 
 <style>
