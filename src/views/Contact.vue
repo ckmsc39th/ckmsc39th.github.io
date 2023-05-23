@@ -76,7 +76,7 @@ const teammateList = [
     id: 4,
     name: "謝秉宸",
     position: "空降支援",
-    intro: "超弱。",
+    intro: "超級電！！",
     photo: "/team/xie.png",
   },
 ];
