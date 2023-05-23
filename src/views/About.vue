@@ -14,17 +14,11 @@
     <div class="music-mv div-page">
       <h2>音樂MV</h2>
       <p>
-        努力趕工錄音中...
-        <!-- <a :href="musicMVLink" target="_blank">點擊我^^</a> -->
-        <!-- <iframe
-          width="100%"
-          height="360"
-          src="https://www.youtube-nocookie.com/embed/z0jQZxH7NgM"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe> -->
+        <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/4L9CUCTfsyQ?rel=0"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+        ></iframe>
       </p>
     </div>
 
@@ -42,15 +36,20 @@
 </template>
 
 <script setup>
-const musicMVLink = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 const invitationLetter = "invitationLetter.png";
 </script>
 
 <style scoped>
 
-.music-mv{
+.music-mv {
   max-width: 100%;
   min-height: fit-content;
+}
+
+.music-mv iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .music-mv a {
@@ -61,7 +60,7 @@ const invitationLetter = "invitationLetter.png";
   text-decoration: underline;
 }
 
-.music-mv iframe{
+.music-mv iframe {
   border-radius: 0.3em;
 }
 
@@ -73,7 +72,7 @@ const invitationLetter = "invitationLetter.png";
   border-radius: 0.3em;
 }
 
-.staff-member:hover{
+.staff-member:hover {
   color:#007bff
 }
 
