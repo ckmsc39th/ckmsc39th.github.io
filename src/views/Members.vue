@@ -9,14 +9,16 @@
 
     <div class="return-btn">
       <router-link :to="{ name: 'About' }" class="link"
-      >返回</router-link>
+      >返回
+      </router-link>
     </div>
 
   </div>
 </template>
 
 <script setup>
-import { ref } from "vue";
+import {ref} from "vue";
+
 const members = ref([]);
 const loadJSON = async () => {
   const response = await fetch("/members.json");
