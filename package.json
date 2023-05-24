@@ -9,8 +9,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "vite build && cp dist/index.html dist/404.html && gh-pages -d dist -b gh-pages",
-    "deploy2": "vite build && cp -v dist/index.html dist/404.html && gh-pages -r git@github.com:ckmsc39th/ckmsc39th.github.io.git -d dist -b gh-pages"
+    "deploy": "vite build && gh-pages -d dist -b gh-pages",
+    "deploy2": "vite build && gh-pages -r git@github.com:ckmsc39th/ckmsc39th.github.io.git -d dist -b gh-pages"
   },
   "dependencies": {
     "firebase": "^9.19.1-20230331192943",
@@ -28,9 +28,12 @@
     "csv-parser": "^3.0.0",
     "feather-icons": "^4.29.0",
     "gh-pages": "^5.0.0",
+    "node-sass": "^9.0.0",
     "postcss": "^8.4.21",
     "prettier": "^2.8.4",
     "prettier-plugin-tailwindcss": "^0.2.3",
+    "sass": "^1.62.1",
+    "sass-loader": "^13.3.0",
     "tailwindcss": "^3.3.1",
     "vite": "^4.1.0",
     "vue-router": "^4.1.6"

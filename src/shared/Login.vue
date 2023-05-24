@@ -4,41 +4,26 @@
     <div class="login-container">
       <h2>Login</h2>
       <form>
-        <div
-            v-if="wrongPasswd"
-            class="text-red-500"
-            style="text-align: left"
-        >
-          The id and password you entered did not match our records.
-          Please double-check and try again.
+        <div v-if="wrongPassword" class="text-red-500" style="text-align: left">
+          The ID and password you entered did not match our records. Please double-check and try again.
         </div>
 
         <div class="form-group">
-          <input
-              v-model="username"
-              type="text"
-              placeholder="Username"
-          />
+          <input v-model="username" type="text" placeholder="Username"/>
         </div>
 
         <div class="form-group">
-          <input
-              v-model="password"
-              type="password"
-              placeholder="Password"
-              @keyup.enter="login"
-          />
+          <input v-model="password" type="password" placeholder="Password" @keyup.enter="login"/>
         </div>
 
         <div class="rememberMe">
-          <input type="checkbox" id="RememberMe" />
+          <input id="RememberMe" type="checkbox" v-model="rememberMe"/>
           <label for="RememberMe" class="text-xs text-blue-600">Remember me</label>
         </div>
 
         <button type="button" @click="login" :disabled="loggingIn">
           {{ loggingIn ? "Logging in..." : "Log in" }}
         </button>
-
       </form>
 
       <button class="close-button" @click="hideLogin">Cancel</button>
@@ -53,65 +38,71 @@
         </a>
       </div>
     </div>
+
+
   </div>
 </template>
 
-<script setup>
-import {ref, onMounted} from "vue";
+<script setup lang="ts">
+import { ref, onMounted } from "vue";
 
 const username = ref("");
 const password = ref("");
+const rememberMe = ref(false);
 const loggingIn = ref(false);
 const showingLogin = ref(false);
-const wrongPasswd = ref(false);
+const wrongPassword = ref(false);
 
-
-const usersData = [];
+const usersData = ref<any[]>([]);
 const loadJSON = async () => {
-  const response = await fetch("/usersData.json");
-  const data = await response.json();
-  usersData.value = data;
-};
-loadJSON();
-
-async function login() {
-  loggingIn.value = true;
-  let matchedUser = usersData.value.find(user => user.id === username.value && user.code === password.value);
   try {
-    if (matchedUser) {
-      console.log("login success");
-      // window.location.href = "/success";
-      wrongPasswd.value = false;
-      alert("恭喜登入成功！請將這個畫面拿給服務台看，會有精美小禮物喔！\n\nid: " + username.value);
-    } else {
-      console.log("login failed");
-      wrongPasswd.value = true;
-    }
+    const response = await fetch("/usersData.json");
+    usersData.value = await response.json();
   } catch (error) {
     console.error(error);
   }
+};
+loadJSON();
+
+const login = async () => {
+  loggingIn.value = true;
+  const matchedUser = usersData.value.find(
+      (user: { id: string; code: string }) =>
+          user.id === username.value && user.code === password.value
+  );
+  if (matchedUser) {
+    console.log("login success");
+    // window.location.href = "/success";
+    wrongPassword.value = false;
+    alert(
+        `Congratulations! You have successfully logged in! Please show this screen to the service desk to receive a special gift!\n\nID: ${username.value}`
+    );
+  } else {
+    // console.log("login failed");
+    wrongPassword.value = true;
+  }
   loggingIn.value = false;
-}
+};
 
-function showLogin() {
+const showLogin = () => {
   showingLogin.value = true;
-}
+};
 
-function hideLogin() {
+const hideLogin = () => {
   showingLogin.value = false;
-}
+  wrongPassword.value = false;
+};
 
 onMounted(() => {
-  window.addEventListener("keydown", (e) => {
+  window.addEventListener("keydown", (e: KeyboardEvent) => {
     if (e.key === "Escape") {
       hideLogin();
     }
   });
-})
+});
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
 .login-button {
   background-color: transparent;
   color: white;
@@ -122,15 +113,15 @@ onMounted(() => {
   text-align: center;
   padding-top: 15px;
   padding-bottom: 15px;
-}
 
-.login-button:hover {
-  border-color: hsl(104, 100%, 86%);
-  border-radius: 0.45em;
-  background-color: hsl(104, 100%, 86%);
-  box-shadow: 0px 0px 0.75em 1px hsl(104, 100%, 86%);
-  animation: text-flicker 6s linear infinite;
-  color: black;
+  &:hover {
+    border-color: hsl(104, 100%, 86%);
+    border-radius: 0.45em;
+    background-color: hsl(104, 100%, 86%);
+    box-shadow: 0px 0px 0.75em 1px hsl(104, 100%, 86%);
+    animation: text-flicker 6s linear infinite;
+    color: black;
+  }
 }
 
 .login-overlay {
@@ -156,139 +147,84 @@ onMounted(() => {
   text-align: center;
   transform: translateY(0%);
   transition: transform 0.5s ease-in-out;
-}
 
-.login-container.show {
-  transform: translateY(0);
-}
-
-.login-container h2 {
-  margin-bottom: 30px;
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.login-container form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.login-container form .form-group {
-  margin-bottom: 20px;
-  width: 100%;
-}
-
-.login-container form label {
-  margin-bottom: 5px;
-  font-size: 14px;
-  color: #555;
-}
-
-.login-container form input[type="text"] {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  background-color: rgba(0, 105, 217, 0.7);
-  transition: background-color 0.5s ease-in-out;
-}
-
-.login-container form input[type="text"]:focus {
-  outline: none;
-  background-color: #0069d9;
-}
-
-.login-container form input[type="password"] {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  background-color: rgba(0, 105, 217, 0.7);
-  transition: background-color 0.5s ease-in-out;
-}
-
-.login-container form input[type="password"]:focus {
-  outline: none;
-  background-color: #0069d9;
-}
-
-.login-container form button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.5s ease-in-out;
-}
-
-.login-container form button:hover {
-  background-color: #0069d9;
-}
-
-.login-container form button:active {
-  transform: scale(0.95);
-}
-
-.rememberMe {
-  text-align: left;
-}
-
-.rememberMe input[type="checkbox"] {
-  margin-right: 10px;
-}
-
-.close-button {
-  background-color: transparent;
-  border: none;
-  color: #888;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-@media (max-width: 2000px) {
-  .login-button {
-    font-size: 1.1rem;
-    width: 100px;
+  &.show {
+    transform: translateY(0);
   }
-}
 
-@media (max-width: 1100px) {
-  .login-button {
-    font-size: 0.9rem;
-    width: 70px;
+  h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
-}
 
-@media (max-width: 800px) {
-  .login-button {
-    margin-right: 10px;
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-}
 
-@media (max-width: 480px) {
-  .login-button {
-    margin-right: 20px;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-}
-
-@media (max-width: 380px) {
-  .login-button {
-    margin-right: 30px;
-    padding-left: 3px;
-    padding-right: 3px;
+  .form-group {
+    margin-bottom: 20px;
     width: 100%;
+  }
+
+  label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(0, 105, 217, 0.7);
+    transition: background-color 0.5s ease-in-out;
+
+    &:focus {
+      outline: none;
+      background-color: #0069d9;
+    }
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+
+    &:hover {
+      background-color: #0069d9;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  .rememberMe {
+    text-align: left;
+  }
+
+  .close-button {
+    background-color: transparent;
+    border: none;
+    color: #888;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
   }
 }
 </style>
