@@ -43,12 +43,12 @@
 
       <button class="close-button" @click="hideLogin">Cancel</button>
 
-      <div >
-        <a class="text-blue-500 text-sm" href="https://youtu.be/dQw4w9WgXcQ">
+      <div>
+        <a class="text-blue-500 text-sm" href="https://youtu.be/dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
           Forgot password?
         </a>
         <span class="text-gray-600 text-sm"> <strong> · </strong> </span>
-        <a class="text-blue-500 text-sm" href="https://youtu.be/D-UmfqFjpl0">
+        <a class="text-blue-500 text-sm" href="https://youtu.be/D-UmfqFjpl0" target="_blank" rel="noopener noreferrer">
           Sign up for Luminescence
         </a>
       </div>
@@ -68,7 +68,7 @@ const wrongPasswd = ref(false);
 
 const usersData = [];
 const loadJSON = async () => {
-  const response = await fetch("src/assets/usersData.json");
+  const response = await fetch("/usersData.json");
   const data = await response.json();
   usersData.value = data;
 };

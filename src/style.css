@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
 @import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,7 +10,7 @@
 @font-face {
   font-family: cursiveFont;
   src: url("/GreatVibes-Regular.ttf");
-  }
+}
 
 @font-face {
   font-family: Dongle;
@@ -34,7 +35,7 @@
   animation: fade-in-animation ease-in 0.3s;
 }
 
-.div-page{
+.div-page {
   margin: 2% auto;
   width: 97%;
   padding: 2.5%;
@@ -57,7 +58,7 @@ h1 {
   margin-left: 2%;
   color: #C1BAD1;
 }
-  
+
 h2 {
   font-weight: 700;
   margin-top: 0.5%;
@@ -150,7 +151,7 @@ th, td {
   0% {
     opacity: 0;
   }
-  
+
   100% {
     opacity: 1;
   }
@@ -181,7 +182,7 @@ th, td {
     font-size: 1.4rem;
   }
 
-  span{
+  span {
     font-size: 1.4rem;
   }
 
@@ -220,7 +221,7 @@ th, td {
     font-size: 1.2rem;
   }
 
-  span{
+  span {
     font-size: 1.2rem;
   }
 
@@ -253,12 +254,12 @@ th, td {
   p {
     font-size: 1.0rem;
   }
-  
+
   a {
     font-size: 1.0rem;
   }
 
-  span{
+  span {
     font-size: 1.0rem;
   }
 
@@ -292,11 +293,11 @@ th, td {
     font-size: 0.8rem;
   }
 
-  a{
+  a {
     font-size: 0.8rem;
   }
 
-  span{
+  span {
     font-size: 0.8rem;
   }
 
@@ -310,7 +311,7 @@ th, td {
 
 }
 
-@media (max-width: 385px){
+@media (max-width: 385px) {
   h1 {
     font-size: 1.4rem;
   }
@@ -320,7 +321,7 @@ th, td {
   }
 }
 
-@media (max-width: 300px){
+@media (max-width: 300px) {
   h1 {
     font-size: 1.2rem;
   }
@@ -329,4 +330,3 @@ th, td {
     font-size: 1.0rem;
   }
 }
-

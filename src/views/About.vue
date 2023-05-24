@@ -12,20 +12,14 @@
     </div>
 
     <div class="music-mv div-page">
-      <h2>音樂MV</h2>
-      <p>
-        努力趕工錄音中...
-        <!-- <a :href="musicMVLink" target="_blank">點擊我^^</a> -->
-        <!-- <iframe
-          width="100%"
-          height="360"
-          src="https://www.youtube-nocookie.com/embed/z0jQZxH7NgM"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe> -->
-      </p>
+      <h2>成發主題MV</h2>
+      <div id="wrapper">
+        <iframe src="https://www.youtube-nocookie.com/embed/4L9CUCTfsyQ?rel=0"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+        ></iframe>
+      </div>
     </div>
 
     <div class="invitation div-page">
@@ -36,33 +30,31 @@
     <div class="div-page">
       <router-link :to="{ name: 'Members' }"><h2 class="staff-member">工作人員名單</h2></router-link>
     </div>
-    
+
   </div>
 
 </template>
 
 <script setup>
-const musicMVLink = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 const invitationLetter = "invitationLetter.png";
 </script>
 
 <style scoped>
 
-.music-mv{
-  max-width: 100%;
-  min-height: fit-content;
+.music-mv #wrapper {
+  position: relative;
+  width: 96%;
+  padding-bottom: 54%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.music-mv a {
-  color: #007bff;
-}
-
-.music-mv a:hover {
-  text-decoration: underline;
-}
-
-.music-mv iframe{
-  border-radius: 0.3em;
+.music-mv iframe {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .invitation img {
@@ -73,7 +65,7 @@ const invitationLetter = "invitationLetter.png";
   border-radius: 0.3em;
 }
 
-.staff-member:hover{
+.staff-member:hover {
   color:#007bff
 }
 
