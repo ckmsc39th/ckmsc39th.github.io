@@ -1,51 +1,71 @@
-# 台北市立建國高級中學數理資優班成果發表會
+# 臺北市建國高中數理班39屆成果發表
 
-[English version](./README.md)
+## 訪問網站
 
-本網頁旨在宣傳建國中學數理資優班成果展示，展示將於 5/25 和 5/26 下午在建國中學舉行。
+訪問網站：[https://ckmsc39th.github.io](https://ckmsc39th.github.io) 🌐
 
-## 大合照
+## 內容
+
+- 團體照 📸
+- 音樂MV 🎵
+- 地點 📍
+- 日期和時間 🗓️⏰
+- 框架 🖥️
+- 開始 🚀
+- 團隊 👥
+- 許可證 📃
+
+## 團體照
 
 ![groupPhoto](./public/groupPhoto.jpg)
 
-## 主題曲
+## 音樂MV
 
-<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/z0jQZxH7NgM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+觀看我們專案創作的驚人音樂MV：[音樂MV連結](https://youtu.be/4L9CUCTfsyQ) 🎵🎥
+[![MV IMAGE](https://img.youtube.com/vi/4L9CUCTfsyQ/0.jpg)](https://www.youtube.com/watch?v=4L9CUCTfsyQ)
 
-## 舉辦地點
+## 地點
 
-建國中學 (100 台北市中正區南海路 56 號)
+活動將在臺北市建國高中舉行，地址：
+臺北市中正區南海路56號。🏫🌆
 
-夢紅樓 2F展演廳 & 4F國際會議廳
+## 日期和時間
 
-
-## 日期與時間
-
-2023 年 5 月 25&26 日 (週四/五) 1:00 PM - 5:00 PM
+專題展示將於以下日期和時間舉行：
+- 日期：2023年5月25日和5月26日（星期四/星期五）
+- 時間：下午1:00至下午5:00 ⏰
 
 ## 框架
 
-本網頁使用 Vue.js 框架構建。
+此網頁使用Vue.js框架構建。🖥️🔧
 
-## 開始使用
+## 開始
 
-若要在本機上運行此網頁，請按照以下步驟進行：
+要在本地運行此網頁，請按照以下步驟操作：
 
-1. 下載此存儲庫：
-   `git clone https://github.com/ckmsc39th/ckmsc39th.github.io.git`
-2. 安裝依賴軟體：
-   `yarn`
-3. 運行伺服器：
-   `yarn dev`
-4. 在瀏覽器中打開 `http://localhost:8080/`以查看網頁。
+1. 複製檔案：
+```bash
+git clone https://github.com/ckmsc39th/ckmsc39th.github.io.git
+```
+2. 安裝依賴：
+```bash
+yarn
+```
+3. 啟動伺服器：
+```bash
+yarn dev
+```
+4. 在瀏覽器中打開`http://localhost:5173/` 以查看網頁。🌐👀
 
-## 貢獻者
+## 開發團隊
 
-- 廖乃頡 - [nigelliao123@gmail.com](mailto:nigelliao123@gmail.com)
-- 謝秉宸 - [bensonhsieh2006@gmail.com](mailto:bensonhsieh2006@gmail.com)
-- 程朗 - [lancameb@hotmail.com](mailto:lancameb@hotmail.com)
-- 賴昱錡 - [laiyuchi@proton.me](mailto:laiyuchi@proton.me)
+以下是我們團隊成員及聯絡方式：
 
-## 憑證
+- Nigel-Liao - [nigelliao123@gmail.com](mailto:nigelliao123@gmail.com) 📧
+- bensonhsieh2006 - [bensonhsieh2006@gmail.com](mailto:bensonhsieh2006@gmail.com) 📧
+- random-integer - [lancameb@hotmail.com](mailto:lancameb@hotmail.com) 📧
+- expect1ai - [laiyuchi@proton.me](mailto:laiyuchi@proton.me) 📧
 
-本項目使用 MIT 憑證進行授權 - 詳情請參見 `LICENSE`檔案。
+## 許可證
+
+本專案使用MIT許可證。詳細信息請參閱`LICENSE`文件。📃
