@@ -102,17 +102,17 @@ const chorus =
     "點亮了海面上 無數微小希望\n\n";
 
 const contents = [
-  {text: intro, class: 'font-sans'},
+  {text: intro, class: 'font-sans text-gray-400'},
   {text: verse1, class: 'font-sans text-blue-400'},
   {text: verse2, class: 'font-sans text-orange-300'},
   {text: verse3, class: 'font-sans text-purple-400'},
   {text: verse4, class: 'font-sans text-green-500'},
-  {text: preChorus, class: 'font-sans text-blue-500'},
-  {text: chorus, class: 'font-sans text-blue-500'},
-  {text: interlude, class: 'font-sans'},
-  {text: preChorus, class: 'font-sans text-blue-500'},
-  {text: chorus, class: 'font-sans text-blue-500'},
-  {text: chorus, class: 'font-sans text-blue-500'}
+  {text: preChorus, class: 'font-sans text-gray-300'},
+  {text: chorus, class: 'font-sans text-gray-300'},
+  {text: interlude, class: 'font-sans text-gray-400'},
+  {text: preChorus, class: 'font-sans text-gray-300'},
+  {text: chorus, class: 'font-sans text-gray-300'},
+  {text: chorus, class: 'font-sans text-gray-300'}
 ];
 </script>
 
