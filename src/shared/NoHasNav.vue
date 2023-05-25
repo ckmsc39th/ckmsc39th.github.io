@@ -5,7 +5,7 @@
       <router-link :to="{ name: 'Categories' }">Categories</router-link>
       <router-link :to="{ name: 'Schedule' }">Schedule</router-link>
       <router-link :to="{ name: 'Contact' }">Contact</router-link>
-      <a href="https://www.youtube.com/@ckmsc39th_luminescence" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.youtube.com/@lumine39th" target="_blank" rel="noopener noreferrer">
         <vue-feather type="youtube" size="20"></vue-feather> Youtube
       </a>
       <a href="https://instagram.com/luminescence_ckmsc39th_" target="_blank" rel="noopener noreferrer">

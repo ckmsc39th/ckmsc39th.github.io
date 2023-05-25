@@ -20,7 +20,7 @@
 
       <div class="outer-links">
         <a
-          href="https://www.youtube.com/@ckmsc39th_luminescence"
+          href="https://www.youtube.com/@lumine39th"
           target="_blank"
           rel="noopener noreferrer"
           class="icon"
