@@ -9,8 +9,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "vite build && gh-pages -d dist -b gh-pages",
-    "deploy2": "vite build && gh-pages -r git@github.com:ckmsc39th/ckmsc39th.github.io.git -d dist -b gh-pages"
+    "deploy": "vite build && cp dist/index.html dist/404.html && echo 'copying index.html to 404.html (important, do not remove)' && gh-pages -d dist -b gh-pages",
+    "deploy2": "vite build && cp dist/index.html dist/404.html && gh-pages -r git@github.com:ckmsc39th/ckmsc39th.github.io.git -d dist -b gh-pages"
   },
   "dependencies": {
     "firebase": "^9.19.1-20230331192943",
